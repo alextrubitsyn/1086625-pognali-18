@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Трубицын](https://up.htmlacademy.ru/adaptive/18/user/1086625).
-* Наставник: `Неизвестно`.
+* Наставник: Дмитрий Казанцев.
 
 ---
 
