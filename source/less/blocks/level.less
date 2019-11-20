@@ -1,6 +1,11 @@
 .level {
   color: #ffffff;
   background-color: #000000;
+  &--catalog {
+    color: @title;
+    line-height: 18px;
+    background-color: #ffffff;
+  }
 }
 
 .level__value {
@@ -13,10 +18,4 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-}
-
-.level--catalog {
-  color: @title;
-  line-height: 18px;
-  background-color: #ffffff;
 }
