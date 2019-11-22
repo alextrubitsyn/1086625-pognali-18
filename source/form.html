@@ -16,18 +16,18 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item">
-              <a>О сервисе</a>
+              <a class="site-list__link" href="index.html">О сервисе</a>
             </li>
             <li class="site-list__item site-list__item--active">
-              <a href="form.html">Направления</a>
+              <a class="site-list__link">Направления</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Попутчики</a>
+              <a class="site-list__link" href="catalog.html">Попутчики</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a class="user-list__login button" href="login.html">Авторизация</a>
+              <a class="site-list__link button" href="login.html">Авторизация</a>
             </li>
           </ul>
           <ul class="main-nav__list contacts">
@@ -62,9 +62,9 @@
     <main class="page-form">
       <h1 class="visually-hidden">Форма заполнения моего аккаунта</h1>
       <form class="form" action="https://echo.htmlacademy.ru" method="get">
-        <div class="form__level level level--catalog">
-          <span class="level__value">99</span>
-          <span class="level__text">level</span>
+        <div class="form__level level level--form">
+          <span class="level__value level__value--form">80</span>
+          <span class="level__text level__text--form">level</span>
         </div>
         <img class="form__image" width="100" height="100" src="../source/img/petr-demin.png" alt="Петя Демин Фото" />
         <a class="form__change-photo button" href="#">Сменить фото</a>
@@ -105,31 +105,37 @@
         </fieldset>
         <div class="form__plans">
           <h2 class="form__plans-title">Мои планы:</h2>
-          <ol class="form__plans-list">
+          <ul class="form__plans-list">
             <li class="form__plans-item plan">
-              <p class="plan__countries">Франция, Италия</p>
+              <p class="plan__countries">
+                <span class="plan__countries-n">1.</span>
+                Франция, Италия
+              </p>
               <p class="plan__companions">3 попутчика</p>
               <p class="plan__period">26 мар — 29 мар</p>
               <a class="plan__change" href="#">Изменить</a>
             </li>
             <li class="form__plans-item plan">
-              <p class="plan__countries">Таиланд, Индонезия</p>
+              <p class="plan__countries">
+                <span class="plan__countries-n">2.</span>
+                Таиланд, Индонезия
+              </p>
               <p class="plan__companions">1 попутчик</p>
               <p class="plan__period">1 июл — 15 июл</p>
               <a class="plan__change" href="#">Изменить</a>
             </li>
-          </ol>
+          </ul>
         </div>
         <section class="new-plan">
           <h2 class="new-plan__title">Добавить план:</h2>
           <p class="new-plan__toggles">
-            <button class="new-plan__toggle" type="button">1</button>
+            <button class="new-plan__toggle new-plan__toggle--active" type="button">1</button>
             <button class="new-plan__toggle" type="button">2</button>
             <button class="new-plan__toggle" type="button">3</button>
           </p>
-          <ol class="steps">
+          <ul class="steps">
             <li class="steps__item period">
-              <a class="steps__label" id="step1">Шаг</a>
+              <a class="steps__label" id="step1">Шаг 1.</a>
               <h3 class="steps__title">Даты пребывания</h3>
               <p class="steps__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
               <div class="counter">
@@ -163,54 +169,54 @@
                 <li class="period__week-item">С</li>
                 <li class="period__week-item">В</li>
               </ul>
-              <ul class="period__day">
-                <li class="period__day-item">23</li>
-                <li class="period__day-item">24</li>
-                <li class="period__day-item">25</li>
-                <li class="period__day-item">26</li>
-                <li class="period__day-item">27</li>
-                <li class="period__day-item">28</li>
-                <li class="period__day-item">1</li>
-                <li class="period__day-item">2</li>
-                <li class="period__day-item">3</li>
-                <li class="period__day-item">4</li>
-                <li class="period__day-item">5</li>
-                <li class="period__day-item">6</li>
-                <li class="period__day-item">7</li>
-                <li class="period__day-item">8</li>
-                <li class="period__day-item">9</li>
-                <li class="period__day-item">10</li>
-                <li class="period__day-item">11</li>
-                <li class="period__day-item">12</li>
-                <li class="period__day-item">13</li>
-                <li class="period__day-item">14</li>
-                <li class="period__day-item">15</li>
-                <li class="period__day-item">16</li>
-                <li class="period__day-item">17</li>
-                <li class="period__day-item">18</li>
-                <li class="period__day-item">19</li>
-                <li class="period__day-item">20</li>
-                <li class="period__day-item">21</li>
-                <li class="period__day-item">22</li>
-                <li class="period__day-item">23</li>
-                <li class="period__day-item">24</li>
-                <li class="period__day-item">25</li>
-                <li class="period__day-item">26</li>
-                <li class="period__day-item">27</li>
-                <li class="period__day-item">28</li>
-                <li class="period__day-item">29</li>
-                <li class="period__day-item">30</li>
-                <li class="period__day-item">31</li>
-                <li class="period__day-item">1</li>
-                <li class="period__day-item">2</li>
-                <li class="period__day-item">3</li>
-                <li class="period__day-item">4</li>
-                <li class="period__day-item">5</li>
+              <ul class="period__days">
+                <li class="period__day">23</li>
+                <li class="period__day">24</li>
+                <li class="period__day">25</li>
+                <li class="period__day">26</li>
+                <li class="period__day">27</li>
+                <li class="period__day">28</li>
+                <li class="period__day">1</li>
+                <li class="period__day">2</li>
+                <li class="period__day">3</li>
+                <li class="period__day">4</li>
+                <li class="period__day">5</li>
+                <li class="period__day">6</li>
+                <li class="period__day">7</li>
+                <li class="period__day">8</li>
+                <li class="period__day">9</li>
+                <li class="period__day">10</li>
+                <li class="period__day">11</li>
+                <li class="period__day">12</li>
+                <li class="period__day">13</li>
+                <li class="period__day">14</li>
+                <li class="period__day">15</li>
+                <li class="period__day">16</li>
+                <li class="period__day">17</li>
+                <li class="period__day">18</li>
+                <li class="period__day">19</li>
+                <li class="period__day">20</li>
+                <li class="period__day">21</li>
+                <li class="period__day">22</li>
+                <li class="period__day">23</li>
+                <li class="period__day">24</li>
+                <li class="period__day">25</li>
+                <li class="period__day period__day--start">26</li>
+                <li class="period__day period__day--active">27</li>
+                <li class="period__day period__day--active">28</li>
+                <li class="period__day period__day--trip">29</li>
+                <li class="period__day period__day--trip">30</li>
+                <li class="period__day period__day--trip">31</li>
+                <li class="period__day period__day--trip">1</li>
+                <li class="period__day period__day--trip">2</li>
+                <li class="period__day period__day--trip">3</li>
+                <li class="period__day period__day--trip">4</li>
+                <li class="period__day period__day--trip">5</li>
               </ul>
               <a class="steps__next button" href="#step2">Следующий шаг</a>
             </li>
-            <li class="steps__item route">
-              <a class="steps__label" id="step2">Шаг</a>
+            <li class="steps__item">
+              <a class="steps__label" id="step2">Шаг 2.</a>
               <h3 class="steps__title">Маршрут</h3>
               <p class="steps__description">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
               <div class="country">
@@ -225,12 +231,12 @@
                 <a class="country__link" href="#">Выберите страну</a>
                 <button class="country__button-del" type="button">удалить</button>
               </div>
-              <section class="country-filter">
+              <section class="country-filter country-filter--form">
                 <h2 class="visually-hidden">Выбор страны</h2>
                 <div class="country-filter__wrapper country-filter__wrapper--close">
                   <ul class="country-filter__letter-list">
                     <li class="country-filter__letter-item">
-                      <button class="country-filter__letter country-filter__letter--active" type="button">А</button>
+                      <button class="country-filter__letter country-filter__letter--active-form" type="button">А</button>
                     </li>
                     <li class="country-filter__letter-item">
                       <button class="country-filter__letter" type="button">Б</button>
@@ -336,12 +342,12 @@
                   </ul>
                 </div>
               </section>
-              <button class="route__add-country button" type="button">Добавить страну</button>
+              <button class="steps__add-country button" type="button">Добавить страну</button>
               <a class="steps__next button" href="#step3">Следующий шаг</a>
               <a class="steps__previous button" href="#step1">На шаг назад</a>
             </li>
             <li class="steps__item">
-              <a class="steps__label" id="step3">Шаг</a>
+              <a class="steps__label" id="step3">Шаг 3.</a>
               <h3 class="steps__title">Развлечения</h3>
               <p class="steps__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
               <fieldset class="country-entertainments">
@@ -357,7 +363,7 @@
               <button class="steps__submit button" type="submit" name="button-submit">Отправить</button>
               <a class="steps__previous button" href="#step2">На шаг назад</a>
             </li>
-          </ol>
+          </ul>
         </section>
       </form>
     </main>
@@ -384,7 +390,7 @@
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
+        <b class="copyrigut__text">Разработано</b>
         <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
           <img class="copyright__logo-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy" />
         </a>

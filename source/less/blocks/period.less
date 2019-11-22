@@ -1,0 +1,48 @@
+.period__with-children {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.period__month-year {
+  color: @title;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.period__week {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.period__day {
+  opacity: 0.3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  list-style: none;
+
+  &--start {
+    opacity: 1;
+    color: #ffffff;
+    border: 2px solid #ff5c23;
+    background-color: @title;
+  }
+
+  &--active {
+    opacity: 1;
+    color: #ffffff;
+    background-color: @title;
+  }
+
+  &--trip {
+    opacity: 1;
+    color: @text;
+    background-color: @bg-catalog;
+  }
+}
