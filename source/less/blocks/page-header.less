@@ -1,5 +1,25 @@
 .page-header {
-  color: #ffffff;
-  background-color: @bg-header;
+  position: relative;
+  background-color: #ffffff;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+    margin: 0;
+  }
 }

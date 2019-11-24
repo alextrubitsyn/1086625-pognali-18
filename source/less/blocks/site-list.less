@@ -1,9 +1,23 @@
-.site-list {
-}
-
 .site-list__link {
+  color: @bg-index;
   font-size: 30px;
   font-weight: 500;
   line-height: 36px;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+  }
+
+  .site-list__item {
+    margin-right: 36px;
+  }
 }

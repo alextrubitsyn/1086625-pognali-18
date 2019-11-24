@@ -1,0 +1,41 @@
+.size(@wt; @ht) {
+  width: @wt;
+  height: @ht;
+}
+
+.sq(@l) {
+  width: @l;
+  height: @l;
+}
+
+.clear() {
+  margin: 0;
+  padding: 0;
+}
+
+.v-h() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  overflow: hidden;
+}
+
+// Отладочные миксины
+.olr() {
+  outline: 3px solid red;
+}
+
+.olo() {
+  outline: 2px solid orange;
+}
+
+.olg() {
+  outline: 1px solid green;
+}
+//

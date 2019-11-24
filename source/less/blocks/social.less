@@ -1,3 +1,34 @@
+.social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: @desktop-width) {
+  .social {
+    display: none;
+  }
+}
+
 .social__item {
   list-style: none;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  .page-header & {
+    .size(39px; 45px);
+    color: #cccccc;
+    background-color: #ffffff;
+  }
+
+  .page-footer & {
+    .size(45px; 45px);
+    color: @title;
+    background-color: @map;
+  }
 }

@@ -2,6 +2,7 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -10,6 +11,38 @@
 }
 
 .contacts__link {
+  color: @bg-index;
   text-decoration: none;
-  color: @map;
+
+  &--orange {
+    text-decoration: none;
+    color: @map;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contacts__link {
+    .sq(50px);
+    font-size: 0;
+    border-radius: 50%;
+  }
+
+  .contacts__phone {
+    background-color: @bg-sequence1;
+  }
+
+  .contacts__email {
+    background-color: @bg-sequence3;
+  }
 }
