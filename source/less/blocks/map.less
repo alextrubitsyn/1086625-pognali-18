@@ -1,10 +1,16 @@
 .map {
   color: @bg-index;
-  border-radius: 0 0 30px 30px;
+}
+.map__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 35px;
   background-color: @map;
+  border-radius: 0 0 30px 30px;
 }
 
 .map__address {
+  padding-left: 61px;
   color: @bg-index;
   font-size: 16px;
   font-weight: 700;
@@ -13,9 +19,21 @@
 }
 
 .map__link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
   color: @title;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   text-decoration: none;
+  border-radius: 10px;
+  border: 3px solid @bg-index;
+}
+
+.map__frame {
+  display: block;
+  width: 100%;
+  padding-top: -30px;
+  border: none;
 }

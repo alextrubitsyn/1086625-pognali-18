@@ -6,7 +6,50 @@
 }
 
 .page-main__title {
+  .clear();
+  margin-bottom: 247px;
+  padding: 24px 15px 0;
+  text-align: center;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+}
+
+.page-main__user {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.page-main__login {
+  flex-grow: 1;
+}
+
+.page-main__login-link {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: @bg-header;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: @map;
+  border-radius: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__login {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    background-color: @bg-header;
+  }
+
+  .page-main__login {
+    display: none;
+  }
 }

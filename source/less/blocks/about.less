@@ -15,5 +15,35 @@
   font-weight: 300;
 }
 
-.about__next {
+.about__more {
+  display: none;
+  .size(274; 81);
+}
+
+@media (min-width: @tablet-width) {
+  .about__more {
+    display: block;
+    padding: 30px 128px 28px 34px;
+    color: @title;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 20px;
+    background-color: @map;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about__more {
+    display: block;
+    padding: 30px 128px 28px 34px;
+    color: @title;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 20px;
+    background-color: @map;
+    text-decoration: none;
+  }
 }

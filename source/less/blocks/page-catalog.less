@@ -1,3 +1,15 @@
 .page-catalog {
   background-color: @bg-catalog;
 }
+
+.page-catalog__list {
+  .clear();
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .page-catalog__item {
+    margin-bottom: 40px;
+    border-radius: 20px;
+  }
+}

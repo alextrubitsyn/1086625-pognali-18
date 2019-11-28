@@ -1,3 +1,12 @@
+.user-list {
+  display: none;
+
+  .page-header--menu-open &,
+  .page-header--nojs & {
+    display: block;
+  }
+}
+
 .user-list__login {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -13,13 +22,32 @@
 
 @media (min-width: @tablet-width) {
   .user-list {
+    display: block;
     order: -1;
     align-self: flex-end;
+    margin-top: 0;
+    background-color: @bg-head-tablet;
+
+    .page-header--menu-open &,
+    .page-header--nojs & {
+      margin-top: -64px;
+      margin-right: 40px;
+      background-color: #ffffff;
+    }
+  }
+
+  .user-list__login {
+    padding: 12px 25px 10px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .user-list {
     order: 100;
+
+    .page-header--menu-open &,
+    .page-header--nojs & {
+      background-color: inherit;
+    }
   }
 }

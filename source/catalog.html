@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <header class="page-header">
-      <a class="page-header__logo logo-pognali" href="index.html">
-        <img class="page-header__logo-img logo-pognali__image" src="img/logo-mobile.svg" width="96" height="15" alt="Погнали?" />
-      </a>
+    <header class="page-header page-header--nojs container">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo-pognali" href="index.html">
+          <img class="page-header__logo-img logo-pognali__image" src="img/logo-mobile-white@1x.png" width="96" height="15" alt="Погнали?" />
+        </a>
+        <button class="page-header__toggle" type="button" aria-label="Закрыть/открыть форму"></button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Закрыть/открыть форму"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">О сервисе</a>
@@ -24,6 +27,9 @@
             <a class="site-list__link">Попутчики</a>
           </li>
         </ul>
+        <a class="main-nav__back-main" href="index.html">
+          На главную
+        </a>
         <ul class="main-nav__list user-list">
           <li class="user-list__item">
             <a class="user-list__login button" href="login.html">Авторизация</a>
@@ -99,7 +105,7 @@
       </nav>
     </header>
 
-    <main class="page-catalog">
+    <main class="page-catalog container">
       <h1 class="visually-hidden">Каталог попутчиков</h1>
       <section class="country-filter">
         <h2 class="country-filter__title">Фильтрация по странам</h2>
@@ -316,9 +322,12 @@
         <ul class="page-catalog__list">
           <li class="page-catalog__item member">
             <a class="member__link" href="#">
-              <img class="member__image" width="70" height="70" src="../source/img/tanya-firsova.png" alt="Таня Фирсова Фото" />
+              <img class="member__image" width="70" height="70" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова Фото" />
+            </a>
+            <a class="member__link" href="#">
               <p class="member__name member__name--red">Таня Фирсова</p>
             </a>
+              <!-- <div class="member__wrapper"> -->
             <div class="member__liked">1,5 m</div>
             <ul class="member__hashtags">
               <li class="member__hashtag">
@@ -340,17 +349,21 @@
                 <a class="member__hashtag-link" href="#"> #смузи</a>
               </li>
             </ul>
-            <p class="member__country-wish">хочет посетить:</p>
-            <ul class="member__countries">
-              <li class="member__country member__country--sri-lanka">
-                Шри-Ланка
-              </li>
-              <li class="member__country member__country--thailand">Таиланд</li>
-              <li class="member__country member__country--seychelles">
-                Сейшелы
-              </li>
-            </ul>
-            <div class="member__wrapper">
+            <div class="member__countries">
+              <p class="member__country-wish">хочет посетить:</p>
+              <ul class="member__countries-list">
+                <li class="member__country member__country--sri-lanka">
+                  Шри-Ланка
+                </li>
+                <li class="member__country member__country--thailand">
+                  Таиланд
+                </li>
+                <li class="member__country member__country--seychelles">
+                  Сейшелы
+                </li>
+              </ul>
+            </div>
+            <div class="member__wrapper-transport">
               <p class="member__travel-title">транспорт:</p>
               <ul class="member__travel-modes travel-way">
                 <li class="travel-way__item travel-way__item--plane travel-way__item--active">
@@ -366,16 +379,19 @@
                   <span class="visually-hidden">пешком</span>
                 </li>
               </ul>
-              <p class="member__level-title">левел:</p>
               <div class="member__level level level--catalog">
+                <p class="member__level-title">левел:</p>
                 <span class="level__value">99</span>
               </div>
             </div>
             <a class="member__invite button" href="#">Позвать!</a>
+              <!-- </div> -->
           </li>
           <li class="page-catalog__item member">
             <a class="member__link" href="#">
-              <img class="member__image" width="70" height="70" src="../source/img/petr-demin.png" alt="Петя Демин Фото" />
+              <img class="member__image" width="70" height="70" src="img/demin-mobile@1x.jpg" alt="Петя Демин Фото" />
+             </a>
+             <a class="member__link" href="#">
               <p class="member__name member__name--red">Петя Демин</p>
             </a>
             <div class="member__liked">150</div>
@@ -396,12 +412,14 @@
                 <a class="member__hashtag-link" href="#"> #крафт</a>
               </li>
             </ul>
-            <p class="member__country-wish">хочет посетить:</p>
-            <ul class="member__countries">
-              <li class="member__country member__country--belgium">Бельгия</li>
-              <li class="member__country member__country--czechia">Чехия</li>
-            </ul>
-            <div class="member__wrapper">
+            <div class="member__countries">
+              <p class="member__country-wish">хочет посетить:</p>
+              <ul class="member__countries-list">
+                <li class="member__country member__country--belgium">Бельгия</li>
+                <li class="member__country member__country--czechia">Чехия</li>
+              </ul>
+            </div>
+            <div class="member__wrapper-transport">
               <p class="member__travel-title">транспорт:</p>
               <ul class="member__travel-modes travel-way">
                 <li class="travel-way__item travel-way__item--plane travel-way__item--active">
@@ -417,8 +435,8 @@
                   <span class="visually-hidden">пешком</span>
                 </li>
               </ul>
-              <p class="member__level-title">левел:</p>
               <div class="member__level level level--catalog">
+                <p class="member__level-title">левел:</p>
                 <span class="level__value">80</span>
               </div>
             </div>
@@ -426,7 +444,9 @@
           </li>
           <li class="page-catalog__item member">
             <a class="member__link" href="#">
-              <img class="member__image" width="70" height="70" src="../source/img/mark-smolov.png" alt="Марк Смолов Фото" />
+              <img class="member__image" width="70" height="70" src="img/smolov-mobile@1x.jpg" alt="Марк Смолов Фото" />
+            </a>
+            <a class="member__link" href="#">
               <p class="member__name member__name--red">Марк Смолов</p>
             </a>
             <div class="member__liked">1700</div>
@@ -447,17 +467,19 @@
                 <a class="member__hashtag-link" href="#"> #суприм</a>
               </li>
             </ul>
-            <p class="member__country-wish">хочет посетить:</p>
-            <ul class="member__countries">
-              <li class="member__country member__country--usa">США</li>
-              <li class="member__country member__country--australia">
-                Австралия
-              </li>
-              <li class="member__country member__country--dominicana">
-                Доминикана
-              </li>
-            </ul>
-            <div class="member__wrapper">
+            <div class="member__countries">
+              <p class="member__country-wish">хочет посетить:</p>
+              <ul class="member__countries-list">
+                <li class="member__country member__country--usa">США</li>
+                <li class="member__country member__country--australia">
+                  Австралия
+                </li>
+                <li class="member__country member__country--dominicana">
+                  Доминикана
+                </li>
+              </ul>
+            </div>
+            <div class="member__wrapper-transport">
               <p class="member__travel-title">транспорт:</p>
               <ul class="member__travel-modes travel-way">
                 <li class="travel-way__item travel-way__item--plane travel-way__item--active">
@@ -473,8 +495,8 @@
                   <span class="visually-hidden">пешком</span>
                 </li>
               </ul>
-              <p class="member__level-title">левел:</p>
               <div class="member__level level level--catalog">
+                <p class="member__level-title">левел:</p>
                 <span class="level__value">25</span>
               </div>
             </div>
@@ -482,7 +504,9 @@
           </li>
           <li class="page-catalog__item member">
             <a class="member__link" href="#">
-              <img class="member__image" width="70" height="70" src="../source/img/larisa-rogovaya.png" alt="Лариса Роговая Фото" />
+              <img class="member__image" width="70" height="70" src="img/rogovaya-mobile@1x.jpg" alt="Лариса Роговая Фото" />
+            </a>
+            <a class="member__link" href="#">
               <p class="member__name member__name--green">Лариса Роговая</p>
             </a>
             <div class="member__liked">23</div>
@@ -500,14 +524,16 @@
                 <a class="member__hashtag-link" href="#"> #линкедин</a>
               </li>
             </ul>
-            <p class="member__country-wish">хочет посетить:</p>
-            <ul class="member__countries">
-              <li class="member__country member__country--britain">
-                Великобритания
-              </li>
-              <li class="member__country member__country--germany">Германия</li>
-            </ul>
-            <div class="member__wrapper">
+            <div class="member__countries">
+              <p class="member__country-wish">хочет посетить:</p>
+              <ul class="member__countries-list">
+                <li class="member__country member__country--britain">
+                  Великобритания
+                </li>
+                <li class="member__country member__country--germany">Германия</li>
+              </ul>
+            </div>
+            <div class="member__wrapper-transport">
               <p class="member__travel-title">транспорт:</p>
               <ul class="member__travel-modes travel-way">
                 <li class="travel-way__item travel-way__item--plane travel-way__item--active">
@@ -523,8 +549,8 @@
                   <span class="visually-hidden">пешком</span>
                 </li>
               </ul>
-              <p class="member__level-title">левел:</p>
               <div class="member__level level level--catalog">
+                <p class="member__level-title">левел:</p>
                 <span class="level__value">50</span>
               </div>
             </div>
@@ -547,7 +573,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page-footer container">
       <a class="page-footer__logo logo-pognali logo-pognali--footer">
         <img class="page-footer__logo-img logo-pognali__image" src="img/logo-mobile.svg" width="96" height="15" alt="Погнали?" />
       </a>
@@ -617,5 +643,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

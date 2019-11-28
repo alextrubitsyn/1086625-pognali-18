@@ -17,7 +17,30 @@
   line-height: 22px;
 }
 
+.directions__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.directions_item {
+  margin-bottom: 10px;
+}
+
+.directions__image {
+  border-radius: 10px;
+}
+
+.directions__wrapper {
+  display: flex;
+  margin-top: -13px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  z-index: 10;
+}
+
 .directions__country {
+  .clear();
   color: @bg-header;
   font-size: 21px;
   font-weight: 700;
@@ -31,10 +54,29 @@
   line-height: 18px;
 }
 
-.directions__slogan-count {
+.directions__count {
   opacity: 0.3;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
   text-transform: uppercase;
+}
+
+.directions__to-all {
+  width: 100%;
+  color: @title;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: @map;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+@media (min-width: @desktop-width) {
+  .directions__to-all {
+    width: 274px;
+    height: 81px;
+    border-radius: 20px;
+  }
 }

@@ -1,7 +1,10 @@
 .companions {
+  padding-bottom: 30px;
   color: #ffffff;
   font-size: 16px;
   line-height: 22px;
+  background-color: @bg-index;
+  border-radius: 0 0 30px 30px;
 }
 
 .companions__title {
@@ -17,4 +20,61 @@
 
 .companions__now-easy {
   font-weight: 700;
+}
+
+.companions__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.companions__item {
+  width: 270px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.companions__to-all {
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  color: @title;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  background-color: @map;
+  border-radius: 10px;
+}
+
+@media (min-width: @desktop-width) {
+  .companions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .companions__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  .companions__list {
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+  .companions__item {
+    width: 285px;
+    margin-right: 60px;
+    text-align: center;
+  }
+
+  .companions__to-all {
+    width: 280px;
+    margin-top: -50px;
+    height: 81px;
+    border-radius: 20px;
+  }
 }

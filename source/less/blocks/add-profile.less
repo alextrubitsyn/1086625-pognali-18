@@ -3,11 +3,14 @@
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
+  text-align: center;
   border-radius: 0 0 30px 30px;
 }
 
-.add-prifile__wrapper {
+.add-profile__wrapper {
+  margin-bottom: 70px;
   color: @text;
+  text-align: left;
   background-color: @bg-catalog;
   border-radius: 0 0 30px 30px;
 }
@@ -20,8 +23,22 @@
   line-height: 24px;
 }
 
+.add-profile__list {
+  display: flex;
+  flex-direction: column;
+  .clear();
+  padding: 25px;
+}
+
 .add-profile__item {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
+
+  &-wrap {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .add-profile__busness-link {
@@ -48,4 +65,83 @@
 .add-profile__authorization {
   color: #ffd74b;
   text-decoration: underline;
+}
+
+.add-profile__form {
+  display: flex;
+}
+
+.add-profile__email {
+  width: 100%;
+  height: 62px;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.add-profile__button {
+  .size(60; 62);
+  margin-left: -60px;
+  font-size: 0;
+  border-radius: 10px;
+  background-color: @map;
+}
+
+.add-profile__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  .clear();
+  padding-left: 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .add-profile__item {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    list-style: none;
+
+    &-wrap {
+      flex-direction: row;
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+  }
+
+  .add-profile__description {
+    flex-grow: 1;
+  }
+
+  .add-profile__number {
+    margin-right: 25px;
+  }
+
+  .add-profile__email {
+    width: calc(100% - 82px);
+    height: 81px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .add-profile__button {
+    .size(82; 81);
+    font-size: 0;
+    border-radius: 0 20px 20px 0;
+    background-color: @map;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-profile__email {
+    width: calc(100% - 324px);
+    height: 81px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .add-profile__button {
+    .size(324; 81);
+    color: @title;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 0 20px 20px 0;
+    background-color: @map;
+  }
 }

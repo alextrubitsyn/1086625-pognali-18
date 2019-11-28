@@ -1,11 +1,6 @@
-.size(@wt; @ht) {
-  width: @wt;
-  height: @ht;
-}
-
-.sq(@l) {
-  width: @l;
-  height: @l;
+.size(@wt; @ht:@wt) {
+  width: ~"@{wt}px";
+  height: ~"@{ht}px";
 }
 
 .clear() {

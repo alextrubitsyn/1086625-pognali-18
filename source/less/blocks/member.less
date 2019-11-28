@@ -1,7 +1,15 @@
 .member {
+  position: relative;
+  padding: 35px;
   color: @text;
   border-radius: 20px;
   background-color: #ffffff;
+
+  .page-catalog__users & {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
 .member__link {
@@ -12,7 +20,16 @@
   line-height: 21px;
 }
 
+.member__image {
+  border-radius: 10px 10px 0 0;
+
+  .page-catalog__item & {
+    border-radius: 50%;
+  }
+}
+
 .member__name {
+  .clear();
   color: @title;
   font-size: 20px;
   font-weight: 700;
@@ -27,34 +44,71 @@
   text-transform: uppercase;
 }
 
-.member__hashtag {
-  list-style: none;
+.member__hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  .clear();
+  .olg();
 }
 
-.member__hashtag-link {
-  color: @text;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
-  .page-catalog__item & {
-    font-size: 15px;
+.member__hashtag {
+  list-style: none;
+  margin-right: 10px;
+
+  &-link {
+    color: @text;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+
+    .page-catalog__item & {
+      font-size: 15px;
+    }
   }
 }
 
-.member__country-wish {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 18px;
+.member__countries-list {
+  display: flex;
+  list-style: none;
+
+  .page-catalog__item & {
+    flex-direction: column;
+  }
 }
 
 .member__country {
+  .size(35; 24);
+  margin-right: 19px;
   color: @title;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 18px;
+  font-size: 0;
   list-style: none;
   text-transform: uppercase;
+
+  .page-catalog__item & {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+
+  &-with {
+    .clear();
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  &--sri-lanka {
+    background-color: red;
+  }
+
+  &--thailand {
+    background-color: blue;
+  }
+
+  &--seychelles {
+    background-color: yellow;
+  }
 }
 
 .member__travel-title {
@@ -69,11 +123,159 @@
   line-height: 18px;
 }
 
+.member__travel-modes {
+  display: flex;
+  .clear();
+}
+
+.member__level {
+  position: absolute;
+  top: 16px;
+  left: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .size(60);
+  border-radius: 50%;
+}
+
 .member__invite {
+  padding: 6px 10px;
   color: @title;
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
+  background-color: @map;
   text-transform: uppercase;
   text-decoration: none;
+  border-radius: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .member {
+    .page-catalog__users & {
+      flex-direction: row;
+      align-items: flex-start;
+      .olo();
+    }
+  }
+
+  .member__link {
+    .page-catalog__item & {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+
+  .member__image {
+    .page-catalog__item & {
+      .size(190);
+      margin-right: 33px;
+      border-radius: 30px;
+    }
+  }
+
+  .member__name {
+    .page-catalog__item & {
+      width: 320px;
+      font-size: 30px;
+      line-height: 30px;
+      .olg();
+    }
+  }
+
+  // .member__wrapper {
+  //   .page-catalog__item & {
+  //     display: flex;
+  //   }
+  // }
+
+  .member__liked {
+    .page-catalog__item & {
+      order: 80;
+      margin-top: -40px;
+      margin-left: 30px;
+      color: @bg-header;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  .member__hashtags {
+    .page-catalog__item & {
+      width: 200px;
+      margin-top: -140px;
+      margin-left: 223px;
+    }
+  }
+
+  .member__countries {
+    .page-catalog__item & {
+      order: 90;
+    }
+  }
+
+  .member__countries-list {
+    .page-catalog__item & {
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 550px;
+      .olg();
+    }
+  }
+
+  .member__country {
+    .page-catalog__item & {
+      padding-left: 50px;
+      color: @title;
+      font-size: 20px;
+      line-height: 30px;
+
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .member__travel-title,
+  .member__level-title {
+    .page-catalog__item & {
+      display: none;
+    }
+  }
+
+  .member__wrapper-transport {
+    .page-catalog__item & {
+      margin-top: -150px;
+      margin-left: auto;
+      order: 100;
+      display: flex;
+      flex-direction: column;
+      .olg();
+    }
+  }
+
+  .member__travel-modes {
+    .page-catalog__item & {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .member__level {
+    .page-catalog__item & {
+      position: static;
+    }
+  }
+
+  .member__invite {
+    .page-catalog__item & {
+      margin-top: -50px;
+      margin-left: 223px;
+      color: @bg-header;
+      font-size: 20px;
+    }
+  }
 }

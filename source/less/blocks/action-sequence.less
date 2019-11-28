@@ -4,30 +4,135 @@
   line-height: 18px;
 }
 
+.action-sequence__list {
+  display: flex;
+  flex-wrap: wrap;
+  .clear();
+}
+
 .action-sequence__text {
   color: @bg-header;
 }
 
-.action-sequence__number {
-  color: #ffffff;
-}
-
 .action-sequence__item {
+  position: relative;
   list-style: none;
+  width: 100%;
 
   &:nth-child(1) {
+    height: 160px;
     background-color: @bg-sequence1;
+    border-radius: 10px 10px 0 0;
   }
 
   &:nth-child(2) {
+    margin-top: -80px;
+    height: 160px;
     background-color: @bg-sequence2;
+    border-radius: 10px 10px 0 0;
   }
 
   &:nth-child(3) {
+    margin-top: -80px;
+    height: 146px;
     background-color: @bg-sequence3;
+    border-radius: 10px 10px 0 0;
   }
 
   &:nth-child(4) {
+    margin-top: -66px;
+    height: 80px;
     background-color: @bg-sequence4;
+    border-radius: 10px;
+  }
+}
+
+.action-sequence__number {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .action-sequence__item {
+    list-style: none;
+
+    &:nth-child(1) {
+      width: calc(50% + 30px);
+      height: 140px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &:nth-child(2) {
+      width: 50%;
+      height: 140px;
+      margin-top: 0;
+      margin-left: -30px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &:nth-child(3) {
+      width: calc(50% + 30px);
+      height: 140px;
+      margin-top: 0;
+      border-radius: 0 0 20px 20px;
+    }
+
+    &:nth-child(4) {
+      width: 50%;
+      height: 140px;
+      margin-top: 0;
+      margin-left: -30px;
+      border-radius: 0 0 20px 20px;
+    }
+  }
+
+  .action-sequence__number {
+    position: absolute;
+    top: calc(100% - 28px);
+    right: calc(100% - 34px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .action-sequence__item {
+    list-style: none;
+
+    &:nth-child(1) {
+      width: calc(25% + 30px);
+      height: 107px;
+      border-radius: 20px;
+    }
+
+    &:nth-child(2) {
+      width: calc(25% + 30px);
+      height: 107px;
+      margin-top: 0;
+      margin-left: -30px;
+      border-radius: 20px;
+    }
+
+    &:nth-child(3) {
+      width: calc(25% + 30px);
+      height: 107px;
+      margin-top: 0;
+      margin-left: -30px;
+      border-radius: 20px;
+    }
+
+    &:nth-child(4) {
+      width: calc(25%);
+      height: 107px;
+      margin-top: 0;
+      margin-left: -30px;
+      border-radius: 20px;
+    }
+  }
+
+  .action-sequence__number {
+    position: absolute;
+    top: 28px;
+    right: 37px;
   }
 }

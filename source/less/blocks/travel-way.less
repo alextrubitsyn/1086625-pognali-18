@@ -1,3 +1,35 @@
 .travel-way__item {
   list-style: none;
+  opacity: 0.15;
+
+  &--plane {
+    .size(19; 21);
+    margin-right: 17px;
+    background: url("../../img/plane.svg") no-repeat;
+    background-position: center;
+  }
+
+  &--bus {
+    .size(17; 21);
+    margin-right: 13px;
+    background: url("../../img/bus.svg") no-repeat;
+    background-position: center;
+  }
+
+  &--bike {
+    .size(24; 21);
+    margin-right: 10px;
+    background: url("../../img/bike.svg") no-repeat;
+    background-position: center;
+  }
+
+  &--run {
+    .size(20; 21);
+    background: url("../../img/run.svg") no-repeat;
+    background-position: center;
+  }
+
+  &--active {
+    opacity: 1;
+  }
 }

@@ -1,13 +1,35 @@
 .contacts {
+  display: none;
+  .clear();
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
   text-align: left;
   text-transform: uppercase;
+
+  .page-header--menu-open &,
+  .page-header--nojs & {
+    display: block;
+  }
+
+  .page-main__user & {
+    display: flex;
+  }
 }
 
 .contacts__item {
   list-style: none;
+
+  .page-main__user & {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-profile & {
+    width: 100%;
+    padding-left: 60px;
+  }
 }
 
 .contacts__link {
@@ -18,22 +40,59 @@
     text-decoration: none;
     color: @map;
   }
+
+  .page-main__user & {
+    .size(40);
+    font-size: 0;
+    border-radius: 50%;
+  }
+}
+
+.contacts__phone {
+  .page-main__user & {
+    background-color: @bg-sequence1;
+  }
+}
+
+.contacts__email {
+  .page-main__user & {
+    background-color: @bg-sequence3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    .page-main__user & {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
-    display: flex;
-    flex-wrap: wrap;
+    .page-header & {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .page-main__user & {
+      display: none;
+    }
   }
 
   .contacts__item {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .add-profile & {
+      width: 50%;
+      padding-left: 94px;
+    }
   }
 
   .contacts__link {
-    .sq(50px);
+    .size(50);
     font-size: 0;
     border-radius: 50%;
   }

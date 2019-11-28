@@ -1,12 +1,15 @@
 .social {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
 
-@media (min-width: @desktop-width) {
-  .social {
+  .page-header & {
     display: none;
+  }
+
+  .page-header--menu-open &,
+  .page-header--nojs & {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -21,14 +24,20 @@
   border-radius: 50%;
 
   .page-header & {
-    .size(39px; 45px);
+    .size(39; 45);
     color: #cccccc;
     background-color: #ffffff;
   }
 
   .page-footer & {
-    .size(45px; 45px);
+    .size(45; 45);
     color: @title;
     background-color: @map;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header .social {
+    display: none;
   }
 }

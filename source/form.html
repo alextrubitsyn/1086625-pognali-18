@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
   <body>
-    <header class="page-header">
-      <a class="page-header__logo logo-pognali" href="index.html">
-        <img class="page-header__logo-img logo-pognali__image" src="img/logo-mobile.svg" width="96" height="15" alt="Погнали?" />
-      </a>
+    <header class="page-header page-header--nojs container">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo logo-pognali" href="index.html">
+          <img class="page-header__logo-img logo-pognali__image" src="img/logo-mobile-white@1x.png" width="96" height="15" alt="Погнали?" />
+        </a>
+        <button class="page-header__toggle" type="button" aria-label="Закрыть/открыть форму"></button>
+      </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Закрыть/открыть форму"></button>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">О сервисе</a>
@@ -436,5 +439,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
