@@ -21,6 +21,17 @@
   overflow: hidden;
 }
 
+.segment(@wt; @level; @sw) {
+  @lev: @level / 100;
+  @l: (@wt - @sw) * 3.1415926;
+  cx: @wt / 2;
+  cy: @wt / 2;
+  r: (@wt - @sw) / 2;
+  stroke-width: @sw;
+  stroke-dasharray: @l * @lev @l * (1 - @lev);
+  stroke-dashoffset: @l * 0.25;
+}
+
 // Отладочные миксины
 .olr() {
   outline: 3px solid red;

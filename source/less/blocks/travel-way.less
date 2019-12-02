@@ -1,35 +1,92 @@
 .travel-way__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .size(32);
+  margin-right: 3px;
   list-style: none;
-  opacity: 0.15;
+  border-radius: 50%;
+  opacity: 1;
+  // .olg();
+
+  &::before {
+    position: absolute;
+    content: "";
+    .size(32);
+    top: 0;
+    left: 0;
+    opacity: 0.15;
+  }
+
+  .page-catalog__users & {
+    margin: 0;
+    background-color: @bg-catalog;
+  }
 
   &--plane {
-    .size(19; 21);
-    margin-right: 17px;
-    background: url("../../img/plane.svg") no-repeat;
-    background-position: center;
+    &::before {
+      background: url("../../img/plane.svg") no-repeat;
+      background-position: center;
+      background-size: 19px 21px;
+
+      .page-catalog__users & {
+        background-size: 14px 16px;
+      }
+    }
   }
 
   &--bus {
-    .size(17; 21);
-    margin-right: 13px;
-    background: url("../../img/bus.svg") no-repeat;
-    background-position: center;
+    &::before {
+      background: url("../../img/bus.svg") no-repeat;
+      background-position: center;
+      background-size: 17px 21px;
+
+      .page-catalog__users & {
+        background-size: 13px 16px;
+      }
+    }
+
+    .page-catalog__users & {
+      margin: 0;
+    }
   }
 
   &--bike {
-    .size(24; 21);
-    margin-right: 10px;
-    background: url("../../img/bike.svg") no-repeat;
-    background-position: center;
+    &::before {
+      background: url("../../img/bike.svg") no-repeat;
+      background-position: center;
+      background-size: 24px 21px;
+
+      .page-catalog__users & {
+        background-size: 19px 17px;
+      }
+    }
+
+    .page-catalog__users & {
+      margin: 0;
+    }
   }
 
   &--run {
-    .size(20; 21);
-    background: url("../../img/run.svg") no-repeat;
-    background-position: center;
+    &::before {
+      background: url("../../img/run.svg") no-repeat;
+      background-position: center;
+      background-size: 20px 21px;
+
+      .page-catalog__users & {
+        background-size: 15px 17px;
+      }
+    }
+
+    .page-catalog__users & {
+      margin: 0;
+    }
   }
 
   &--active {
-    opacity: 1;
+    &::before {
+      opacity: 1;
+    }
   }
 }

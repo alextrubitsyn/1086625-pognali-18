@@ -26,6 +26,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  .clear();
   list-style: none;
 }
 
@@ -36,16 +37,30 @@
 }
 
 .companions__to-all {
+  position: relative;
   width: 100%;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px;
   color: @title;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   text-decoration: none;
+  text-align: left;
   background-color: @map;
   border-radius: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: calc(50% - 7px);
+    right: 19px;
+    .size(10; 14);
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: 10px 14px;
+    background-position: center;
+  }
 }
 
 @media (min-width: @desktop-width) {

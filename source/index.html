@@ -125,19 +125,31 @@
         <h2 class="visually-hidden">Последовательность действий</h2>
         <ul class="action-sequence__list">
           <li class="action-sequence__item">
-            <b class="action-sequence__text">Выберите направление</b>
+            <div class="action-sequence__text">
+              <b class="action-sequence__text1">Выберите</b>
+              <b class="action-sequence__text2">направление</b>
+            </div>
             <span class="action-sequence__number">1</span>
           </li>
           <li class="action-sequence__item">
-            <b class="action-sequence__text">Изучите идеи путешественников</b>
+            <div class="action-sequence__text">
+              <b class="action-sequence__text1">Изучите идеи</b>
+              <b class="action-sequence__text2">путешественников</b>
+            </div>
             <span class="action-sequence__number">2</span>
           </li>
           <li class="action-sequence__item">
-            <b class="action-sequence__text">Находите тех, кто похож на вас</b>
+            <div class="action-sequence__text">
+              <b class="action-sequence__text1">Находите тех,</b>
+              <b class="action-sequence__text2">кто похож на вас</b>
+            </div>
             <span class="action-sequence__number">3</span>
           </li>
           <li class="action-sequence__item">
-            <b class="action-sequence__text">Путешествуйте вместе!</b>
+            <div class="action-sequence__text">
+              <b class="action-sequence__text1">Путешествуйте</b>
+              <b class="action-sequence__text2">вместе!</b>
+            </div>
             <span class="action-sequence__number">4</span>
           </li>
         </ul>
@@ -193,25 +205,28 @@
         </div>
         <ul class="companions__list">
           <li class="companions__item member">
-            <a class="member__link" href="#">
+            <a class="member__link-img" href="#">
               <img class="member__image" width="270" height="270" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова Фото" />
             </a>
-            <div class="member__level level level--index">
-              <span class="level__value">99</span>
-              <span class="level__text">level</span>
+            <div class="member__level">
+              <svg class="member__level-line" width="60" height="60" viewBox="0 0 60 60">
+                <circle class="member__level-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke-width="3" stroke-dasharray="177.2800704 1.790707782" stroke-dashoffset="44.76769455"></circle>
+              </svg>
+              <span class="member__level-value">99</span>
+              <span class="member__level-text">level</span>
             </div>
             <ul class="member__countries">
-              <li class="member__country member__country--main member__country--sri-lanka">
+              <li class="member__country member__country--sri-lanka">
                 Шри-Ланка
               </li>
-              <li class="member__country member__country--main member__country--thailand">
+              <li class="member__country member__country--thailand">
                 Таиланд
               </li>
-              <li class="member__country member__country--main member__country--seychelles">
+              <li class="member__country member__country--seychelles">
                 Сейшелы
               </li>
             </ul>
-            <a class="member__link" href="#">
+            <a class="member__link-name" href="#">
               <p class="member__name member__name--red">Таня Фирсова</p>
             </a>
             <ul class="member__hashtags">
@@ -250,12 +265,15 @@
             </ul>
           </li>
           <li class="companions__item member">
-            <a class="member__link" href="#">
+            <a class="member__link-img" href="#">
               <img class="member__image" width="270" height="270" src="img/demin-mobile@1x.jpg" alt="Петя Демин Фото" />
             </a>
-            <div class="member__level level level--index">
-              <span class="level__value">99</span>
-              <span class="level__text">level</span>
+            <div class="member__level">
+              <span class="member__level-value">80</span>
+              <span class="member__level-text">level</span>
+              <svg class="member__level-line" width="60" height="60" viewBox="0 0 60 60">
+                <circle class="member__level-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke-width="3" stroke-dasharray="143.2566226 35.81415564" stroke-dashoffset="44.76769455"></circle>
+              </svg>
             </div>
             <ul class="member__countries">
               <li class="member__country member__country--main member__country--belgium">
@@ -265,7 +283,7 @@
                 Чехия
               </li>
             </ul>
-            <a class="member__link" href="#">
+            <a class="member__link-name" href="#">
               <p class="member__name member__name--green">Петя Демин</p>
             </a>
             <ul class="member__hashtags">
@@ -289,14 +307,14 @@
               <li class="travel-way__item travel-way__item--plane travel-way__item--active">
                 <span class="visually-hidden">самолёт</span>
               </li>
-              <li class="travel-way__item travel-way__item--bus travel-way__item--active">
-                <span class="visually-hidden">самолёт</span>
+              <li class="travel-way__item travel-way__item--bus">
+                <span class="visually-hidden">автобус</span>
               </li>
               <li class="travel-way__item travel-way__item--bike">
-                <span class="visually-hidden">самолёт</span>
+                <span class="visually-hidden">велосипед</span>
               </li>
-              <li class="travel-way__item travel-way__item--run travel-way__item--active">
-                <span class="visually-hidden">самолёт</span>
+              <li class="travel-way__item travel-way__item--run">
+                <span class="visually-hidden">пешком</span>
               </li>
             </ul>
           </li>
