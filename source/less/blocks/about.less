@@ -3,27 +3,63 @@
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
+  border-radius: 0 0 30px 30px;
 }
 
 .about__title {
-  color: @bg-sequence1;
-  font-size: 24px;
-  line-height: 24px;
+  .clear();
+  margin-bottom: 23px;
 }
 
 .about__text {
+  .clear();
+  margin-bottom: 25px;
   font-weight: 300;
+}
+
+.about__next {
+  display: block;
+  .clear();
 }
 
 .about__more {
   display: none;
-  .size(274; 81);
 }
 
 @media (min-width: @tablet-width) {
+  .about {
+    padding-bottom: 88px;
+    background: url("../../img/about-desktop@1x.png") no-repeat;
+    background-size: 376px 548px;
+    background-position: right 5px;
+  }
+
+  .about__title {
+    .clear();
+    margin-bottom: 43px;
+    padding-left: 35px;
+  }
+
+  .about__text {
+    width: 335px;
+    margin-bottom: 43px;
+    padding-left: 35px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .about__next {
+    width: 300px;
+    margin-bottom: 53px;
+    padding-left: 35px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+
   .about__more {
-    display: block;
-    padding: 30px 128px 28px 34px;
+    display: inline-block;
+    margin-left: 35px;
+    padding: 30px 126px 28px 34px;
     color: @title;
     font-size: 24px;
     font-weight: 700;
@@ -35,9 +71,32 @@
 }
 
 @media (min-width: @desktop-width) {
+  .about {
+    padding-bottom: 163px;
+    background: url("../../img/about-desktop@1x.png") no-repeat;
+    background-size: 376px 548px;
+    background-position: right 5px;
+  }
+
+  .about__title {
+    .clear();
+    margin-bottom: 61px;
+    padding-left: 72px;
+  }
+
+  .about__text {
+    width: 685px;
+    padding-left: 71px;
+  }
+
+  .about__next {
+    width: 485px;
+    margin-bottom: 86px;
+    padding-left: 71px;
+  }
+
   .about__more {
-    display: block;
-    padding: 30px 128px 28px 34px;
+    padding: 30px 126px 28px 34px;
     color: @title;
     font-size: 24px;
     font-weight: 700;

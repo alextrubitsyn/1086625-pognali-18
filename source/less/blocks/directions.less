@@ -1,23 +1,19 @@
 .directions {
+  padding-bottom: 30px;
   color: @text;
   background-color: @bg-catalog;
   border-radius: 0 0 30px 30px;
 }
 
-.directions__title {
-  color: @bg-sequence1;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
 .directions__entry {
+  .clear();
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
 }
 
 .directions__list {
+  .clear();
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -33,7 +29,6 @@
 
 .directions__wrapper {
   display: flex;
-  margin-top: -13px;
   border-radius: 10px;
   background-color: #ffffff;
   z-index: 10;
@@ -64,19 +59,27 @@
 
 .directions__to-all {
   width: 100%;
+  padding: 24px;
   color: @title;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   background-color: @map;
   text-decoration: none;
+  text-align: left;
   border-radius: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .directions__to-all {
+    padding: 31px 35px 32px 34px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .directions__to-all {
-    width: 274px;
-    height: 81px;
-    border-radius: 20px;
   }
 }

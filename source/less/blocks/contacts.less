@@ -7,6 +7,10 @@
   text-align: left;
   text-transform: uppercase;
 
+  .add-profile & {
+    display: block;
+  }
+
   .page-header--menu-open &,
   .page-header--nojs & {
     display: block;
@@ -36,7 +40,25 @@
   color: @bg-index;
   text-decoration: none;
 
-  &--orange {
+  &--phone {
+    .page-main__user & {
+      background: url("../../img/topmenu-phone.svg") no-repeat;
+      background-size: 18px;
+      background-position: center;
+      background-color: @bg-sequence1;
+    }
+  }
+
+  &--email {
+    .page-main__user & {
+      background: url("../../img/topmenu-mail.svg") no-repeat;
+      background-size: 18px;
+      background-position: center;
+      background-color: @bg-sequence3;
+    }
+  }
+
+  .add-profile__contacts & {
     text-decoration: none;
     color: @map;
   }
@@ -45,25 +67,6 @@
     .size(40);
     font-size: 0;
     border-radius: 50%;
-  }
-}
-
-.contacts__phone {
-  .page-main__user & {
-    background: url("../../img/topmenu-phone.svg") no-repeat;
-    background-size: 18px;
-    background-position: center;
-    background-color: @bg-sequence1;
-
-  }
-}
-
-.contacts__email {
-  .page-main__user & {
-    background: url("../../img/topmenu-mail.svg") no-repeat;
-    background-size: 18px;
-    background-position: center;
-    background-color: @bg-sequence3;
   }
 }
 
@@ -102,13 +105,13 @@
     .size(50);
     font-size: 0;
     border-radius: 50%;
-  }
 
-  .contacts__phone {
-    background-color: @bg-sequence1;
-  }
+    &--phone {
+      background-color: @bg-sequence1;
+    }
 
-  .contacts__email {
-    background-color: @bg-sequence3;
+    &--email {
+      background-color: @bg-sequence3;
+    }
   }
 }

@@ -1,10 +1,11 @@
 .page-header {
+  width: 100%;
   position: relative;
   background-color: @bg-header;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 
   &--menu-open,
-  &--nojs {
+  .nojs & {
     background-color: #ffffff;
   }
 }
@@ -36,7 +37,7 @@
     background-image: url("/img/menu-close.svg");
   }
 
-  .page-header--nojs & {
+  .nojs & {
     display: none;
   }
 }
@@ -50,11 +51,11 @@
     background-color: @bg-head-tablet;
 
     &--menu-open,
-    &--nojs {
+    .nojs & {
       background-color: #ffffff;
     }
 
-    &--nojs {
+    .nojs & {
       display: block;
     }
   }
