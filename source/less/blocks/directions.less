@@ -1,12 +1,18 @@
 .directions {
-  padding-bottom: 30px;
+  position: relative;
+  padding-bottom: 108px;
   color: @text;
   background-color: @bg-catalog;
   border-radius: 0 0 30px 30px;
 }
 
+.directions__title {
+  margin-bottom: 23px;
+}
+
 .directions__entry {
   .clear();
+  margin-bottom: 66px;
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
@@ -19,23 +25,26 @@
   list-style: none;
 }
 
-.directions_item {
+.directions__item {
   margin-bottom: 10px;
 }
 
 .directions__image {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .directions__wrapper {
   display: flex;
+  flex-wrap: wrap;
   border-radius: 10px;
   background-color: #ffffff;
-  z-index: 10;
+  .olg();
 }
 
 .directions__country {
   .clear();
+  padding-right: 98px;
+  padding-left: 24px;
   color: @bg-header;
   font-size: 21px;
   font-weight: 700;
@@ -43,6 +52,7 @@
 }
 
 .directions__slogan-country {
+  .clear();
   opacity: 0.3;
   font-size: 16px;
   font-weight: 500;
@@ -51,6 +61,7 @@
 
 .directions__count {
   opacity: 0.3;
+  padding-right: 19px;
   font-size: 16px;
   font-weight: 500;
   line-height: 30px;
@@ -58,7 +69,10 @@
 }
 
 .directions__to-all {
-  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  left: 7.81%;
+  width: 84.375%;
   padding: 24px;
   color: @title;
   font-size: 18px;
@@ -68,18 +82,198 @@
   text-decoration: none;
   text-align: left;
   border-radius: 10px;
+
+  &::after {
+    right: 24px;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .directions {
+    padding-top: 74px;
+    padding-bottom: 80px;
+    background: url("../../img/flags-back@1x.png") no-repeat;
+    background-size: 289px 575px;
+    background-position: right 74px;
+    background-color: @bg-catalog;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .directions__wrapper {
+  }
+
+  .directions__title {
+    margin-bottom: 62px;
+    padding-left: 35px;
+  }
+
+  .directions__entry {
+    width: 337px;
+    padding-left: 35px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .directions__list {
+    width: 559px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 43px;
+    padding-left: 35px;
+    padding-right: 35px;
+    list-style: none;
+  }
+
+  .directions__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 20px;
+  }
+
+  .directions__image {
+    .size(186; 140);
+    order: 2;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .directions__wrapper {
+    flex-grow: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 32px 0 25px 30px;
+  }
+
+  .directions__country {
+    .clear();
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .directions__count {
+    opacity: 0.3;
+    order: 2;
+    padding-left: 31px;
+    font-size: 20px;
+  }
+
+  .directions__slogan-country {
+    opacity: 0.3;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 17.68px;
+  }
+
   .directions__to-all {
+    display: block;
+    width: 618px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 31px 35px 32px 34px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
+
+    &::after {
+      right: 35px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .directions {
+    padding-top: 88px;
+    padding-bottom: 87px;
+    // background: url("../../img/flags-back@1x.png") no-repeat;
+    // background-size: 289px 575px;
+    background-position: right 74px;
+    background-color: @bg-catalog;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .directions__title {
+    margin-bottom: 62px;
+    padding-left: 35px;
+  }
+
+  .directions__entry {
+    width: 337px;
+    padding-left: 35px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .directions__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 43px;
+    padding-left: 35px;
+    padding-right: 35px;
+    list-style: none;
+  }
+
+  .directions__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    .olg();
+  }
+
+  .directions__image {
+    .size(186; 140);
+    order: 2;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .directions__wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 32px 0 25px 30px;
+  }
+
+  .directions__country {
+    .clear();
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .directions__count {
+    opacity: 0.3;
+    order: 2;
+    padding-left: 31px;
+    font-size: 20px;
+  }
+
+  .directions__slogan-country {
+    opacity: 0.3;
+    flex-grow: 1;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 17.68px;
+  }
+
   .directions__to-all {
+    display: block;
+    width: 618px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 31px 35px 32px 34px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
+    &::after {
+      right: 35px;
+    }
   }
 }

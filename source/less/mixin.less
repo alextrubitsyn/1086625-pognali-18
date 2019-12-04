@@ -32,6 +32,13 @@
   stroke-dashoffset: @l * 0.25;
 }
 
+.psevdo(@wt; @ht:@wt) {
+  position: absolute;
+  content: "";
+  width: ~"@{wt}px";
+  height: ~"@{ht}px";
+}
+
 // Отладочные миксины
 .olr() {
   outline: 3px solid red;
