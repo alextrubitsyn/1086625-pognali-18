@@ -103,23 +103,26 @@
     left: 46px;
     width: 50%;
     padding: 5px 0 5px 38px;
+  }
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      .size(31);
-      background: url("../../img/heart.svg") no-repeat;
-      background-color: @bg-catalog;
-      background-size: 13px 11px;
-      background-position: center;
-      border-radius: 50%;
-    }
+.member__like-btn {
+  .page-catalog__users & {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .size(31);
+    background: url("../../img/heart.svg") no-repeat;
+    background-color: @bg-catalog;
+    background-size: 13px 11px;
+    background-position: center;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
 
-    &--active::before {
+    &--active {
       background: url("../../img/heart-active.svg") no-repeat;
-      background-color: #f9eaea;
+      background-color: @heart-active;
       background-size: 13px 11px;
       background-position: center;
     }
@@ -476,6 +479,14 @@
       color: @bg-header;
       font-size: 20px;
       line-height: 30px;
+    }
+  }
+
+  .member__like-btn {
+    .page-catalog__users & {
+      position: static;
+      top: auto;
+      left: auto;
     }
   }
 
