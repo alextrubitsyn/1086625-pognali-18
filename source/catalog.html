@@ -1195,20 +1195,33 @@
           </li>
         </ul>
         <a class="page-catalog__show-more button" href="#">Показать еще</a>
-        <ul class="page-catalog__pagination pagination">
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">
-              <span class="pagination__left visually-hidden">Предыдущий</span>
-            </a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__link" href="#">
-              <span class="pagination__right visually-hidden">Следующий</span>
-            </a>
-          </li>
-        </ul>
+
+        <!-- ПАГИНАЦИЯ -->
+        <div class="page-catalog__pagination pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--current">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">3</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">4</a>
+            </li>
+          </ul>
+          <a class="pagination__btn pagination__btn--before" href="#">
+            <span class="visually-hidden">Предыдущий</span>
+          </a>
+          <a class="pagination__btn pagination__btn--after" href="#">
+            <span class="visually-hidden">Следующий</span>
+          </a>
+        </div>
       </section>
       </div>
+
     </main>
 
     <!-- ФУТЕР -->
