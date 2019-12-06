@@ -109,13 +109,13 @@
 
     <main class="page-catalog container">
       <h1 class="visually-hidden">Каталог попутчиков</h1>
-      <section class="country-filter">
-        <h2 class="country-filter__title">Фильтрация по странам</h2>
-        <button class="country-filter__toggle" type="button">
-          <span class="country-filter__toggle-open">Показать все</span>
-          <span class="country-filter__toggle-close">Свернуть</span>
-        </button>
-        <div class="country-filter__wrapper country-filter__wrapper--open">
+      <section class="country-filter country-filter--open">
+        <div class="country-filter__menu">
+          <h2 class="country-filter__title">Фильтрация по странам</h2>
+          <button class="country-filter__toggle" type="button">
+            <span class="country-filter__toggle-open">Показать все</span>
+            <span class="country-filter__toggle-close">Свернуть</span>
+          </button>
           <ul class="country-filter__region-list">
             <li class="country-filter__region-item">
               <a class="country-filter__region-link country-filter__region-link--active" href="#">Европа</a>
@@ -130,6 +130,8 @@
               <a class="country-filter__region-link" href="#">Острова</a>
             </li>
           </ul>
+        </div>
+        <div class="country-filter__wrapper">
           <ul class="country-filter__letter-list">
             <li class="country-filter__letter-item">
               <button class="country-filter__letter-btn country-filter__letter-btn--active" type="button">А</button>
@@ -815,9 +817,8 @@
               </li>
             </ul>
           </div>
-
-          <button class="country-filter__close" type="button">свернуть</button>
         </div>
+        <button class="country-filter__close" type="button">свернуть</button>
       </section>
     <div class="page-catalog__wrapper">
       <section class="page-catalog__filter  user-filters">

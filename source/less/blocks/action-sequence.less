@@ -1,8 +1,10 @@
 .action-sequence {
-  margin-bottom: 72px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
+  .main-page & {
+    margin-bottom: 72px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+  }
 }
 
 .action-sequence__list {
@@ -45,6 +47,7 @@
 
 .action-sequence__text {
   width: 140px;
+  .clear();
   color: @bg-header;
 }
 

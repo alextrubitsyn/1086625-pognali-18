@@ -1,22 +1,31 @@
 .add-profile {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-  text-align: center;
-  border-radius: 0 0 30px 30px;
+  .page-main {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 0 0 30px 30px;
+  }
 }
 
 .add-profile__wrapper {
   margin-bottom: 70px;
-  color: @text;
   text-align: left;
+  color: @text;
   background-color: @bg-catalog;
   border-radius: 0 0 30px 30px;
 }
 
 .add-profile__title {
-  text-decoration: none;
+  .page-main & {
+    display: block;
+    padding: 15px 144px 13px 25px;
+    text-decoration: none;
+    background: url("../../img/rates@1x.png") no-repeat;
+    background-size: 99px;
+    background-position: right center;
+  }
 }
 
 .add-profile__list {
