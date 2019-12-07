@@ -1,10 +1,10 @@
 .add-profile {
-  .page-main {
+  .page-main & {
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
     text-align: center;
-    color: #ffffff;
+    background-color: @bg-catalog;
     border-radius: 0 0 30px 30px;
   }
 }
@@ -13,8 +13,6 @@
   margin-bottom: 70px;
   text-align: left;
   color: @text;
-  background-color: @bg-catalog;
-  border-radius: 0 0 30px 30px;
 }
 
 .add-profile__title {
@@ -46,56 +44,14 @@
   }
 }
 
-.add-profile__busness-link {
+.add-profile__business-link {
+  width: 100%;
+  margin-bottom: 36px;
   color: @bg-index;
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
-}
-
-.add-profile__question {
-  color: @bg-sequence1;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-}
-
-.add-profile__communication {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 22px;
-}
-
-.add-profile__authorization {
-  color: #ffd74b;
-  text-decoration: underline;
-}
-
-.add-profile__form {
-  display: flex;
-}
-
-.add-profile__email {
-  width: 100%;
-  height: 62px;
-  border-radius: 10px;
-  background-color: #ffffff;
-}
-
-.add-profile__button {
-  .size(60; 62);
-  margin-left: -60px;
-  font-size: 0;
-  border-radius: 10px;
-  background-color: @map;
-}
-
-.add-profile__contacts {
-  display: flex;
-  flex-wrap: wrap;
-  .clear();
-  padding-left: 60px;
 }
 
 @media (min-width: @tablet-width) {

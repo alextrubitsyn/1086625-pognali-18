@@ -1,5 +1,6 @@
 .map {
-  color: @bg-index;
+  background-color: @map;
+  border-radius: 0 0 30px 30px;
 }
 
 .map__wrapper {
@@ -7,29 +8,47 @@
   flex-direction: column;
   padding: 0 25px 35px;
   background-color: @map;
-  border-radius: 0 0 30px 30px;
+  color: @bg-index;
 }
 
 .map__address {
+  position: relative;
+  padding-right: 30px;
   padding-left: 61px;
   color: @bg-index;
   font-size: 16px;
   font-weight: 700;
   line-height: 22px;
   text-transform: uppercase;
+
+  &::after {
+    .psevdo();
+    .size(45);
+    left: 0;
+    top: 0;
+    background: url("../../img/contacts-location.svg") no-repeat;
+    background-size: 14px 22px;
+    background-position: center;
+    background-color: #121936;
+    border-radius: 50%;
+  }
 }
 
 .map__link {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
+  // display: block;
+  padding: 24px 23px 21px 24px;
   color: @title;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
   text-decoration: none;
+  text-align: left;
   border-radius: 10px;
   border: 3px solid @bg-index;
+
+  &::after {
+    right: 23px;
+  }
 }
 
 .map__frame {

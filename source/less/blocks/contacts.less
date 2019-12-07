@@ -7,7 +7,7 @@
   text-align: left;
   text-transform: uppercase;
 
-  .add-profile & {
+  .registration & {
     display: block;
   }
 
@@ -29,20 +29,34 @@
     justify-content: center;
     align-items: center;
   }
-
-  .add-profile & {
-    width: 100%;
-    padding-left: 60px;
-  }
 }
 
 .contacts__link {
+  display: block;
   color: @bg-index;
   text-decoration: none;
 
+  .registration & {
+    color: @map;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 61px;
+
+    &--phone {
+      background: url("../../img/contacts-phone.svg") no-repeat;
+      background-size: 18px;
+      background-position: 14px center;
+    }
+
+    &--email {
+      background: url("../../img/contacts-mail.svg") no-repeat;
+      background-size: 18px;
+      background-position: 14px center;
+    }
+  }
+
   &--phone {
-    .page-main__user &,
-    .page-header & {
+    .page-main__user & {
       background: url("../../img/topmenu-phone.svg") no-repeat;
       background-size: 18px;
       background-position: center;
@@ -51,18 +65,12 @@
   }
 
   &--email {
-    .page-main__user &,
-    .page-header & {
+    .page-main__user & {
       background: url("../../img/topmenu-mail.svg") no-repeat;
       background-size: 18px;
       background-position: center;
       background-color: @bg-sequence3;
     }
-  }
-
-  .add-profile__contacts & {
-    text-decoration: none;
-    color: @map;
   }
 
   .page-main__user & {
@@ -95,10 +103,10 @@
     justify-content: center;
     align-items: center;
 
-    .add-profile & {
-      width: 50%;
-      padding-left: 94px;
-    }
+    // .add-profile & {
+    //   width: 50%;
+    //   padding-left: 94px;
+    // }
   }
 
   .contacts__link {
