@@ -1,4 +1,5 @@
 .social {
+  .clear();
   display: flex;
 
   .page-header & {
@@ -6,7 +7,7 @@
   }
 
   .page-header--menu-open &,
-  .page-header--nojs & {
+  .nojs & {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -36,8 +37,18 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .social {
+    .page-header & {
+      order: 5;
+    }
+  }
+}
+
 @media (min-width: @desktop-width) {
-  .page-header .social {
-    display: none;
+  .social {
+    .page-header & {
+      display: none;
+    }
   }
 }

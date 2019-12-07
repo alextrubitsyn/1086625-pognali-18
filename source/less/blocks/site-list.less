@@ -2,7 +2,7 @@
   display: none;
 
   .page-header--menu-open &,
-  .page-header--nojs & {
+  .nojs & {
     display: block;
   }
 
@@ -26,13 +26,17 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header .site-list {
-    display: flex;
-    margin-right: auto;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 30px;
-    text-transform: uppercase;
+  .site-list {
+    .page-header & {
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: auto;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
   }
 
   .site-list__item {

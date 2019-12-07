@@ -2,7 +2,7 @@
   display: none;
 
   .page-header--menu-open &,
-  .page-header--nojs & {
+  .nojs & {
     display: block;
   }
 }
@@ -23,15 +23,15 @@
 @media (min-width: @tablet-width) {
   .user-list {
     display: block;
-    order: -1;
-    align-self: flex-end;
-    margin-top: 0;
+    margin-top: -120px;
+    margin-bottom: 120px;
+    margin-left: auto;
     background-color: @bg-head-tablet;
 
     .page-header--menu-open &,
-    .page-header--nojs & {
-      margin-top: -64px;
-      margin-right: 40px;
+    .nojs & {
+      order: -1;
+      padding-right: 40px;
       background-color: #ffffff;
     }
   }
@@ -44,9 +44,11 @@
 @media (min-width: @desktop-width) {
   .user-list {
     order: 100;
+    .clear();
 
     .page-header--menu-open &,
     .page-header--nojs & {
+      order: 100;
       background-color: inherit;
     }
   }

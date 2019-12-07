@@ -12,7 +12,7 @@
   }
 
   .page-header--menu-open &,
-  .page-header--nojs & {
+  .nojs & {
     display: block;
   }
 
@@ -41,7 +41,8 @@
   text-decoration: none;
 
   &--phone {
-    .page-main__user & {
+    .page-main__user &,
+    .page-header & {
       background: url("../../img/topmenu-phone.svg") no-repeat;
       background-size: 18px;
       background-position: center;
@@ -50,7 +51,8 @@
   }
 
   &--email {
-    .page-main__user & {
+    .page-main__user &,
+    .page-header & {
       background: url("../../img/topmenu-mail.svg") no-repeat;
       background-size: 18px;
       background-position: center;
@@ -71,10 +73,8 @@
 }
 
 @media (min-width: @tablet-width) {
-  .contacts {
-    .page-main__user & {
-      display: none;
-    }
+  .page-main__user & {
+    display: none;
   }
 }
 

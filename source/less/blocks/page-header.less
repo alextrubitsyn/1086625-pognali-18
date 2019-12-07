@@ -1,6 +1,5 @@
 .page-header {
   width: 100%;
-  position: relative;
   background-color: @bg-header;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 
@@ -11,7 +10,6 @@
 }
 
 .page-header__wrapper {
-  width: 100%;
   min-height: 74px;
   display: flex;
   justify-content: space-between;
@@ -42,6 +40,11 @@
   }
 }
 
+.page-header__list {
+  .clear();
+  list-style: none;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     &--menu-open,
@@ -61,17 +64,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  // .page-header {
-  //   display: flex;
-  //   flex-direction: row;
-  //   align-items: center;
-  //   flex-wrap: nowrap;
-  //   margin: 0;
-  //   background-color: @bg-header;
-  // }
-
   .page-header__wrapper {
-    width: auto;
+    width: 200px;
   }
 
   .page-header__toggle {
