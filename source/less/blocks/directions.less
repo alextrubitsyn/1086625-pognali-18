@@ -94,7 +94,6 @@
   bottom: -88px;
   left: 0;
   right: 0;
-  // width: 100%;
   padding: 24px;
   color: @title;
   font-size: 18px;
@@ -118,7 +117,7 @@
     background-size: 289px 575px;
     background-position: right 74px;
     background-color: @bg-catalog;
-    border-radius: 0 0 30px 30px;
+    border-radius: 0 0 60px 60px;
   }
 
   .directions__title {
@@ -196,9 +195,7 @@
   }
 
   .directions__to-all {
-    bottom: 60px;
-    left: 9.77%;
-    width: 80.47%;
+    bottom: -166px;
     padding: 31px 35px 32px 34px;
     font-size: 24px;
     line-height: 24px;
@@ -212,14 +209,10 @@
 
 @media (min-width: @desktop-width) {
   .directions {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     padding-top: 88px;
     padding-bottom: 87px;
     background-position: right 74px;
     background-color: @bg-catalog;
-    border-radius: 0 0 60px 60px;
   }
 
   .directions__wrapper-text {
@@ -301,8 +294,8 @@
     line-height: 24px;
     border-radius: 20px;
 
-    &::after {
-      right: 36px;
-    }
+    // &::after {
+    //   right: 36px;
+    // }
   }
 }

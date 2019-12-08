@@ -1,12 +1,23 @@
 .about {
   .page-main & {
-    padding-left: 61px;
+    position: relative;
     padding-bottom: 84px;
     color: #ffffff;
+    background-color: @bg-index;
     font-size: 16px;
     font-weight: 700;
     line-height: 22px;
-    border-radius: 0 0 30px 30px;
+
+    &::after {
+      .psevdo();
+      width: 100%;
+      z-index: 2;
+      height: 25px;
+      bottom: -25px;
+      left: 0;
+      background-color: @bg-index;
+      border-radius: 0 0 25px 25px;
+    }
   }
 }
 
@@ -36,10 +47,13 @@
 
 @media (min-width: @tablet-width) {
   .about {
-    padding-bottom: 88px;
-    background: url("../../img/about-desktop@1x.png") no-repeat;
-    background-size: 376px 548px;
-    background-position: right 5px;
+    .page-main & {
+      &::after {
+        height: 60px;
+        bottom: -60px;
+        border-radius: 0 0 60px 60px;
+      }
+    }
   }
 
   .about__title {
@@ -67,7 +81,7 @@
   .about__more {
     width: 274px;
     margin-left: 35px;
-    padding: 30px 36px 28px 34px;
+    padding: 30px 126px 28px 34px;
     color: @title;
     font-size: 24px;
     font-weight: 700;
@@ -77,6 +91,7 @@
     text-decoration: none;
 
     .page-main & {
+      display: block;
       text-align: left;
     }
 
@@ -88,10 +103,18 @@
 
 @media (min-width: @desktop-width) {
   .about {
-    padding-bottom: 163px;
-    background: url("../../img/about-desktop@1x.png") no-repeat;
-    background-size: 376px 548px;
-    background-position: right 5px;
+    .page-main & {
+      padding-bottom: 88px;
+      background-image: none;
+      // background-size: 376px 548px;
+      // background-position: right bottom;
+
+      &::after {
+        height: 60px;
+        bottom: -60px;
+        border-radius: 0 0 60px 60px;
+      }
+    }
   }
 
   .about__title {

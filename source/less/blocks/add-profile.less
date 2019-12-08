@@ -1,5 +1,6 @@
 .add-profile {
   .page-main & {
+    padding-top: 50px;
     font-size: 16px;
     font-weight: 300;
     line-height: 22px;
@@ -13,6 +14,9 @@
   margin-bottom: 70px;
   text-align: left;
   color: @text;
+  background: url("../../img/rates@1x.png") no-repeat;
+  background-size: 99px;
+  background-position: right top;
 }
 
 .add-profile__title {
@@ -20,9 +24,6 @@
     display: block;
     padding: 15px 144px 13px 25px;
     text-decoration: none;
-    background: url("../../img/rates@1x.png") no-repeat;
-    background-size: 99px;
-    background-position: right center;
   }
 }
 
@@ -55,6 +56,16 @@
 }
 
 @media (min-width: @tablet-width) {
+  .add-profile {
+    .page-main & {
+      border-radius: 0 0 60px 60px;
+    }
+  }
+  .add-profile__wrapper {
+    margin-bottom: 70px;
+    background-position: right bottom;
+  }
+
   .add-profile__item {
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -75,25 +86,43 @@
     margin-right: 25px;
   }
 
-  .add-profile__email {
-    width: calc(100% - 82px);
-    height: 81px;
-    border-radius: 20px 0 0 20px;
-  }
+  .add-profile__business-link {
+    .page-main & {
+      position: relative;
+      margin-bottom: 36px;
+      padding-left: 90px;
+      padding-top: 25px;
+      padding-bottom: 22px;
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+    }
 
-  .add-profile__button {
-    .size(82; 81);
-    font-size: 0;
-    border-radius: 0 20px 20px 0;
-    background-color: @map;
+    &::after {
+      .psevdo();
+      .size(67);
+      top: 0;
+      left: 0;
+      background: url("../../img/business.svg") no-repeat;
+      background-size: 17px 21px;
+      background-position: center;
+      background-color: @bg-country;
+      border-radius: 50%;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .add-profile__email {
-    width: calc(100% - 324px);
-    height: 81px;
-    border-radius: 20px 0 0 20px;
+  .add-profile__wrapper {
+    margin-bottom: 70px;
+    background-size: 198px;
+    background-position: right center;
+  }
+
+  .add-profile__title {
+    .page-main & {
+      text-align: center;
+    }
   }
 
   .add-profile__button {

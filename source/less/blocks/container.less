@@ -19,12 +19,27 @@
   .directions & {
     position: relative;
   }
+
+  .map__wrapper & {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 35px;
+    // background-color: @map;
+    // color: @bg-index;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .container {
     max-width: @tablet-width;
     padding: 0 40px;
+
+    .about & {
+      background: url("../../img/about-desktop@1x.png") no-repeat;
+      background-size: 376px 548px;
+      background-position: right bottom;
+    }
 
     .page-footer & {
       flex-direction: row;
@@ -41,8 +56,37 @@
     .page-header & {
       display: flex;
       flex-wrap: nowrap;
-      margin: 0;
       background-color: @bg-header;
+    }
+
+    .about & {
+      padding-top: 133px;
+      padding-bottom: 163px;
+      background: url("../../img/about-desktop@1x.png") no-repeat;
+      background-size: 630px 665px;
+      background-position: right bottom;
+    }
+
+    .directions & {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    .companions & {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .map__wrapper & {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding-top: 54px;
+      padding-bottom: 56px;
     }
   }
 }

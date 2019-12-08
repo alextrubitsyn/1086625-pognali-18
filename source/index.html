@@ -154,13 +154,15 @@
       </section>
 
       <!-- О СЕРВИСЕ -->
-      <section class="about container">
-        <h2 class="about__title heading-secondary">О сервисе</h2>
-        <p class="about__text">
-          Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
-        </p>
-        <b class="about__next">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
-        <a class="about__more button button--arrow-right" href="#">Подробнее</a>
+      <section class="about">
+        <div class="container">
+          <h2 class="about__title heading-secondary">О сервисе</h2>
+          <p class="about__text">
+            Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+          </p>
+          <b class="about__next">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</b>
+          <a class="about__more button button--arrow-right" href="#">Подробнее</a>
+        </div>
       </section>
 
       <!-- НАПРАВЛЕНИЯ -->
@@ -203,131 +205,133 @@
       </section>
 
       <!-- ПОПУТЧИКИ -->
-      <section class="companions container">
-        <div class="companions__wrapper">
-          <h2 class="companions__title heading-secondary">Попутчики</h2>
-          <p class="companions__description">
-            Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-          </p>
-          <strong class="companions__now-easy">Теперь можно легко найти единомышленников!</strong>
+      <section class="companions">
+        <div class="container">
+          <div class="companions__wrapper">
+            <h2 class="companions__title heading-secondary">Попутчики</h2>
+            <p class="companions__description">
+              Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+            </p>
+            <strong class="companions__now-easy">Теперь можно легко найти единомышленников!</strong>
+          </div>
+          <ul class="companions__list">
+            <li class="companions__item member">
+              <a class="member__link-img" href="#">
+                <img class="member__image" width="270" height="270" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова Фото" />
+              </a>
+              <div class="member__level">
+                <svg class="member__level-line" width="60" height="60" viewBox="0 0 60 60">
+                  <circle class="member__level-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke-width="3" stroke-dasharray="177.2800704 1.790707782" stroke-dashoffset="44.76769455"></circle>
+                </svg>
+                <span class="member__level-value">99</span>
+                <span class="member__level-text">level</span>
+              </div>
+              <ul class="member__countries">
+                <li class="member__country member__country--sri-lanka">
+                  Шри-Ланка
+                </li>
+                <li class="member__country member__country--thailand">
+                  Таиланд
+                </li>
+                <li class="member__country member__country--seychelles">
+                  Сейшелы
+                </li>
+              </ul>
+              <a class="member__link-name" href="#">
+                <p class="member__name member__name--red">Таня Фирсова</p>
+              </a>
+              <ul class="member__hashtags">
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#">#ЗОЖ</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#"> #ПП</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#"> #Фитнес</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#"> #пляж</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#"> #авокадо</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#"> #смузи</a>
+                </li>
+              </ul>
+              <ul class="member__travel-modes travel-way">
+                <li class="travel-way__item travel-way__item--plane travel-way__item--active">
+                  <span class="visually-hidden">самолёт</span>
+                </li>
+                <li class="travel-way__item travel-way__item--bus">
+                  <span class="visually-hidden">автобус</span>
+                </li>
+                <li class="travel-way__item travel-way__item--bike">
+                  <span class="visually-hidden">велосипед</span>
+                </li>
+                <li class="travel-way__item travel-way__item--run">
+                  <span class="visually-hidden">пешком</span>
+                </li>
+              </ul>
+            </li>
+            <li class="companions__item member">
+              <a class="member__link-img" href="#">
+                <img class="member__image" width="270" height="270" src="img/demin-mobile@1x.jpg" alt="Петя Демин Фото" />
+              </a>
+              <div class="member__level">
+                <span class="member__level-value">80</span>
+                <span class="member__level-text">level</span>
+                <svg class="member__level-line" width="60" height="60" viewBox="0 0 60 60">
+                  <circle class="member__level-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke-width="3" stroke-dasharray="143.2566226 35.81415564" stroke-dashoffset="44.76769455"></circle>
+                </svg>
+              </div>
+              <ul class="member__countries">
+                <li class="member__country member__country--main member__country--belgium">
+                  Бельгия
+                </li>
+                <li class="member__country member__country--main member__country--czechia">
+                  Чехия
+                </li>
+              </ul>
+              <a class="member__link-name" href="#">
+                <p class="member__name member__name--green">Петя Демин</p>
+              </a>
+              <ul class="member__hashtags">
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#">#бургер</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#">#бар</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#">#футбол</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#">#концерт</a>
+                </li>
+                <li class="member__hashtag">
+                  <a class="member__hashtag-link" href="#">#крафт</a>
+                </li>
+              </ul>
+              <ul class="member__travel-modes travel-way">
+                <li class="travel-way__item travel-way__item--plane travel-way__item--active">
+                  <span class="visually-hidden">самолёт</span>
+                </li>
+                <li class="travel-way__item travel-way__item--bus">
+                  <span class="visually-hidden">автобус</span>
+                </li>
+                <li class="travel-way__item travel-way__item--bike">
+                  <span class="visually-hidden">велосипед</span>
+                </li>
+                <li class="travel-way__item travel-way__item--run">
+                  <span class="visually-hidden">пешком</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <a class="companions__to-all button button--arrow-right" href="catalog.html">Показать всех</a>
         </div>
-        <ul class="companions__list">
-          <li class="companions__item member">
-            <a class="member__link-img" href="#">
-              <img class="member__image" width="270" height="270" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова Фото" />
-            </a>
-            <div class="member__level">
-              <svg class="member__level-line" width="60" height="60" viewBox="0 0 60 60">
-                <circle class="member__level-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke-width="3" stroke-dasharray="177.2800704 1.790707782" stroke-dashoffset="44.76769455"></circle>
-              </svg>
-              <span class="member__level-value">99</span>
-              <span class="member__level-text">level</span>
-            </div>
-            <ul class="member__countries">
-              <li class="member__country member__country--sri-lanka">
-                Шри-Ланка
-              </li>
-              <li class="member__country member__country--thailand">
-                Таиланд
-              </li>
-              <li class="member__country member__country--seychelles">
-                Сейшелы
-              </li>
-            </ul>
-            <a class="member__link-name" href="#">
-              <p class="member__name member__name--red">Таня Фирсова</p>
-            </a>
-            <ul class="member__hashtags">
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#">#ЗОЖ</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#"> #ПП</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#"> #Фитнес</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#"> #пляж</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#"> #авокадо</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#"> #смузи</a>
-              </li>
-            </ul>
-            <ul class="member__travel-modes travel-way">
-              <li class="travel-way__item travel-way__item--plane travel-way__item--active">
-                <span class="visually-hidden">самолёт</span>
-              </li>
-              <li class="travel-way__item travel-way__item--bus">
-                <span class="visually-hidden">автобус</span>
-              </li>
-              <li class="travel-way__item travel-way__item--bike">
-                <span class="visually-hidden">велосипед</span>
-              </li>
-              <li class="travel-way__item travel-way__item--run">
-                <span class="visually-hidden">пешком</span>
-              </li>
-            </ul>
-          </li>
-          <li class="companions__item member">
-            <a class="member__link-img" href="#">
-              <img class="member__image" width="270" height="270" src="img/demin-mobile@1x.jpg" alt="Петя Демин Фото" />
-            </a>
-            <div class="member__level">
-              <span class="member__level-value">80</span>
-              <span class="member__level-text">level</span>
-              <svg class="member__level-line" width="60" height="60" viewBox="0 0 60 60">
-                <circle class="member__level-segment" cx="30" cy="30" r="28.5" fill="transparent" stroke-width="3" stroke-dasharray="143.2566226 35.81415564" stroke-dashoffset="44.76769455"></circle>
-              </svg>
-            </div>
-            <ul class="member__countries">
-              <li class="member__country member__country--main member__country--belgium">
-                Бельгия
-              </li>
-              <li class="member__country member__country--main member__country--czechia">
-                Чехия
-              </li>
-            </ul>
-            <a class="member__link-name" href="#">
-              <p class="member__name member__name--green">Петя Демин</p>
-            </a>
-            <ul class="member__hashtags">
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#">#бургер</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#">#бар</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#">#футбол</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#">#концерт</a>
-              </li>
-              <li class="member__hashtag">
-                <a class="member__hashtag-link" href="#">#крафт</a>
-              </li>
-            </ul>
-            <ul class="member__travel-modes travel-way">
-              <li class="travel-way__item travel-way__item--plane travel-way__item--active">
-                <span class="visually-hidden">самолёт</span>
-              </li>
-              <li class="travel-way__item travel-way__item--bus">
-                <span class="visually-hidden">автобус</span>
-              </li>
-              <li class="travel-way__item travel-way__item--bike">
-                <span class="visually-hidden">велосипед</span>
-              </li>
-              <li class="travel-way__item travel-way__item--run">
-                <span class="visually-hidden">пешком</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <a class="companions__to-all button button--arrow-right" href="catalog.html">Показать всех</a>
       </section>
 
       <!-- ДОБАВЛЕНИЕ ПРОФИЛЯ -->
@@ -394,12 +398,14 @@
       <!-- КАРТА -->
       <section class="map">
         <h2 class="visually-hidden">Наш офис на карте</h2>
-        <div class="map__wrapper container">
-          <p class="map__address">
-            <span>ул. Большая</span>
-            <span>Конюшенная, 19/8</span>
-          </p>
-          <a class="map__link button button--arrow-right" href="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.938456,30.3211096,17z/data=!3m1!4b1!4m8!1m2!2m1!1z0JHQvtC70YzRiNCw0Y8g0LrQvtC90Y7RiNC10L3QvdCw0Y8gMTkuOA!3m4!1s0x4696310fb661d55f:0xd0cc7f055debe430!8m2!3d59.938456!4d30.3232983?hl=ru-RU"> Проложить маршрут </a>
+        <div class="map__wrapper">
+          <div class="container">
+            <p class="map__address">
+              <span>ул. Большая</span>
+              <span>Конюшенная, 19/8</span>
+            </p>
+            <a class="map__link button button--arrow-right" href="https://www.google.com/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.938456,30.3211096,17z/data=!3m1!4b1!4m8!1m2!2m1!1z0JHQvtC70YzRiNCw0Y8g0LrQvtC90Y7RiNC10L3QvdCw0Y8gMTkuOA!3m4!1s0x4696310fb661d55f:0xd0cc7f055debe430!8m2!3d59.938456!4d30.3232983?hl=ru-RU"> Проложить маршрут </a>
+          </div>
         </div>
         <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586871!2d30.320853351918583!3d59.93871648178722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1570610088650!5m2!1sru!2sru" width="600" height="450" allowfullscreen=""> </iframe>
       </section>

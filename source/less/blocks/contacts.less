@@ -38,20 +38,23 @@
 
   .registration & {
     color: @map;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 61px;
+    padding-left: 47px;
+    background-repeat: no-repeat;
+    background-position: left center;
 
     &--phone {
-      background: url("../../img/contacts-phone.svg") no-repeat;
+      margin-bottom: 30px;
+      padding-top: 2px;
+      padding-bottom: 3px;
+      background-image: url("../../img/contacts-phone.svg");
       background-size: 18px;
-      background-position: 14px center;
     }
 
     &--email {
-      background: url("../../img/contacts-mail.svg") no-repeat;
-      background-size: 18px;
-      background-position: 14px center;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      background-image: url("../../img/contacts-mail.svg");
+      background-size: 18px 13px;
     }
   }
 
@@ -81,8 +84,31 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-main__user & {
-    display: none;
+  .contacts {
+    .page-main__user & {
+      display: none;
+    }
+  }
+
+  .contacts__link {
+    .registration & {
+      padding-left: 70px;
+      font-size: 28px;
+      line-height: 28px;
+
+      &--phone {
+        margin-bottom: 30px;
+        padding-top: 3px;
+        padding-bottom: 2px;
+        background-size: 27px;
+      }
+
+      &--email {
+        padding-top: 2px;
+        padding-bottom: 1px;
+        background-size: 27px 20px;
+      }
+    }
   }
 }
 
@@ -93,6 +119,10 @@
       flex-wrap: wrap;
     }
 
+    // .registration & {
+    // display: flex;
+    // }
+
     .page-main__user & {
       display: none;
     }
@@ -102,17 +132,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    // .add-profile & {
-    //   width: 50%;
-    //   padding-left: 94px;
-    // }
   }
 
   .contacts__link {
     .size(50);
     font-size: 0;
     border-radius: 50%;
+
+    .registration & {
+      .size(440; 36);
+      padding-left: 94px;
+      padding-top: 6px;
+      padding-bottom: 8px;
+      background-color: @bg-index;
+      border-radius: 0;
+
+      &--phone {
+        margin-bottom: 0;
+        background-size: 36px;
+        // background-position: 0 center;
+      }
+
+      &--email {
+        background-size: 36px 26px;
+      }
+    }
 
     &--phone {
       background-color: @bg-sequence1;
