@@ -1,9 +1,55 @@
-.site-list {
+.site-list__item {
+  display: none;
+
+  .page-header--menu-open &,
+  .nojs & {
+    display: block;
+  }
+
+  &--active {
+    display: block;
+    background-color: @bg-header;
+
+    & .site-list__link {
+      color: #ffffff;
+    }
+  }
 }
 
 .site-list__link {
+  color: @bg-index;
   font-size: 30px;
   font-weight: 500;
   line-height: 36px;
   text-transform: uppercase;
+  text-decoration: none;
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    .page-header & {
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: auto;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      text-transform: uppercase;
+    }
+  }
+
+  .site-list__item {
+    display: block;
+    margin-right: 36px;
+  }
+
+  .site-list__link {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+  }
 }

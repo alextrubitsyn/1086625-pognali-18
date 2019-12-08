@@ -1,0 +1,31 @@
+.button {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  border: none;
+  cursor: pointer;
+
+  &--arrow-left,
+  &--arrow-right {
+    &::after {
+      .psevdo();
+      .size(10; 14);
+      top: 50%;
+      transform: translateY(-50%);
+      background-size: 10px 14px;
+    }
+  }
+
+  &--arrow-left {
+    &::after {
+      background: url("../../img/triangle-arrow-left.svg") no-repeat;
+    }
+  }
+
+  &--arrow-right {
+    &::after {
+      background: url("../../img/triangle-arrow-right.svg") no-repeat;
+    }
+  }
+}

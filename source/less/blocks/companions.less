@@ -1,20 +1,149 @@
 .companions {
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 22px;
+  .page-main & {
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 30px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 22px;
+    background-color: @bg-index;
+
+    &::after {
+      .psevdo();
+      width: 100%;
+      height: 30px;
+      left: 0;
+      bottom: -30px;
+      z-index: 2;
+      background-color: inherit;
+      border-radius: 0 0 30px 30px;
+    }
+  }
 }
 
 .companions__title {
-  color: @bg-sequence1;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
+  .page-main & {
+    margin-bottom: 23px;
+  }
 }
 
 .companions__description {
+  .clear();
   font-weight: 300;
+
+  .page-main & {
+    margin-bottom: 27px;
+  }
 }
 
 .companions__now-easy {
   font-weight: 700;
+}
+
+.companions__wrapper {
+  .page-main & {
+    margin-bottom: 60px;
+  }
+}
+
+.companions__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .clear();
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.companions__item {
+  width: 270px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.companions__to-all {
+  width: 100%;
+  padding: 24px;
+  color: @title;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-decoration: none;
+  text-align: left;
+  background-color: @map;
+  border-radius: 10px;
+
+  &::after {
+    right: 24px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .companions {
+    .page-main & {
+      &::after {
+        height: 60px;
+        left: 0;
+        bottom: -60px;
+        z-index: 2;
+        border-radius: 0 0 60px 60px;
+      }
+    }
+  }
+
+  .companions__item {
+    width: 285px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions__wrapper {
+    width: 630px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+  }
+
+  .companions__title {
+    .page-main & {
+      margin-bottom: 61px;
+    }
+  }
+
+  .companions__description {
+    width: 423px;
+    margin-bottom: 46px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .companions__now-easy {
+    width: 258px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .companions__list {
+    justify-content: flex-end;
+    list-style: none;
+  }
+
+  .companions__item {
+    border-radius: 20px;
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+    }
+  }
+
+  .companions__to-all {
+    width: 280px;
+    margin-top: -50px;
+    padding: 31px 36px 32px 34px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+  }
 }

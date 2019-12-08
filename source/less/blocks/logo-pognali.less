@@ -1,0 +1,37 @@
+.logo-pognali__image-opened {
+  display: none;
+
+  .page-header--menu-open &,
+  .nojs & {
+    display: block;
+  }
+}
+
+.logo-pognali__image-closed {
+  display: block;
+
+  .page-header--menu-open &,
+  .nojs & {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo-pognali__image-opened {
+    display: none;
+
+    .page-header--menu-open &,
+    .nojs & {
+      display: none;
+    }
+  }
+
+  .logo-pognali__image-closed {
+    display: block;
+
+    .page-header--menu-open &,
+    .nojs & {
+      display: block;
+    }
+  }
+}

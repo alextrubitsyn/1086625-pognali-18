@@ -7,12 +7,42 @@
   background-color: @bg-country;
   border-radius: 0 0 20px 20px;
 
-  &--form {
+  .page-form & {
     box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
     border-radius: 0 0 10px 10px;
     border: 1px solid #cbced9;
     background-color: #ffffff;
   }
+}
+
+.country-filter__title {
+  .clear();
+}
+
+.country-filter__toggle {
+  background-color: @bg-country;
+  border: none;
+
+  &-open {
+    display: block;
+
+    .country-filter--open & {
+      display: none;
+    }
+  }
+
+  &-close {
+    display: none;
+
+    .country-filter--open & {
+      display: block;
+    }
+  }
+}
+
+.country-filter__menu {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .country-filter__region-item {
@@ -31,10 +61,18 @@
 }
 
 .country-filter__letter-list {
+  width: 230px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .clear();
+  margin: 0 auto 50px;
   list-style: none;
 }
 
-.country-filter__letter {
+.country-filter__letter-btn {
+  .clear();
+  .size(45; 42);
   color: @title;
   font-size: 14px;
   font-weight: 500;
@@ -42,19 +80,40 @@
   text-transform: uppercase;
   letter-spacing: 1.4px;
   background-color: #ffffff;
+  border: 1px solid @letter;
+  margin-left: -1px;
+  margin-top: -1px;
 
-  &--active-catalog {
-    color: #ffffff;
-    background-color: @title;
+  .page-form & {
+    color: @title;
+    border: 1px solid @letter;
   }
 
-  &--active-form {
-    border: 1px solid @letter;
-    background-color: @bg-catalog;
+  &--active {
+    color: #ffffff;
+    background-color: @title;
+
+    .page-form & {
+      background-color: @bg-catalog;
+    }
   }
 }
 
+.country-filter__letter {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.country-filter__letter-title {
+  display: none;
+}
+
 .country-filter__country-list {
+  .clear();
+  padding-left: 25px;
   list-style: none;
 }
 
@@ -71,4 +130,182 @@
   font-weight: 700;
   line-height: 29.45px;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .country-filter__menu {
+    display: flex;
+  }
+
+  .country-filter__toggle {
+    .page-catalog & {
+      margin-left: auto;
+      order: 2;
+    }
+  }
+
+  .country-filter__region-list {
+    .page-catalog & {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .country-filter__region-item {
+    .page-catalog & {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .country-filter__wrapper {
+    display: flex;
+  }
+
+  .country-filter__title {
+    display: none;
+  }
+
+  .country-filter__letter-list {
+    .page-catalog & {
+      width: 400px;
+      .clear();
+      padding-left: 25px;
+    }
+
+    .page-form & {
+      width: 287px;
+      .clear();
+      padding-left: 27px;
+    }
+  }
+
+  .country-filter__letter-item {
+    .page-catalog & {
+      margin-bottom: 0;
+    }
+  }
+
+  .country-filter__letter-btn {
+    .page-catalog & {
+      .size(75);
+      .clear();
+      color: @bg-index;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 24px;
+      border: none;
+      opacity: 0.2;
+
+      &--active {
+        opacity: 1;
+        background-color: inherit;
+      }
+    }
+
+    .page-form & {
+      .size(52; 70);
+      font-size: 20px;
+
+      &--active {
+        color: #ffffff;
+        letter-spacing: 2px;
+        background-color: @title;
+      }
+    }
+  }
+
+  .country-filter__country-link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country-filter__menu {
+    display: flex;
+  }
+
+  .country-filter__toggle {
+    .page-catalog & {
+      margin-left: auto;
+      order: 2;
+    }
+  }
+
+  .country-filter__region-list {
+    .page-catalog & {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .country-filter__region-item {
+    .page-catalog & {
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .country-filter__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .country-filter__title {
+    display: block;
+  }
+
+  .country-filter__letter {
+    .page-catalog & {
+      display: block;
+      width: 20%;
+      margin-bottom: 59px;
+    }
+  }
+
+  .country-filter__letter-title {
+    .page-catalog & {
+      display: block;
+      .clear();
+      margin-bottom: 48px;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+
+  .country-filter__letter-list {
+    .page-catalog & {
+      display: none;
+    }
+
+    .page-form & {
+      width: 384px;
+    }
+  }
+
+  .country-filter__country-list {
+    .page-catalog & {
+      .clear();
+    }
+  }
+
+  .country-filter__letter-item {
+    .page-form & {
+      margin-bottom: 15px;
+
+      &:not(:nth-child(5n)) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .country-filter__letter-btn {
+    .page-form & {
+      .size(60; 70);
+      border-radius: 4px;
+    }
+  }
 }

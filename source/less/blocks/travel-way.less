@@ -1,3 +1,92 @@
 .travel-way__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .size(32);
+  margin-right: 3px;
   list-style: none;
+  border-radius: 50%;
+  opacity: 1;
+  // .olg();
+
+  &::before {
+    position: absolute;
+    content: "";
+    .size(32);
+    top: 0;
+    left: 0;
+    opacity: 0.15;
+  }
+
+  .page-catalog__users & {
+    margin: 0;
+    background-color: @bg-catalog;
+  }
+
+  &--plane {
+    &::before {
+      background: url("../../img/plane.svg") no-repeat;
+      background-position: center;
+      background-size: 19px 21px;
+
+      .page-catalog__users & {
+        background-size: 14px 16px;
+      }
+    }
+  }
+
+  &--bus {
+    &::before {
+      background: url("../../img/bus.svg") no-repeat;
+      background-position: center;
+      background-size: 17px 21px;
+
+      .page-catalog__users & {
+        background-size: 13px 16px;
+      }
+    }
+
+    .page-catalog__users & {
+      margin: 0;
+    }
+  }
+
+  &--bike {
+    &::before {
+      background: url("../../img/bike.svg") no-repeat;
+      background-position: center;
+      background-size: 24px 21px;
+
+      .page-catalog__users & {
+        background-size: 19px 17px;
+      }
+    }
+
+    .page-catalog__users & {
+      margin: 0;
+    }
+  }
+
+  &--run {
+    &::before {
+      background: url("../../img/run.svg") no-repeat;
+      background-position: center;
+      background-size: 20px 21px;
+
+      .page-catalog__users & {
+        background-size: 15px 17px;
+      }
+    }
+
+    .page-catalog__users & {
+      margin: 0;
+    }
+  }
+
+  &--active {
+    &::before {
+      opacity: 1;
+    }
+  }
 }

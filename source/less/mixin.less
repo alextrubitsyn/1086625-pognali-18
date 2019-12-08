@@ -1,0 +1,52 @@
+.size(@wt; @ht:@wt) {
+  width: ~"@{wt}px";
+  height: ~"@{ht}px";
+}
+
+.clear() {
+  margin: 0;
+  padding: 0;
+}
+
+.v-h() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  overflow: hidden;
+}
+
+.segment(@wt; @level; @sw) {
+  @lev: @level / 100;
+  @l: (@wt - @sw) * 3.1415926;
+  cx: @wt / 2;
+  cy: @wt / 2;
+  r: (@wt - @sw) / 2;
+  stroke-width: @sw;
+  stroke-dasharray: @l * @lev @l * (1 - @lev);
+  stroke-dashoffset: @l * 0.25;
+}
+
+.psevdo() {
+  position: absolute;
+  content: "";
+}
+
+// Отладочные миксины
+.olr() {
+  outline: 3px solid red;
+}
+
+.olo() {
+  outline: 2px solid orange;
+}
+
+.olg() {
+  outline: 1px solid green;
+}
+//
