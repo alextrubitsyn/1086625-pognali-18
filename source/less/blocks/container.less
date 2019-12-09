@@ -27,10 +27,16 @@
     padding-bottom: 35px;
   }
 
-  .form-me & {
+  .form-me__wrapper & {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-me__wrapper-bottom & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -93,8 +99,10 @@
       padding-bottom: 56px;
     }
 
-    .form-me & {
-      align-items: center;
+    .form-me__wrapper-bottom & {
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
     }
   }
 }
