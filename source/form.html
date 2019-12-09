@@ -106,22 +106,35 @@
 
     <main class="page-form">
       <h1 class="visually-hidden">Форма заполнения моего аккаунта</h1>
-      <form class="form" action="https://echo.htmlacademy.ru" method="get">
-        <div class="form__level level level--form">
-          <span class="level__value level__value--form">80</span>
-          <span class="level__text level__text--form">level</span>
+
+      <!-- МОИ ДАННЫЕ -->
+      <form class="form-me" action="https://echo.htmlacademy.ru" method="get">
+        <div class="container">
+          <div class="form-me__wrapper">
+        <!-- уровень  -->
+        <div class="form-me__level level">
+          <svg class="level-line" width="100" height="100" viewBox="0 0 45 45">
+            <circle class="level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent" 
+            stroke-width="2" stroke-dasharray="98.01768912 24.50442228" stroke-dashoffset="30.63052785"></circle>
+          </svg>
+          <span class="level__value">80</span>
+          <span class="level__text">level</span>
         </div>
-        <img class="form__image" width="100" height="100" src="../source/img/petr-demin.png" alt="Петя Демин Фото" />
-        <a class="form__change-photo button" href="#">Сменить фото</a>
-        <fieldset class="form__hashtags" title="Напишите свои теги">
-          <legend class="form__legend-hashtag">Тэги:</legend>
-          <textarea class="form__hashtags-list" name="hashtag" id="hashtag" cols="30" rows="2">
+        <!-- фото -->
+        <img class="form-me__image" width="100" height="100" src="img/demin-mobile@1x.jpg" alt="Петя Демин Фото" />
+        <a class="form-me__photo-btn button" href="#">Сменить фото</a>
+        </div>
+        <!-- теги -->
+        <fieldset class="form-me__hashtags" title="Напишите свои теги">
+          <legend class="form-me__legend-hashtag">Тэги</legend>
+          <textarea class="form-me__hashtags-list" name="hashtag" id="hashtag" cols="30" rows="3">
             #бургер #бар #футбол #концерт #крафт
           </textarea>
         </fieldset>
-        <fieldset class="form__transport" title="Выберите способ передвижения">
-          <legend class="form__legend-transport">Транспорт:</legend>
-          <ul class="form__travel-modes travel-way">
+        <!-- Транспорт -->
+        <fieldset class="form-me__transport" title="Выберите способ передвижения">
+          <legend class="form-me__legend-transport">Транспорт</legend>
+          <ul class="form-me__travel-modes travel-way">
             <li class="travel-way__item travel-way__item--plane travel-way__item--active">
               <input class="travel-way__input visually-hidden" id="plane" type="checkbox" name="plane" checked />
               <label class="travel-way__label" for="plane">
@@ -148,6 +161,11 @@
             </li>
           </ul>
         </fieldset>
+        </div>        
+      </form>
+
+      <!-- ФОРМА С ПЛАНАМИ -->
+      <form class="form" action="https://echo.htmlacademy.ru" method="get">
         <div class="form__plans">
           <h2 class="form__plans-title">Мои планы:</h2>
           <ul class="form__plans-list">
@@ -171,6 +189,8 @@
             </li>
           </ul>
         </div>
+
+        <!-- НОВЫЕ ПЛАНЫ -->
         <section class="new-plan">
           <h2 class="new-plan__title">Добавить план:</h2>
           <p class="new-plan__toggles">
@@ -179,6 +199,7 @@
             <button class="new-plan__toggle" type="button">3</button>
           </p>
           <ul class="steps">
+            <!-- шаг 1 -->
             <li class="steps__item period">
               <a class="steps__label" id="step1">Шаг 1.</a>
               <h3 class="steps__title">Даты пребывания</h3>
@@ -260,20 +281,22 @@
               </ul>
               <a class="steps__next button button--arrow-right" href="#step2">Следующий шаг</a>
             </li>
+
+            <!-- шаг 2 -->
             <li class="steps__item">
               <a class="steps__label" id="step2">Шаг 2.</a>
               <h3 class="steps__title">Маршрут</h3>
               <p class="steps__description">Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.</p>
               <div class="country">
-                <a class="country__link" href="#">Босния и герцеговина</a>
+                <button> class="country__btn" type="button">Босния и герцеговина</button>
                 <button class="country__button-del" type="button">закрыть</button>
               </div>
               <div class="country">
-                <a class="country__link" href="#">Чехия</a>
+                <button> class="country__btn" type="button">Чехия</button>
                 <button class="country__button-del" type="button">закрыть</button>
               </div>
               <div class="country country--null">
-                <a class="country__link" href="#">Выберите страну</a>
+                <button> class="country__btn" type="button">Выберите страну</button>
                 <button class="country__button-del" type="button">закрыть</button>
               </div>
               <section class="country-filter">
@@ -391,6 +414,8 @@
               <a class="steps__next button button--arrow-right" href="#step3">Следующий шаг</a>
               <a class="steps__previous button button--arrow-left" href="#step1">На шаг назад</a>
             </li>
+
+            <!-- шаг 3 -->
             <li class="steps__item">
               <a class="steps__label" id="step3">Шаг 3.</a>
               <h3 class="steps__title">Развлечения</h3>

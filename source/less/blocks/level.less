@@ -1,23 +1,32 @@
 .level {
-  color: #ffffff;
-  background-color: #000000;
-  &--catalog {
-    color: @title;
-    line-height: 18px;
-    background-color: #ffffff;
+  .form-me & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
   }
-  &--form {
-    color: @bg-header;
-    background-color: @bg-catalog;
+}
+
+.level-line {
+  .form-me & {
+    display: block;
+    position: absolute;
+  }
+}
+
+.level-segment {
+  .form-me & {
+    transform-origin: center;
+    stroke: @bg-sequence1;
   }
 }
 
 .level__value {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-  &--form {
+  .form-me & {
+    color: @bg-header;
     font-size: 38px;
+    font-weight: 700;
     line-height: 38px;
   }
 }
@@ -26,9 +35,27 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-  &--form {
+
+  .form-me & {
     color: @text;
     font-size: 18px;
+    font-weight: 400;
     line-height: 22.17px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .level-line {
+    .form-me & {
+      .size(94);
+    }
+  }
+}
+
+// @media (min-width: @desktop-width) {
+//   .level-line {
+//     .form-me & {
+//       .size(94);
+//     }
+//   }
+// }
