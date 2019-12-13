@@ -26,6 +26,22 @@
     flex-direction: column;
     padding-bottom: 35px;
   }
+
+  .form-me__wrapper & {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-me__wrapper-bottom & {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .new-plan & {
+    position: relative;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -37,6 +53,12 @@
       background: url("../../img/about-desktop@1x.png") no-repeat;
       background-size: 376px 548px;
       background-position: right bottom;
+    }
+
+    .directions & {
+      background: url("../../img/flags-back@1x.png") no-repeat;
+      background-size: 289px 575px;
+      background-position: right 74px;
     }
 
     .page-footer & {
@@ -55,6 +77,13 @@
       display: flex;
       flex-wrap: nowrap;
       background-color: @bg-header;
+
+      .form-me__wrapper-bottom & {
+        flex-direction: column;
+        // align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     }
 
     .about & {
@@ -85,6 +114,12 @@
       align-items: flex-start;
       padding-top: 54px;
       padding-bottom: 56px;
+    }
+
+    .form-me__wrapper-bottom & {
+      flex-direction: row;
+      align-items: flex-start;
+      flex-wrap: wrap;
     }
   }
 }
