@@ -1,16 +1,25 @@
 .page-main {
   width: 100%;
   color: #ffffff;
-  background-color: @bg-index;
-  background-image: url("../../img/traveller-illustration-mobile@1x.png"), url("../../img/globe-back-mobile@1x.jpg");
+  background-image: url("../../img/globe-back-mobile@1x.jpg"), linear-gradient(to bottom,  @bg-header 1230px, @bg-catalog 1230px);
+  background-repeat: no-repeat , no-repeat;
+  background-position: center -160px, top center;
+  background-size: 100% 569px, 100%;
+
+}
+
+.page-main__wrapper{
+  padding-top: 20px;
+  background-image: url("../../img/traveller-illustration-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: center 160px;
+  background-position: 79px 150px;
+  background-size: 192px 255px;
 }
 
 .page-main__title {
   .clear();
-  margin-bottom: 247px;
-  padding: 24px 15px 0;
+  margin-bottom: 245px;
+  padding: 0 15px;
   text-align: center;
   font-size: 36px;
   font-weight: 700;
@@ -19,7 +28,7 @@
 
 .page-main__user {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
 }
 
 .page-main__login {
@@ -42,17 +51,22 @@
 
 @media (min-width: @tablet-width) {
   .page-main {
-    background-image: url("../../img/traveller-illustration-tablet@1x.png"), url("../../img/globe-back-tablet@1x.jpg");
-    background-size: 372px 451px, 1479px 612px;
-    background-position: 315px 290px, center;
+    background-image: url("../../img/globe-back-tablet@1x.jpg"), linear-gradient(to bottom,  @bg-header 1230px, @bg-catalog 1230px);
   }
+
+  .page-main__wrapper{
+    padding-top: 34px;
+    background-image: url("../../img/traveller-illustration-tablet@1x.png");
+    // background-repeat: no-repeat;
+    background-position: 285px 274px;
+    background-size: 372px 451px;
+    }
+
 
   .page-main__title {
     .clear();
     width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 95px;
+    margin: 0 auto 84px;
     text-align: center;
     font-size: 60px;
     line-height: 70px;
@@ -69,10 +83,8 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    padding-top: 107px;
-    background-image: url("../../img/traveller-illustration-desktop@1x.png"), url("../../img/globe-back-desktop@1x.jpg");
-    background-size: 431px 640px, 1440px 750px;
-    background-position: 590px 0, center;
+    padding-top: 89px;
+    background-image: none;
   }
 
   .page-main__wrapper {
@@ -80,11 +92,13 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    .clear();
+    background-image: none
   }
 
   .page-main__title {
     .clear();
-    margin-left: 69px;
+    margin-left: 127px;
     text-align: left;
   }
 }

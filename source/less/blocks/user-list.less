@@ -1,15 +1,18 @@
 .user-list {
   display: none;
+  list-style: none;
 
   .page-header--menu-open &,
   .nojs & {
+    .clear();
     display: block;
+    margin-bottom: 50px;
   }
 }
 
 .user-list__login {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  width: 100%;
+  padding: 10px 0;
   color: @bg-header;
   font-size: 17px;
   font-weight: 700;
@@ -22,27 +25,34 @@
 
 @media (min-width: @tablet-width) {
   .user-list {
+    position: absolute;
+    top: 40px;
+    right: 40px;
     display: block;
-    margin-top: -120px;
-    margin-bottom: 120px;
-    margin-left: auto;
-    background-color: @bg-head-tablet;
+    .clear();
 
     .page-header--menu-open &,
     .nojs & {
-      order: -1;
-      padding-right: 40px;
-      background-color: #ffffff;
+      // order: -1;
+      // padding-right: 40px;
+      // background-color: #ffffff;
+      top: -90px;
+      display: block;
+      // .clear();
     }
   }
 
   .user-list__login {
-    padding: 12px 25px 10px;
+    padding: 12px 31px 7px 28px;
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .user-list {
+    top: 20px;
+    right: 60px;
+
     order: 100;
     .clear();
 

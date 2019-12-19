@@ -1,42 +1,41 @@
 .about {
   .page-main & {
     position: relative;
-    padding-bottom: 84px;
+    padding-top: 72px;
+    padding-bottom: 81px;
     color: #ffffff;
     background-color: @bg-index;
     font-size: 16px;
     font-weight: 700;
     line-height: 22px;
-
-    &::after {
-      .psevdo();
-      width: 100%;
-      z-index: 2;
-      height: 25px;
-      bottom: -25px;
-      left: 0;
-      background-color: @bg-index;
-      border-radius: 0 0 25px 25px;
-    }
+    border-radius: 0 0 30px 30px;
   }
 }
 
 .about__title {
   .page-main & {
     .clear();
-    margin-bottom: 23px;
+    margin-bottom: 19px;
+    padding-left: 25px;
   }
 }
 
 .about__text {
   .clear();
-  margin-bottom: 25px;
+  margin-bottom: 19px;
+  padding-left: 25px;
   font-weight: 300;
+
+  &nbsp {
+    display: none;
+  }
 }
 
 .about__next {
   display: block;
   .clear();
+  padding-left: 25px;
+  padding-right: 30px;
 }
 
 .about__more {
@@ -48,30 +47,38 @@
 @media (min-width: @tablet-width) {
   .about {
     .page-main & {
-      &::after {
-        height: 60px;
-        bottom: -60px;
-        border-radius: 0 0 60px 60px;
-      }
+      padding-top: 70px;
+      padding-bottom: 87px;
+      border-radius: 0 0 60px 60px;
     }
   }
 
   .about__title {
-    .clear();
-    margin-bottom: 43px;
-    padding-left: 35px;
+    .page-main & {
+      .clear();
+      margin-bottom: 40px;
+      padding-left: 34px;
+    }
   }
 
   .about__text {
     width: 335px;
-    margin-bottom: 43px;
+    margin-bottom: 32px;
     padding-left: 35px;
     font-size: 28px;
     line-height: 33px;
+
+    & br {
+      display: none;
+    }
+
+    & span {
+      display: block;
+    }
   }
 
   .about__next {
-    width: 300px;
+    width: 322px;
     margin-bottom: 53px;
     padding-left: 35px;
     font-size: 21px;
@@ -81,7 +88,7 @@
   .about__more {
     width: 274px;
     margin-left: 35px;
-    padding: 30px 126px 28px 34px;
+    padding: 29px 126px 27px 33px;
     color: @title;
     font-size: 24px;
     font-weight: 700;
@@ -104,7 +111,8 @@
 @media (min-width: @desktop-width) {
   .about {
     .page-main & {
-      padding-bottom: 88px;
+      padding-top: 0;
+      padding-bottom: 0;
       background-image: none;
       // background-size: 376px 548px;
       // background-position: right bottom;
@@ -118,19 +126,31 @@
   }
 
   .about__title {
+    .page-main & {
     .clear();
-    margin-bottom: 61px;
-    padding-left: 72px;
+    margin-bottom: 55px;
+    padding-left: 68px;
   }
+}
 
   .about__text {
     width: 685px;
+    margin-bottom: 40px;
     padding-left: 71px;
+
+    & span{
+      display: inline;
+    }
   }
 
   .about__next {
-    width: 485px;
-    margin-bottom: 86px;
+    display: block;
+    width: 510px;
+    margin-bottom: 84px;
     padding-left: 71px;
+  }
+
+  .about__more {
+    margin-left: 71px;
   }
 }

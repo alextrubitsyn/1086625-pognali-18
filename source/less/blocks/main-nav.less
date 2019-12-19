@@ -1,10 +1,12 @@
 .main-nav {
+  display: none;
   .clear();
-  display: block;
+  padding: 43px 25px 28px;
   text-align: center;
   background-color: inherit;
 
   .page-header--menu-open & {
+    display: block;
     position: absolute;
     top: 100%;
     right: 0;
@@ -14,11 +16,13 @@
   }
 
   .nojs & {
+    display: block;
     position: static;
   }
 }
 
-.main-nav__list {
+.main-nav__list
+.page-header & {
   .clear();
   list-style: none;
 }
@@ -34,13 +38,31 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
-    margin-left: auto;
+    .clear();
+
+    .page-header--menu-open & {
+      display: flex;
+      position: absolute;
+      padding-top: 53px;
+      padding-bottom: 74px;
+    // top: 100%;
+    // right: 0;
+    // left: 0;
+    // background-color: #ffffff;
+    // z-index: 100;
   }
+
+  .nojs & {
+    // display: block;
+    display: flex;
+    position: static;
+  }
+}
 
   .main-nav__back-main {
     position: absolute;
@@ -54,9 +76,8 @@
   .main-nav {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     flex-grow: 1;
-    padding-top: 49px;
     color: #ffffff;
     background-color: @bg-header;
 
