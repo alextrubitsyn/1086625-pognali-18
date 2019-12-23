@@ -21,20 +21,19 @@
   }
 }
 
-.main-nav__list
-.page-header & {
+.main-nav__list .page-header & {
   .clear();
   list-style: none;
 }
 
-.main-nav__back-main {
-  display: none;
-  color: #ffffff;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  text-transform: uppercase;
-}
+// .main-nav__back-main {
+//   display: none;
+//   color: #ffffff;
+//   font-size: 20px;
+//   font-weight: 700;
+//   line-height: 24px;
+//   text-transform: uppercase;
+// }
 
 @media (min-width: @tablet-width) {
   .main-nav {
@@ -50,26 +49,20 @@
       position: absolute;
       padding-top: 53px;
       padding-bottom: 74px;
-    // top: 100%;
-    // right: 0;
-    // left: 0;
-    // background-color: #ffffff;
-    // z-index: 100;
+    }
+
+    .nojs & {
+      display: flex;
+      position: static;
+    }
   }
 
-  .nojs & {
-    // display: block;
-    display: flex;
-    position: static;
-  }
-}
-
-  .main-nav__back-main {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: block;
-  }
+  // .main-nav__back-main {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   display: block;
+  // }
 }
 
 @media (min-width: @desktop-width) {
@@ -87,7 +80,7 @@
     }
   }
 
-  .main-nav__back-main {
-    display: block;
-  }
+  // .main-nav__back-main {
+  //   display: block;
+  // }
 }

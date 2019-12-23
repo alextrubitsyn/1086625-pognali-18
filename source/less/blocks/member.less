@@ -2,7 +2,7 @@
   position: relative;
   // padding: 35px;
   color: @text;
-  border-radius: 10px;
+  border-radius: 20px;
   background-color: #ffffff;
 
   .page-catalog__users & {
@@ -31,6 +31,7 @@
 
 .member__wrapper {
   .page-catalog__users & {
+    position: relative;
     margin-top: -70px;
   }
 }
@@ -72,8 +73,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     width: 146px;
+    margin-bottom: 18px;
+    padding-left: 0;
     padding-right: 70px;
+    letter-spacing: 0px;
 
     &::after {
       right: 2px;
@@ -89,7 +94,7 @@
 
   .page-catalog__users & {
     align-self: flex-end;
-    margin-bottom: 46px;
+    margin-bottom: 26px;
   }
 }
 
@@ -101,9 +106,9 @@
   text-transform: uppercase;
 
   .page-catalog__users & {
-    position: relative;
-    top: -80px;
-    left: 46px;
+    position: absolute;
+    top: 41px;
+    left: 48px;
     width: 50%;
     padding: 5px 0 5px 38px;
   }
@@ -118,7 +123,7 @@
     background: url("../../img/heart.svg") no-repeat;
     background-color: @bg-catalog;
     background-size: 13px 11px;
-    background-position: center;
+    background-position: 54% center;
     border-radius: 50%;
     border: none;
     cursor: pointer;
@@ -149,9 +154,10 @@
 
   .page-catalog__item & {
     justify-content: flex-start;
-    margin-top: -20px;
-    margin-bottom: 0;
+    margin-bottom: 23px;
+    padding-right: 28px;
     padding-left: 8px;
+    letter-spacing: -0.1px;
   }
 }
 
@@ -185,9 +191,12 @@
 
   .page-catalog__item & {
     flex-direction: column;
-    margin-top: -24px;
-    margin-bottom: 20px;
+    margin-bottom: 3px;
     padding-left: 8px;
+
+    &--short {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -198,6 +207,7 @@
 
   .page-catalog__item & {
     flex-direction: column;
+    .clear();
   }
 }
 
@@ -206,26 +216,30 @@
   font-size: 0;
   list-style: none;
   text-transform: uppercase;
+  .olg();
 
   &:not(:last-child) {
     margin-right: 19px;
-    .olg();
   }
 
   .page-catalog__item & {
-    padding-left: 41px;
+    display: block;
+    padding-left: 38px;
+    height: 18px;
     font-size: 15px;
     font-weight: 500;
     line-height: 18px;
     white-space: nowrap;
+    margin-bottom: 9px;
 
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-right: 0;
     }
 
     &-wish {
+      .clear();
       display: block;
-      margin-bottom: 19px;
+      margin-bottom: 18px;
       color: @text;
       font-size: 15px;
       font-weight: 400;
@@ -238,15 +252,15 @@
   }
 
   &--sri-lanka {
-    background-color: red;
+    .olo();
   }
 
   &--thailand {
-    background-color: blue;
+    .olo();
   }
 
   &--seychelles {
-    background-color: yellow;
+    .olo();
   }
 }
 
@@ -258,9 +272,9 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
-    margin-bottom: 20px;
-    padding-top: 30px;
-    padding-left: 8px;
+    margin-bottom: 14px;
+    padding-top: 26px;
+    // padding-left: 8px;
 
     &::before,
     &::after {
@@ -274,7 +288,7 @@
       position: absolute;
       content: "транспорт:";
       top: 0;
-      left: 10px;
+      left: 8px;
     }
 
     &::after {
@@ -350,6 +364,10 @@
 
   .page-catalog__users & {
     position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     top: auto;
     left: auto;
     .size(45);
@@ -359,12 +377,21 @@
     font-weight: 700;
     line-height: 18px;
 
+    &::after {
+      display: none;
+    }
+
     &-title {
       display: none;
     }
 
     &-value {
-      display: block;
+      padding-top: 3px;
+      margin-bottom: 0;
+    }
+
+    &-text {
+      display: none;
     }
   }
 }
@@ -392,6 +419,7 @@
   border-radius: 25px;
 
   .page-catalog__users & {
+    padding: 5px 10px;
     color: @bg-header;
   }
 }
@@ -404,12 +432,17 @@
     // align-items: center;
 
     .page-catalog__users & {
+      height: 332px;
       flex-direction: row;
       justify-content: flex-start;
       align-items: flex-start;
       flex-wrap: nowrap;
       .clear();
-      padding: 35px 25px 25px 35px;
+      padding: 32px 25px 22px 35px;
+
+      // &:nth-child(2) {
+      //   padding-bottom: 16px;
+      // }
 
       &:not(:last-child) {
         margin-bottom: 40px;
@@ -424,16 +457,17 @@
   .member__link-img {
     .page-catalog__item & {
       flex-shrink: 0;
-      margin-right: 30px;
-      margin-bottom: 24px;
-      border-radius: 30px;
+      margin-right: 29px;
+      // margin-bottom: 24px;
+      padding-top: 2px;
+      border-radius: 20px;
     }
   }
 
   .member__image {
     .page-catalog__item & {
       .size(190);
-      border-radius: 30px;
+      border-radius: 20px;
     }
 
     .page-main & {
@@ -472,7 +506,7 @@
       align-self: flex-start;
       width: 320px;
       .clear();
-      margin-bottom: 20px;
+      margin-bottom: 11px;
     }
   }
 
@@ -490,26 +524,43 @@
     }
 
     .page-catalog__item & {
+      width: auto;
       .clear();
-      flex-direction: row;
+      display: inline-block;
+      // justify-content: flex-start;
+      // flex-direction: row;
+      // padding-top: 1px;
       padding-right: 30px;
+      padding-left: 4px;
       font-size: 30px;
       line-height: 30px;
+
+      &::after {
+        right: 0;
+        top: 12px;
+      }
     }
   }
 
   .member__name-n {
     .page-catalog__item & {
-      margin-right: 12px;
+      // margin-right: 12px;
+    }
+  }
+
+  .member__name-f {
+    .page-catalog__item & {
+      display: inline-block;
     }
   }
 
   .member__liked {
     .page-catalog__item & {
+      display: flex;
+      align-items: center;
       position: static;
       order: 80;
-      padding-top: 7px;
-      padding-left: 50px;
+      .clear();
       color: @bg-header;
       font-size: 20px;
       line-height: 30px;
@@ -521,6 +572,15 @@
       position: static;
       top: auto;
       left: auto;
+      .size(50);
+      margin-right: 8px;
+      background-size: 20px 17px;
+    }
+  }
+
+  .member__like-vol {
+    .page-catalog__users & {
+      padding-top: 4px;
     }
   }
 
@@ -537,7 +597,9 @@
     }
 
     .page-catalog__item & {
-      width: 200px;
+      width: 235px;
+      .clear();
+      padding-left: 6px;
     }
   }
 
@@ -546,14 +608,20 @@
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0.2px;
+
+    .page-catalog__item & {
+      font-size: 20px;
+    }
   }
 
   .member__countries {
     margin-bottom: 17px;
 
     .page-catalog__item & {
-      margin-left: -216px;
+      // .clear();
       width: calc(100% + 216px);
+      margin-left: -216px;
+      padding-left: 0;
       order: 90;
     }
   }
@@ -570,19 +638,24 @@
   .member__country {
     .page-catalog__item & {
       width: auto;
-      padding-left: 50px;
+      padding-left: 43px;
       color: @title;
       font-size: 20px;
       line-height: 30px;
       white-space: nowrap;
 
+      &--short {
+        margin-bottom: 3px;
+      }
+
       &:not(:last-child) {
-        margin-right: 25px;
+        margin-right: 31px;
       }
 
       &-wish {
-        padding-bottom: 22px;
-        margin-left: 48px;
+        .clear();
+        margin-bottom: 15px;
+        padding-left: 45px;
         font-size: 15px;
         font-weight: 400;
         line-height: 18px;
@@ -599,11 +672,17 @@
 
   .member__wrapper-transport {
     .page-catalog__item & {
-      margin-top: calc(130px - 100%);
-      margin-left: auto;
-      order: 100;
+      position: absolute;
+      right: 0;
+      top: 0;
+      .clear();
       display: flex;
       flex-direction: column;
+
+      &::before,
+      &::after {
+        display: none;
+      }
     }
   }
 
@@ -616,6 +695,8 @@
       flex-direction: column;
       justify-content: center;
       .clear();
+      margin-right: 5px;
+      margin-bottom: 6px;
     }
   }
 
@@ -640,6 +721,12 @@
       font-size: 24px;
       font-weight: 700;
       line-height: 24px;
+
+      .page-catalog__users & {
+        .clear();
+        margin-bottom: 6px;
+        padding-top: 10px;
+      }
     }
 
     &-text {
@@ -649,18 +736,51 @@
       line-height: 14px;
     }
 
-    .page-catalog__item & {
-      position: static;
+    .page-catalog__users & {
+      position: relative;
       .clear();
+      .size(60);
+
+      &::after {
+        display: block;
+        .psevdo();
+        .size(31; 1);
+        left: 15px;
+        bottom: 23px;
+        background-color: @text;
+        opacity: 0.1;
+      }
+
+      &-text {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 14px;
+        color: @text;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  .member__level-line {
+    .page-catalog__users & {
+      .size(66);
+    }
+  }
+
+  .member__level-segment {
+    .page-catalog__users & {
+      // .size(60);
     }
   }
 
   .member__invite {
     .page-catalog__item & {
       order: 70;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
       color: @bg-header;
       font-size: 20px;
+      padding: 12px 32px 7px;
     }
   }
 }
@@ -669,6 +789,7 @@
   .member {
     .page-catalog__users & {
       width: 950px;
+      height: auto;
       .clear;
       flex-direction: row;
       justify-content: space-between;
@@ -705,11 +826,11 @@
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-content: flex-start;
       flex-wrap: wrap;
       width: 665px;
       min-height: 285px;
-      padding: 48px 44px 42px 34px;
+      padding: 48px 44px 0 34px;
     }
   }
 
@@ -722,7 +843,7 @@
       flex-wrap: wrap;
       .clear();
       width: 355px;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
   }
 
@@ -740,9 +861,14 @@
     .page-catalog__item & {
       width: 311px;
       .clear();
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-size: 30px;
       line-height: 30px;
+
+      &::after {
+        right: auto;
+        left: 0;
+      }
     }
   }
 
@@ -755,12 +881,11 @@
   .member__liked {
     .page-catalog__item & {
       position: static;
+      align-self: center;
       order: 90;
       width: 150px;
-      margin-right: 100px;
-      padding-top: 7px;
-      padding-left: 50px;
-      color: @bg-header;
+      .clear();
+      margin-right: 30px;
       font-size: 20px;
       line-height: 30px;
     }
@@ -773,9 +898,9 @@
 
     .page-catalog__item & {
       justify-content: flex-start;
-      width: 222px;
+      width: 260px;
       .clear();
-      padding-left: 25px;
+      padding-left: 28px;
       // margin-right: 134px;
     }
   }
@@ -790,8 +915,7 @@
       // width: calc(100% + 216px);
       .clear();
       order: 70;
-      width: 195px;
-      margin-bottom: 36px;
+      width: 220px;
     }
   }
 
@@ -807,14 +931,16 @@
 
   .member__country {
     .page-catalog__item & {
+      height: 24px;
       margin: 0;
-      padding-left: 50px;
+      padding-left: 54px;
       color: @title;
       font-size: 20px;
       line-height: 30px;
       white-space: nowrap;
 
       &:not(:last-child) {
+        margin-right: 0;
         margin-bottom: 13px;
       }
 
@@ -833,8 +959,8 @@
 
   .member__wrapper-transport {
     .page-catalog__item & {
-      // margin-top: calc(130px - 100%);
-      // margin-left: auto;
+      position: static;
+      align-self: center;
       .clear();
       order: 100;
       display: flex;
@@ -848,6 +974,8 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
+      margin-right: 42px;
+      margin-bottom: 0;
     }
   }
 
@@ -865,7 +993,9 @@
   .member__invite {
     .page-catalog__item & {
       order: 80;
-      margin-left: 25px;
+      align-self: center;
+      margin-left: 20px;
+      margin-bottom: 0;
       color: @bg-header;
       font-size: 20px;
     }

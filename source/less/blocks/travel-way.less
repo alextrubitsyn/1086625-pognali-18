@@ -76,6 +76,7 @@
 
       .page-catalog__users & {
         background-size: 15px 17px;
+        background-position: center;
       }
     }
 
@@ -87,6 +88,59 @@
   &--active {
     &::before {
       opacity: 1;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .travel-way__item {
+    .page-catalog__users & {
+      .size(34);
+      background-color: inherit;
+
+      &::before {
+        .size(34);
+        opacity: 0.15;
+      }
+
+      &--plane {
+        &::before {
+          background: url("../../img/plane.svg") no-repeat;
+          background-position: center;
+          background-size: 19px 21px;
+        }
+      }
+
+      &--bus {
+        &::before {
+          background: url("../../img/bus.svg") no-repeat;
+          background-position: center;
+          background-size: 17px 21px;
+        }
+      }
+
+      &--bike {
+        &::before {
+          background: url("../../img/bike.svg") no-repeat;
+          background-position: center;
+          background-size: 24px 21px;
+        }
+      }
+
+      &--run {
+        &::before {
+          background: url("../../img/run.svg") no-repeat;
+          background-position: left center;
+          background-size: 20px 21px;
+          background-position: center;
+        }
+      }
+
+      &--active {
+        &::before {
+          opacity: 1;
+        }
+      }
     }
   }
 }

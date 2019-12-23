@@ -117,10 +117,7 @@
   }
 
   .map__frame {
-    display: block;
-    width: 100%;
     height: 523px;
-    border: none;
   }
 }
 
@@ -129,16 +126,26 @@
     padding-top: 114px;
   }
 
+  .map__wrapper {
+    padding-bottom: 0;
+
+    &::after {
+      bottom: -56px;
+    }
+  }
+
   .map__address {
     position: relative;
     margin-right: 148px;
     margin-left: 222px;
+    margin-bottom: 0;
     padding: 31px 0 33px 122px;
     text-transform: uppercase;
 
     &::after {
       .size(90);
       background-size: 28px 43px;
+      z-index: 5;
     }
   }
 
@@ -154,8 +161,6 @@
   }
 
   .map__frame {
-    display: block;
-    width: 100%;
-    border: none;
+    height: 450px;
   }
 }
