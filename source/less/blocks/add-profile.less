@@ -1,27 +1,22 @@
 .add-profile {
-  .page-main & {
-    position: relative;
-    padding-top: 68px;
-    // padding-bottom: 30px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 22px;
-    text-align: center;
-    background-color: @bg-catalog;
-    // background-color: red;
-    border-radius: 0 0 30px 30px;
-    z-index: 5;
+  position: relative;
+  padding-top: 68px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  text-align: center;
+  background-color: @bg-catalog;
+  z-index: 5;
 
-    &::after {
-      .psevdo();
-      width: 100%;
-      height: 30px;
-      left: 0;
-      bottom: -30px;
-      border-radius: 0 0 30px 30px;
-      background-color: @bg-catalog;
-      z-index: -1;
-    }
+  &::after {
+    .psevdo();
+    width: 100%;
+    height: 30px;
+    left: 0;
+    bottom: -30px;
+    border-radius: 0 0 30px 30px;
+    background-color: @bg-catalog;
+    z-index: -1;
   }
 }
 
@@ -54,8 +49,7 @@
     right: 0;
     top: -135px;
     background: url("../../img/rates@1x.png") no-repeat;
-    // background-size: 99px;
-    // background-position: 195px top;
+    background-size: 99px;
   }
 }
 
@@ -94,7 +88,7 @@
     background-color: @bg-sequence3;
   }
 
-  .add-profile__item:nth-child(3) & {
+  .add-profile__item:nth-child(n + 2) & {
     background-color: @bg-sequence4;
   }
 }
@@ -102,26 +96,33 @@
 .add-profile__business-link {
   width: 100%;
   margin-bottom: 8px;
-  color: @bg-index;
+  color: #132576;
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .add-profile {
-    .page-main & {
-      padding-top: 134px;
-      font-size: 28px;
-      font-weight: 300;
-      line-height: 33px;
+    padding-top: 134px;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33px;
 
-      &::after {
-        height: 60px;
-        bottom: -60px;
-        border-radius: 0 0 60px 60px;
-      }
+    &::after {
+      height: 60px;
+      bottom: -60px;
+      border-radius: 0 0 60px 60px;
     }
   }
 
@@ -209,6 +210,15 @@
       text-align: left;
     }
 
+    &:hover::after,
+    &:focus::after {
+      opacity: 0.7;
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+
     &::after {
       .psevdo();
       .size(67);
@@ -217,18 +227,28 @@
       background: url("../../img/business.svg") no-repeat;
       background-size: 17px 21px;
       background-position: center;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    &::before {
+      .psevdo();
+      .size(67);
+      top: 0;
+      left: 0;
       background-color: @bg-country;
       border-radius: 50%;
+    }
+    &:active::after {
+      opacity: 1;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .add-profile {
-    .page-main & {
-      padding-top: 166px;
-      padding-bottom: 100px;
-    }
+    padding-top: 164px;
+    padding-bottom: 100px;
   }
 
   .add-profile__wrapper {
@@ -254,6 +274,7 @@
       top: 0;
       right: 74px;
       bottom: 0;
+      background-size: 198px;
     }
 
     &::after {

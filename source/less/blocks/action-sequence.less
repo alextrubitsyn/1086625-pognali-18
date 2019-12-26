@@ -1,5 +1,5 @@
 .action-sequence {
-  background-image: linear-gradient(to bottom, @bg-header 80px,  @bg-index 80px);
+  background-image: linear-gradient(to bottom, @bg-header 25%, @bg-index 25%);
 }
 
 .action-sequence__list {
@@ -60,9 +60,16 @@
 
 @media (min-width: @tablet-width) {
   .action-sequence {
-    margin-bottom: 66px;
+    padding-bottom: 96px;
     font-size: 24px;
     line-height: 24px;
+    // background-color: @bg-index;
+    background-image: none;
+    // background-image: linear-gradient(
+    //   to bottom,
+    //   @bg-header 140px,
+    //   @bg-index 140px
+    // );
   }
 
   .action-sequence__item {
@@ -111,7 +118,25 @@
 
 @media (min-width: @desktop-width) {
   .action-sequence {
-    margin-bottom: 124px;
+    // background-image: inherit;
+    // padding-bottom: 0;
+    padding-bottom: 123px;
+    z-index: 5;
+  }
+
+  .action-sequence__wrapper {
+    position: relative;
+    z-index: 5;
+
+    &::before {
+      .psevdo();
+      .size(431; 640);
+      bottom: -123px;
+      right: 405px;
+      background-image: url("../../img/traveller-illustration-desktop@1x.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 
   .action-sequence__item {
@@ -168,6 +193,5 @@
     margin-right: 54px;
     font-size: 24px;
     line-height: 120px;
-
   }
 }

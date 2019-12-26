@@ -23,6 +23,13 @@
   padding-top: 22px;
 }
 
+.country-filter__menu-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .country-filter__title {
   .clear();
   padding: 14px 0 14px 27px;
@@ -250,6 +257,12 @@
     margin-bottom: 48px;
   }
 
+  .country-filter__menu-wrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
   .country-filter__title {
     display: none;
   }
@@ -454,7 +467,7 @@
   }
 
   .country-filter__menu {
-    margin-bottom: 55px;
+    margin-bottom: 44px;
     background-color: @bg-catalog;
   }
 
@@ -503,8 +516,8 @@
     .country-filter--open & {
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin-bottom: 61px;
-      padding-top: 7px;
+      margin-bottom: 10px;
+      padding-top: 0px;
       padding-left: 36px;
       background-color: @bg-catalog;
     }
@@ -526,10 +539,11 @@
     .page-catalog & {
       display: block;
       .clear();
+      margin-bottom: 49px;
       // .olo();
 
       &:nth-child(5n + 2) {
-        width: 250px;
+        width: 254px;
       }
       &:nth-child(5n + 3) {
         width: 252px;
@@ -538,29 +552,29 @@
         width: 250px;
       }
       &:nth-child(5n + 5) {
-        width: 252px;
+        width: 246px;
       }
       &:nth-child(5n + 6) {
         width: 204px;
       }
-      &:nth-child(5n + 6) {
-        width: 204px;
-      }
-      &:nth-child(n + 2):nth-child(-n + 6) {
-        margin-bottom: 70px;
-      }
-      &:nth-child(n + 7):nth-child(-n + 11) {
-        margin-bottom: 65px;
-      }
+      // &:nth-child(5n + 6) {
+      //   width: 204px;
+      // }
+      // &:nth-child(n + 2):nth-child(-n + 6) {
+      //   margin-bottom: 49px;
+      // }
+      // &:nth-child(n + 7):nth-child(-n + 11) {
+      //   margin-bottom: 50px;
+      // }
       &:nth-child(n + 12):nth-child(-n + 16) {
-        margin-bottom: 108px;
+        margin-bottom: 90px;
       }
       &:nth-child(n + 17):nth-child(-n + 21) {
-        margin-bottom: 62px;
+        margin-bottom: 45px;
       }
       &:nth-child(n + 22):nth-child(-n + 26) {
         & .country-filter__letter-title {
-          margin-bottom: 57px;
+          margin-bottom: 40px;
         }
       }
     }
@@ -568,9 +582,12 @@
 
   .country-filter__letter-title {
     .page-catalog & {
-      display: inline-block;
+      // display: block;
+      display: flex;
+      align-items: center;
+      min-height: 60px;
       .clear();
-      margin-bottom: 48px;
+      margin-bottom: 30px;
       font-size: 60px;
       font-weight: 700;
       line-height: 24px;

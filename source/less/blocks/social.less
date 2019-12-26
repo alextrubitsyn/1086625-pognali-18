@@ -22,18 +22,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
   .size(45);
+  color: @title;
+  background-color: @map;
+  border-radius: 50%;
 
   .main-nav & {
-    color: #cccccc;
-    background-color: #ffffff;
+    &:hover,
+    &:focus {
+      color: #ffffff;
+      background-color: @bg-index;
+    }
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   .page-footer & {
     margin-bottom: 52px;
-    color: @title;
-    background-color: @map;
+
+    &:hover,
+    &:focus {
+      background-color: @bg-sequence3;
+    }
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
   }
 }
 

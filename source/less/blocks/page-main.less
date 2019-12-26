@@ -1,15 +1,16 @@
 .page-main {
   width: 100%;
   color: #ffffff;
-  background-image: url("../../img/globe-back-mobile@1x.jpg"), linear-gradient(to bottom,  @bg-header 1230px, @bg-catalog 1230px);
-  background-repeat: no-repeat , no-repeat;
-  background-position: center -160px, top center;
-  background-size: 100% 569px, 100%;
-
+  background-color: @bg-header;
 }
 
-.page-main__wrapper{
+.page-main__wrapper {
+  position: relative;
+}
+
+.page-main__intro {
   padding-top: 20px;
+  padding-bottom: 30px;
   background-image: url("../../img/traveller-illustration-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 79px 150px;
@@ -47,21 +48,35 @@
   text-decoration: none;
   background-color: @map;
   border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    background-color: @bg-sequence3;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .page-main {
-    background-image: url("../../img/globe-back-tablet@1x.jpg"), linear-gradient(to bottom,  @bg-header 1230px, @bg-catalog 1230px);
+    position: relative;
+    background-color: @bg-index;
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center 250px;
+    background-size: 1479px 612px;
   }
 
-  .page-main__wrapper{
+  .page-main__intro {
     padding-top: 34px;
+    padding-bottom: 213px;
     background-image: url("../../img/traveller-illustration-tablet@1x.png");
-    // background-repeat: no-repeat;
-    background-position: 285px 274px;
+    background-position: 285px 273px;
     background-size: 372px 451px;
-    }
-
+    z-index: 5;
+  }
 
   .page-main__title {
     .clear();
@@ -83,22 +98,27 @@
 
 @media (min-width: @desktop-width) {
   .page-main {
-    padding-top: 89px;
-    background-image: none;
+    background-position: -9999px;
   }
 
   .page-main__wrapper {
+    .clear();
+  }
+
+  .page-main__intro {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    .clear();
-    background-image: none
+    padding-top: 88px;
+    padding-bottom: 2px;
+    background-image: none;
   }
 
   .page-main__title {
     .clear();
-    margin-left: 127px;
+    margin-left: 66px;
     text-align: left;
+    z-index: 2;
   }
 }

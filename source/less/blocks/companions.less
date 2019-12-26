@@ -22,8 +22,29 @@
   }
 }
 
+.companions__wrapper {
+  position: relative;
+  background-image: url("../../img/smolov-back-desktop@1x.png");
+  background-position: 180px 0;
+  background-repeat: no-repeat;
+  background-size: 143px 143px;
+  z-index: 1;
+
+  &::after {
+    .psevdo();
+    .size(71);
+    top: 273px;
+    left: -9px;
+    background-image: url("../../img/rogovaya-back-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 71px 71px;
+    z-index: -1;
+  }
+}
+
 .companions__title {
   .page-main & {
+    padding-top: 32px;
     margin-bottom: 19px;
     // padding-left: 25px;
   }
@@ -46,7 +67,7 @@
   font-weight: 700;
 }
 
-.companions__wrapper {
+.companions__wrapper-title {
   .page-main & {
     margin-bottom: 56px;
     padding-left: 25px;
@@ -102,6 +123,23 @@
   }
 
   .companions__wrapper {
+    // padding-top: 72px;
+    background-image: url("../../img/rogovaya-back-desktop@1x.png");
+    background-position: 408px 7px;
+    background-repeat: no-repeat;
+    background-size: 285px 285px;
+
+    &::after {
+      .size(143);
+      top: 357px;
+      left: 40px;
+      background-image: url("../../img/smolov-back-desktop@1x.png");
+      background-size: 143px 143px;
+      z-index: -1;
+    }
+  }
+
+  .companions__wrapper-title {
     .page-main & {
       margin-bottom: 58px;
       padding-left: 33px;
@@ -111,6 +149,7 @@
   .companions__title {
     .page-main & {
       margin-bottom: 55px;
+      padding-top: 72px;
       // padding-left: 33px;
       // margin-left: -2px;
     }
@@ -178,6 +217,21 @@
   }
 
   .companions__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding-top: 0;
+    // padding-bottom: 54px;
+    background-position: 191px 256px;
+
+    &::after {
+      top: 4px;
+      left: 547px;
+    }
+  }
+
+  .companions__wrapper-title {
     .page-main & {
       // width: 430px;
       display: flex;
@@ -190,7 +244,8 @@
 
   .companions__title {
     .page-main & {
-      margin-bottom: 57px;
+      margin-bottom: 54px;
+      padding-top: 0;
       padding-left: 0;
       letter-spacing: -0.2px;
     }
@@ -233,7 +288,7 @@
   .companions__to-all {
     width: 280px;
     margin-top: -78px;
-    // margin-bottom: 87px;
+    margin-bottom: 54px;
     margin-left: 71px;
     padding: 28px 36px 26px 34px;
     font-size: 24px;

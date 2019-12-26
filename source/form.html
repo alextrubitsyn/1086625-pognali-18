@@ -10,8 +10,8 @@
 
 <body class="nojs">
   <header class="page-header">
-    <div class="container">
-        <div class="page-header__wrapper">
+    <div class="container page-header__wrapper">
+        <div class="page-header__wrapper-logo">
           <a class="page-header__logo logo-pognali" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
@@ -31,13 +31,13 @@
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a class="site-list__link" href="index.html">О сервисе</a>
+            <a data-hover="О сервисе" class="site-list__link" href="index.html">О сервисе</a data-hover="О сервисе">
           </li>
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">Направления</a>
+            <a data-hover="Направления" class="site-list__link">Направления</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Попутчики</a>
+            <a data-hover="Попутчики" class="site-list__link" href="catalog.html">Попутчики</a>
           </li>
         </ul>
         <ul class="main-nav__list user-list">
@@ -113,8 +113,8 @@
   </header>
 
   <main class="page-form">
-      <div class="page-form__wrapper-top">
-        <div class="container">
+      <div class="page-form__header">
+        <div class="container page-form__wrapper-top">
           <h1 class="page-form__title">Направления</h1>
         </div>
       </div>
@@ -122,8 +122,8 @@
     <!-- МОИ ДАННЫЕ -->
     <form class="form-me" action="https://echo.htmlacademy.ru" method="get">
 
-      <div class="form-me__wrapper">
-        <div class="container">
+      <div class="form-me__private">
+        <div class="container form-me__wrapper-top">
           <!-- уровень  -->
           <div class="form-me__level level">
             <svg class="form-me__level-line level-line" width="45" height="45" viewBox="0 0 45 45">
@@ -142,8 +142,9 @@
         </div>
       </div>
 
-      <div class="form-me__wrapper-bottom">
-        <div class="container">
+      <div class="form-me__favor">
+      <!-- <div class="form-me__wrapper-bottom"> -->
+        <div class="container form-me__wrapper-favor">
           <!-- <a class="form-me__photo-btn button" href="#"><span>Сменить</span>фото</a> -->
           <input class="form-me__input" id="user-photo" type="file" name="user-photo" />
           <label class="form-me__photo-btn button" for="user-photo"><span>Сменить</span>фото</label>
@@ -217,7 +218,7 @@
 
       <!-- НОВЫЕ ПЛАНЫ -->
       <section class="new-plan">
-        <div class="container">
+        <div class="container new-plan__wrapper">
           <h2 class="new-plan__title">Добавить план:</h2>
           <ul class="new-plan__list steps">
 

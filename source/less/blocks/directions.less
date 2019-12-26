@@ -1,6 +1,6 @@
 .directions {
   position: relative;
-  padding-top: 72px;
+  padding-top: 102px;
   padding-bottom: 88px;
   color: @text;
   background-color: @bg-catalog;
@@ -15,6 +15,10 @@
     z-index: 2;
     border-radius: 0 0 30px 30px;
   }
+}
+
+.directions__wrapper {
+  position: relative;
 }
 
 .directions__title {
@@ -55,7 +59,7 @@
   border-radius: 10px 10px 0 0;
 }
 
-.directions__wrapper {
+.directions__wrapper-country {
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +133,7 @@
 
 @media (min-width: @tablet-width) {
   .directions {
-    padding-top: 73px;
+    padding-top: 134px;
     padding-bottom: 105px;
     background-color: @bg-catalog;
     // border-radius: 0 0 60px 60px;
@@ -138,6 +142,21 @@
       bottom: -60px;
       height: 60px;
       border-radius: 0 0 60px 60px;
+    }
+  }
+
+  .directions__wrapper {
+    background: url("../../img/flags-back@1x.png") no-repeat;
+    background-size: 289px 575px;
+    background-position: 438px 6px;
+
+    &::before {
+      .psevdo();
+      .size(141);
+      top: 334px;
+      left: 40px;
+      background-color: @bg-country;
+      border-radius: 20px;
     }
   }
 
@@ -179,7 +198,7 @@
     border-radius: 0 20px 20px 0;
   }
 
-  .directions__wrapper {
+  .directions__wrapper-country {
     flex-grow: 0;
     display: flex;
     flex-direction: column;
@@ -236,10 +255,24 @@
 
 @media (min-width: @desktop-width) {
   .directions {
-    padding-top: 89px;
+    padding-top: 150px;
     padding-bottom: 27px;
     background-position: right 74px;
     background-color: @bg-catalog;
+  }
+
+  .directions__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 73px;
+    padding-bottom: 52px;
+    background-position: 1091px top;
+
+    &::before {
+      top: 1px;
+      left: 60px;
+    }
   }
 
   .directions__wrapper-text {
@@ -285,7 +318,7 @@
     border-radius: 0 20px 20px 0;
   }
 
-  .directions__wrapper {
+  .directions__wrapper-country {
     flex-grow: 1;
     // flex-direction: column;
     // justify-content: flex-start;

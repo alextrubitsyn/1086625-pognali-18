@@ -21,6 +21,15 @@
   text-decoration: none;
   background-color: @map;
   border-radius: 25px;
+
+  &:hover,
+  &:focus {
+    background-color: @bg-sequence3;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -33,12 +42,8 @@
 
     .page-header--menu-open &,
     .nojs & {
-      // order: -1;
-      // padding-right: 40px;
-      // background-color: #ffffff;
       top: -90px;
       display: block;
-      // .clear();
     }
   }
 
@@ -50,11 +55,14 @@
 
 @media (min-width: @desktop-width) {
   .user-list {
-    top: 20px;
-    right: 60px;
-
+    top: auto;
+    right: auto;
+    position: static;
     order: 100;
-    .clear();
+
+    .main-nav & {
+      .clear();
+    }
 
     .page-header--menu-open &,
     .page-header--nojs & {

@@ -1,7 +1,7 @@
 .page-form {
   padding-bottom: 44px;
 }
-.page-form__wrapper-top {
+.page-form__header {
   position: relative;
   padding-top: 49px;
   background-color: @bg-header;
@@ -16,6 +16,10 @@
     border-radius: 0 0 20px 20px;
     // z-index: -1;
   }
+}
+
+.page-form__wrapper-top {
+  position: relative;
 }
 
 .page-form__title {
@@ -44,7 +48,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-form__wrapper-top {
+  .page-form__header {
     position: relative;
     padding-top: 88px;
     padding-bottom: 4px;
@@ -62,6 +66,13 @@
       border-radius: 0 0 60px 60px;
       // z-index: -1;
     }
+  }
+
+  .page-form__wrapper-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   .page-form__title {
@@ -84,7 +95,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-form__wrapper-top {
+  .page-form__header {
     padding-top: 98px;
     padding-bottom: 4px;
     padding-right: 35px;
