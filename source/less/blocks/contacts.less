@@ -197,22 +197,25 @@
       }
     }
     .registration & {
-      padding-left: 70px;
+      height: 68px;
+      padding-left: 93px;
       font-size: 28px;
       line-height: 28px;
 
+      &::before {
+        .size(68);
+      }
+
       &--phone {
-        margin-bottom: 36px;
-        padding-top: 3px;
-        padding-bottom: 2px;
-        background-size: 27px;
-        background-position: left top;
+        &::before {
+          background-size: 27px;
+        }
       }
 
       &--email {
-        padding-top: 2px;
-        padding-bottom: 1px;
-        background-size: 27px 20px;
+        &::before {
+          background-size: 27px 20px;
+        }
       }
     }
   }
@@ -295,20 +298,29 @@
     }
 
     .registration & {
-      .size(440; 36);
-      padding-left: 94px;
-      padding-top: 6px;
-      padding-bottom: 8px;
+      .size(440; 90);
+      padding-left: 123px;
+      // padding-top: 6px;
+      // padding-bottom: 8px;
       background-color: @bg-index;
       border-radius: 0;
 
+      &::before {
+        .size(90);
+      }
+
       &--phone {
         margin-bottom: 0;
-        background-size: 36px;
+
+        &::before {
+          background-size: 36px;
+        }
       }
 
       &--email {
-        background-size: 36px 26px;
+        &::before {
+          background-size: 36px 26px;
+        }
       }
     }
 
