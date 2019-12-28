@@ -1,10 +1,11 @@
 .map {
-  padding-top: 50px;
+  padding-top: 62px;
   background-color: @map;
 }
 
 .map__wrapper {
   position: relative;
+  padding-bottom: 5px;
   background-color: @map;
 
   &::after {
@@ -19,10 +20,16 @@
   }
 }
 
+.map__wrapper-addr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .map__address {
   position: relative;
   .clear();
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   padding-right: 30px;
   padding-left: 61px;
   color: @bg-index;
@@ -46,7 +53,7 @@
 }
 
 .map__link {
-  padding: 24px 23px 21px 24px;
+  padding: 19px 20px;
   color: @title;
   font-size: 18px;
   font-weight: 700;
@@ -57,23 +64,34 @@
   border: 3px solid @bg-index;
 
   &::after {
-    right: 23px;
+    right: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: @bg-index;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
 .map__frame {
   display: block;
   width: 100%;
+  height: 302px;
   border: none;
 }
 
 @media (min-width: @tablet-width) {
   .map {
-    padding-top: 100px;
+    padding-top: 107px;
   }
 
   .map__wrapper {
-    padding-bottom: 85px;
+    padding-bottom: 24px;
 
     &::after {
       height: 60px;
@@ -84,6 +102,8 @@
 
   .map__address {
     position: relative;
+    margin-bottom: 42px;
+    margin-left: 35px;
     padding: 22px 0 20px 94px;
     font-size: 28px;
     line-height: 28px;
@@ -99,43 +119,64 @@
   }
 
   .map__link {
-    padding: 31px 23px 36px 27px;
+    width: 618px;
+    margin: 0 auto;
+    padding: 27px 0 24px 33px;
     color: @title;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
 
     &::after {
-      right: 36px;
+      right: 34px;
     }
   }
 
   .map__frame {
-    display: block;
-    width: 100%;
-    border: none;
+    height: 523px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .map {
+    padding-top: 114px;
+  }
+
+  .map__wrapper {
+    padding-bottom: 0;
+
+    &::after {
+      bottom: -56px;
+    }
+  }
+
+  .map__wrapper-addr {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
   .map__address {
     position: relative;
     margin-right: 148px;
+    margin-left: 222px;
+    margin-bottom: 0;
     padding: 31px 0 33px 122px;
     text-transform: uppercase;
 
     &::after {
-      .psevdo();
       .size(90);
-      left: 0;
-      top: 0;
       background-size: 28px 43px;
+      z-index: 5;
     }
   }
 
   .map__link {
+    width: 324px;
+    margin-top: 4px;
     margin-right: 74px;
-    padding: 31px 67px 28px 37px;
+    padding: 27px 0 24px 33px;
     color: @title;
     font-size: 24px;
     line-height: 24px;
@@ -143,8 +184,6 @@
   }
 
   .map__frame {
-    display: block;
-    width: 100%;
-    border: none;
+    height: 450px;
   }
 }

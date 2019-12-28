@@ -1,7 +1,6 @@
 .registration {
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 29px;
+  padding-top: 102px;
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
@@ -21,7 +20,8 @@
 
 .registration__question {
   .page-main & {
-    margin-bottom: 23px;
+    display: block;
+    margin-bottom: 19px;
   }
 }
 
@@ -32,13 +32,22 @@
 
 .registration__communication-atr {
   .clear();
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   padding: 0 34px 0;
 }
 
 .registration__authorization {
   color: @map;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: @bg-sequence1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .registration__form {
@@ -48,25 +57,61 @@
 
 .registration__email {
   width: 100%;
-  padding: 24px;
+  padding: 18px;
   padding-right: 84px;
   color: rgba(68, 68, 68, 0.3);
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
+  letter-spacing: -1px;
   border-radius: 10px;
   background-color: #ffffff;
+  border: 4px solid transparent;
+
+  &:hover {
+    color: rgba(68, 68, 68, 0.5);
+    background-color: @bg-catalog;
+  }
+
+  &:active,
+  &:focus {
+    color: #ffffff;
+    background-color: @bg-index;
+    border: 4px solid #ffffff;
+  }
+
+  &:invalid {
+    color: #ff0000;
+    background-color: #ffefef;
+  }
 }
 
 .registration__button {
-  position: absolute;
-  width: 60px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  font-size: 0;
-  border-radius: 10px;
-  background-color: @map;
+  .page-main & {
+    position: absolute;
+    width: 60px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    .clear();
+    font-family: inherit;
+    font-size: 0;
+    border-radius: 10px;
+    background-color: @map;
+
+    &:after {
+      right: 23px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @bg-sequence3;
+    }
+
+    &:active {
+      color: rgba(29, 46, 91, 0.3);
+    }
+  }
 }
 
 .registration__communication-q,
@@ -75,7 +120,7 @@
 }
 
 .registration__communication-a {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .registration__contacts {
@@ -90,6 +135,7 @@
 
 @media (min-width: @tablet-width) {
   .registration {
+    padding-top: 136px;
     font-size: 28px;
     line-height: 33px;
 
@@ -102,65 +148,50 @@
     }
   }
 
+  .registration__question {
+    .page-main & {
+      margin-bottom: 55px;
+    }
+  }
+
+  .registration__communication-atr {
+    margin-bottom: 62px;
+  }
+
   .registration__form {
-    margin-bottom: 61px;
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 58px;
+    padding: 0 35px;
   }
 
   .registration__email {
-    padding: 30px 117px 32px 35px;
+    flex-grow: 1;
+    width: auto;
+    padding: 26px 30px 25px;
     font-size: 24px;
     line-height: 24px;
-    border-radius: 20px;
+    border-radius: 20px 0 0 20px;
   }
 
   .registration__button {
-    position: absolute;
-    width: 82px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    border-radius: 0 20px 20px 0;
+    .page-main & {
+      top: auto;
+      bottom: auto;
+      right: auto;
+      position: relative;
+      width: 82px;
+      border-radius: 0 20px 20px 0;
+
+      &:after {
+        right: 36px;
+      }
+    }
   }
 
-  .registration__communication-q,
-  .registration__communication-a {
-    display: inline-block;
-  }
-
-  .registration__contacts {
-    font-size: 28px;
-    line-height: 28px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .registration__form {
-    margin-bottom: 71px;
-  }
-
-  .registration__email {
-    width: 1178px;
-    margin: 0 auto;
-    padding: 30px 360px 32px 35px;
-    border-radius: 20px;
-  }
-
-  .registration__button {
-    position: absolute;
-    width: 325px;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    padding-left: 37px;
-    color: @title;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: left;
-    border-radius: 0 20px 20px 0;
-
-    &::after {
-      right: 36px;
+  .registration__communication {
+    & br {
+      display: none;
     }
   }
 
@@ -169,11 +200,80 @@
     display: inline-block;
   }
 
+  .registration__communication-a {
+    margin-bottom: 40px;
+  }
+
+  .registration__contacts {
+    padding-left: 34px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .registration {
+    padding-top: 168px;
+    padding-bottom: 42px;
+  }
+  .registration__form {
+    margin-bottom: 71px;
+  }
+
+  .registration__communication-atr {
+    margin-bottom: 56px;
+  }
+
+  .registration__form {
+    margin-bottom: 67px;
+    padding: 0 74px;
+  }
+
+  .registration__email {
+    width: 850px;
+    margin: 0;
+    padding: 24px 28px 24px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .registration__button {
+    .page-main & {
+      width: 325px;
+      padding: 30px 153px 23px 35px;
+      color: @title;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+      border-radius: 0 20px 20px 0;
+
+      &::after {
+        right: 36px;
+      }
+    }
+  }
+
+  .registration__communication-q,
+  .registration__communication-a {
+    display: inline-block;
+  }
+
+  .registration__communication-q {
+    letter-spacing: -0.1px;
+  }
+
+  .registration__communication-a {
+    margin-bottom: 40px;
+    line-height: 40.56px;
+    letter-spacing: 0.65px;
+  }
+
   .registration__contacts {
     .page-main & {
       display: flex;
       flex-direction: row;
       justify-content: center;
+      padding-left: 0;
     }
   }
 }

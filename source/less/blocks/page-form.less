@@ -1,3 +1,120 @@
 .page-form {
   padding-bottom: 44px;
 }
+.page-form__header {
+  position: relative;
+  padding-top: 49px;
+  background-color: @bg-header;
+
+  &::after {
+    .psevdo();
+    width: 100%;
+    height: 20px;
+    bottom: -20px;
+    left: 0;
+    background-color: inherit;
+    border-radius: 0 0 20px 20px;
+    // z-index: -1;
+  }
+}
+
+.page-form__wrapper-top {
+  position: relative;
+}
+
+.page-form__title {
+  position: absolute;
+  bottom: -21px;
+  left: 20px;
+  .clear();
+  padding: 0 5px 10px;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  z-index: 1;
+
+  &::after {
+    .psevdo();
+    height: 5px;
+    left: 3px;
+    right: 3px;
+    bottom: -2.5px;
+    background-color: @bg-sequence1;
+    border-radius: 2px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-form__header {
+    position: relative;
+    padding-top: 88px;
+    padding-bottom: 4px;
+    padding-right: 35px;
+    padding-left: 33px;
+    background-color: @bg-header;
+
+    &::after {
+      .psevdo();
+      width: 100%;
+      height: 60px;
+      bottom: -60px;
+      left: 0;
+      background-color: inherit;
+      border-radius: 0 0 60px 60px;
+      // z-index: -1;
+    }
+  }
+
+  .page-form__wrapper-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .page-form__title {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    .clear();
+    // padding-bottom: 63px;
+    font-size: 60px;
+    line-height: 70px;
+
+    &::after {
+      height: 8px;
+      left: 0;
+      right: 0;
+      bottom: -68px;
+      border-radius: 4px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-form__header {
+    padding-top: 98px;
+    padding-bottom: 4px;
+    padding-right: 35px;
+    padding-left: 33px;
+
+    // &::after {
+    //   .psevdo();
+    //   width: 100%;
+    //   height: 60px;
+    //   bottom: -60px;
+    //   left: 0;
+    //   background-color: inherit;
+    //   border-radius: 0 0 60px 60px;
+    // z-index: -1;
+    // }
+  }
+
+  .page-form__title {
+    .clear();
+    margin-left: 34px;
+  }
+}

@@ -1,7 +1,21 @@
 .copyright {
   align-self: stretch;
+}
+
+.copyright__logo {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
@@ -11,9 +25,19 @@
   line-height: 22px;
 }
 
+.copyright__logo-img {
+  display: block;
+}
+
 @media (min-width: @tablet-width) {
+  .copyright {
+    align-self: center;
+  }
   .copyright__text {
     margin-right: 25px;
+    margin-bottom: 4px;
+    line-height: 24px;
+    font-size: 20px;
   }
 }
 

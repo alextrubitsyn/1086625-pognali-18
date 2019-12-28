@@ -1,21 +1,38 @@
 .directions {
   position: relative;
-  padding-top: 72px;
-  padding-bottom: 108px;
+  padding-top: 102px;
+  padding-bottom: 88px;
   color: @text;
   background-color: @bg-catalog;
-  border-radius: 0 0 30px 30px;
+
+  &::after {
+    .psevdo();
+    left: 0;
+    height: 30px;
+    bottom: -30px;
+    background-color: @bg-catalog;
+    width: 100%;
+    z-index: 2;
+    border-radius: 0 0 30px 30px;
+  }
+}
+
+.directions__wrapper {
+  position: relative;
 }
 
 .directions__title {
   .page-main & {
-    margin-bottom: 23px;
+    margin-bottom: 19px;
+    padding-left: 26px;
   }
 }
 
 .directions__entry {
   .clear();
-  margin-bottom: 66px;
+  margin-bottom: 60px;
+  padding-left: 24px;
+  padding-right: 46px;
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
@@ -30,6 +47,7 @@
 
 .directions__item {
   background-color: #ffffff;
+  border-radius: 10px;
 
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -41,12 +59,12 @@
   border-radius: 10px 10px 0 0;
 }
 
-.directions__wrapper {
+.directions__wrapper-country {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 11px 26px 22px 25px;
-  border-radius: 10px;
+  padding: 13px 24px 18px 25px;
+  border-radius: 0 0 10px 10px;
   background-color: #ffffff;
 
   &::before {
@@ -62,6 +80,8 @@
 
 .directions__country {
   .clear();
+  // margin-bottom: 4px;
+  padding-top: 3px;
   color: @bg-header;
   font-size: 21px;
   font-weight: 700;
@@ -70,6 +90,8 @@
 
 .directions__slogan-country {
   .clear();
+  margin-top: -4px;
+  margin-bottom: 4px;
   opacity: 0.3;
   font-size: 16px;
   font-weight: 500;
@@ -86,14 +108,14 @@
   text-transform: uppercase;
   background: url("../../img/user.svg") no-repeat;
   background-size: 11px;
-  background-position: left center;
+  background-position: left 8px;
 }
 
 .directions__to-all {
   position: absolute;
-  bottom: -88px;
-  left: 0;
-  right: 0;
+  bottom: -91px;
+  left: 25px;
+  right: 25px;
   padding: 24px;
   color: @title;
   font-size: 18px;
@@ -111,22 +133,43 @@
 
 @media (min-width: @tablet-width) {
   .directions {
-    padding-top: 74px;
-    padding-bottom: 161px;
+    padding-top: 134px;
+    padding-bottom: 105px;
     background-color: @bg-catalog;
-    border-radius: 0 0 60px 60px;
+    // border-radius: 0 0 60px 60px;
+
+    &::after {
+      bottom: -60px;
+      height: 60px;
+      border-radius: 0 0 60px 60px;
+    }
+  }
+
+  .directions__wrapper {
+    background: url("../../img/flags-back@1x.png") no-repeat;
+    background-size: 289px 575px;
+    background-position: 438px 6px;
+
+    &::before {
+      .psevdo();
+      .size(141);
+      top: 334px;
+      left: 40px;
+      background-color: @bg-country;
+      border-radius: 20px;
+    }
   }
 
   .directions__title {
     .page-main & {
-      margin-bottom: 62px;
-      padding-left: 35px;
+      margin-bottom: 57px;
+      padding-left: 32px;
     }
   }
 
   .directions__entry {
-    width: 337px;
-    margin-bottom: 113px;
+    width: 430px;
+    margin-bottom: 105px;
     padding-left: 35px;
     font-size: 28px;
     line-height: 33px;
@@ -146,19 +189,22 @@
     justify-content: space-between;
     border-radius: 20px;
   }
+  .directions__pic {
+    order: 2;
+  }
 
   .directions__image {
     .size(186; 140);
-    order: 2;
     border-radius: 0 20px 20px 0;
   }
 
-  .directions__wrapper {
+  .directions__wrapper-country {
     flex-grow: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 32px 0 25px 30px;
+    padding: 32px 0 15px 30px;
+    border-radius: 20px 0 0 20px;
 
     &::before {
       display: none;
@@ -167,7 +213,7 @@
 
   .directions__country {
     .clear();
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -175,25 +221,28 @@
   .directions__count {
     order: 2;
     margin-left: 0;
-    padding-left: 31px;
+    padding-left: 30px;
     font-size: 20px;
     line-height: 30px;
     background-size: 20px;
+    background-position: left 4px;
     opacity: 0.3;
   }
 
   .directions__slogan-country {
     opacity: 0.3;
     flex-grow: 0;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     font-size: 20px;
     font-weight: 500;
     line-height: 17.68px;
   }
 
   .directions__to-all {
-    bottom: -166px;
-    padding: 31px 35px 32px 34px;
+    bottom: -129px;
+    width: 618px;
+    margin: 0 auto;
+    padding: 28px 0 28px 32px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
@@ -206,40 +255,60 @@
 
 @media (min-width: @desktop-width) {
   .directions {
-    padding-top: 88px;
-    padding-bottom: 87px;
+    padding-top: 150px;
+    padding-bottom: 27px;
     background-position: right 74px;
     background-color: @bg-catalog;
+  }
+
+  .directions__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: 73px;
+    padding-bottom: 52px;
+    background-position: 1091px top;
+
+    &::before {
+      top: 1px;
+      left: 60px;
+    }
   }
 
   .directions__wrapper-text {
     order: 2;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 50%;
-    padding-left: 111px;
+    // width: 50%;
+    padding-top: 4px;
   }
 
   .directions__title {
-    margin-bottom: 62px;
-    padding-left: 0;
+    .page-main & {
+      margin-bottom: 58px;
+      padding-left: 0;
+      letter-spacing: -0.2px;
+    }
   }
 
   .directions__entry {
-    width: 337px;
+    width: 386px;
+    margin-bottom: 98px;
     padding-left: 0;
     font-size: 28px;
     line-height: 33px;
   }
 
   .directions__list {
-    width: 50%;
+    .clear();
     padding-left: 71px;
-    padding-right: 60px;
-    list-style: none;
+    margin-right: 171px;
+    margin-bottom: 0;
+    // list-style: none;
   }
 
   .directions__item {
+    width: 559px;
     border-radius: 20px;
   }
 
@@ -249,17 +318,17 @@
     border-radius: 0 20px 20px 0;
   }
 
-  .directions__wrapper {
+  .directions__wrapper-country {
     flex-grow: 1;
     // flex-direction: column;
     // justify-content: flex-start;
-    padding: 25px 0 25px 30px;
+    padding: 25px 0 18px 30px;
     border-radius: 20px 0 0 20px;
   }
 
   .directions__country {
     .clear();
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-size: 24px;
     line-height: 24px;
   }
@@ -270,6 +339,8 @@
     margin-top: auto;
     padding-left: 31px;
     font-size: 20px;
+
+    // letter-spacing: 0.2px;
   }
 
   .directions__slogan-country {
@@ -284,15 +355,17 @@
     position: relative;
     bottom: auto;
     left: auto;
+    right: auto;
     width: 274px;
     display: block;
-    padding: 31px 35px 32px 34px;
+    margin: 0;
+    padding: 29px 35px 26px 36px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
 
-    // &::after {
-    //   right: 36px;
-    // }
+    &::after {
+      right: 34px;
+    }
   }
 }

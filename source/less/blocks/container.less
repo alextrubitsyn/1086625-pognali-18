@@ -3,68 +3,12 @@
   margin: 0 auto;
   padding: 0 25px;
   .olg();
-
-  .page-header--menu-open &,
-  .nojs & {
-    position: relative;
-  }
-
-  .page-footer & {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .directions & {
-    position: relative;
-  }
-
-  .map__wrapper & {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 35px;
-  }
-
-  .form-me__wrapper & {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .form-me__wrapper-bottom & {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .new-plan & {
-    position: relative;
-  }
 }
 
 @media (min-width: @tablet-width) {
   .container {
     max-width: @tablet-width;
     padding: 0 40px;
-
-    .about & {
-      background: url("../../img/about-desktop@1x.png") no-repeat;
-      background-size: 376px 548px;
-      background-position: right bottom;
-    }
-
-    .directions & {
-      background: url("../../img/flags-back@1x.png") no-repeat;
-      background-size: 289px 575px;
-      background-position: right 74px;
-    }
-
-    .page-footer & {
-      flex-direction: row;
-      justify-content: space-between;
-    }
   }
 }
 
@@ -72,54 +16,5 @@
   .container {
     max-width: @desktop-width;
     padding: 0 60px;
-
-    .page-header & {
-      display: flex;
-      flex-wrap: nowrap;
-      background-color: @bg-header;
-
-      .form-me__wrapper-bottom & {
-        flex-direction: column;
-        // align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-    }
-
-    .about & {
-      padding-top: 133px;
-      padding-bottom: 163px;
-      background: url("../../img/about-desktop@1x.png") no-repeat;
-      background-size: 630px 665px;
-      background-position: right bottom;
-    }
-
-    .directions & {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-    }
-
-    .companions & {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .map__wrapper & {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      align-items: flex-start;
-      padding-top: 54px;
-      padding-bottom: 56px;
-    }
-
-    .form-me__wrapper-bottom & {
-      flex-direction: row;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
   }
 }

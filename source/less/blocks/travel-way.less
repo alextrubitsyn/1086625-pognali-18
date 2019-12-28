@@ -7,7 +7,7 @@
   margin-right: 3px;
   list-style: none;
   border-radius: 50%;
-  opacity: 1;
+  opacity: 0.15;
   // .olg();
 
   &::before {
@@ -17,6 +17,55 @@
     top: 0;
     left: 0;
     opacity: 0.15;
+  }
+
+  .travel-way__name {
+    display: none;
+
+    &--main {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      color: #ffffff;
+      padding: 20px 24px;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      border-radius: 4px;
+      background-color: #101d41;
+      z-index: 100;
+
+      &::before {
+        .psevdo();
+        .size(11);
+        background-color: inherit;
+        top: -6px;
+        left: calc(50% - 6px);
+        transform: rotate(45deg);
+      }
+      .travel-way__item:hover& {
+        display: block;
+      }
+    }
+  }
+
+  &--filter {
+    color: @title;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      color: #101e44;
+      opacity: 0.7;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+
+    &::before {
+      display: none;
+    }
   }
 
   .page-catalog__users & {
@@ -71,11 +120,12 @@
   &--run {
     &::before {
       background: url("../../img/run.svg") no-repeat;
-      background-position: center;
+      background-position: left center;
       background-size: 20px 21px;
 
       .page-catalog__users & {
         background-size: 15px 17px;
+        background-position: center;
       }
     }
 
@@ -87,6 +137,63 @@
   &--active {
     &::before {
       opacity: 1;
+    }
+  }
+}
+
+.travel-way__label {
+  opacity: 1;
+}
+
+@media (min-width: @tablet-width) {
+  .travel-way__item {
+    .page-catalog__users & {
+      .size(34);
+      background-color: inherit;
+
+      &::before {
+        .size(34);
+        opacity: 0.15;
+      }
+
+      &--plane {
+        &::before {
+          background: url("../../img/plane.svg") no-repeat;
+          background-position: center;
+          background-size: 19px 21px;
+        }
+      }
+
+      &--bus {
+        &::before {
+          background: url("../../img/bus.svg") no-repeat;
+          background-position: center;
+          background-size: 17px 21px;
+        }
+      }
+
+      &--bike {
+        &::before {
+          background: url("../../img/bike.svg") no-repeat;
+          background-position: center;
+          background-size: 24px 21px;
+        }
+      }
+
+      &--run {
+        &::before {
+          background: url("../../img/run.svg") no-repeat;
+          background-position: left center;
+          background-size: 20px 21px;
+          background-position: center;
+        }
+      }
+
+      &--active {
+        &::before {
+          opacity: 1;
+        }
+      }
     }
   }
 }

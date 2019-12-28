@@ -10,6 +10,14 @@
 .pagination__btn {
   width: 50%;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+
   &--before {
     background: url("../../img/triangle-arrow-left.svg") no-repeat;
     background-size: 10px 20px;
@@ -31,8 +39,8 @@
 @media (min-width: @tablet-width) {
   .pagination {
     height: auto;
+    margin-bottom: 60px;
     padding: 25px 17px 25px 28px;
-    .olg();
   }
 
   .pagination__list {
@@ -55,24 +63,30 @@
     text-decoration: none;
     border-radius: 50%;
 
-    &--current {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &--current,
+    &:active {
       background-color: @map;
+    }
+
+    &--current:hover,
+    &--current:focus {
+      opacity: 1;
     }
   }
 
   .pagination__btn {
-    width: 43px;
-
-    &--before {
-      background: url("../../img/triangle-arrow-left.svg") no-repeat;
-      background-size: 10px 20px;
-      background-position: center;
-    }
-
-    &--after {
-      background: url("../../img/triangle-arrow-right.svg") no-repeat;
-      background-size: 10px 20px;
-      background-position: center;
-    }
+    width: 46px;
+  }
+}
+@media (min-width: @tablet-width) {
+  .pagination {
+    height: auto;
+    margin-bottom: 77px;
+    padding: 25px 25px 25px 28px;
   }
 }
