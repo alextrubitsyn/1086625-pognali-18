@@ -8,7 +8,8 @@
   </head>
 
   <body class="nojs">
-    <header class="page-header page-header--scroll">
+    <header class="page-header">
+    <!-- <header class="page-header page-header--scroll"> -->
       <div class="container page-header__wrapper">
         <div class="page-header__wrapper-logo">
           <a class="page-header__logo logo-pognali" href="index.html">
@@ -59,8 +60,8 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21" xml:space="preserve">
                 <g fill="currentcolor">
                   <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
-		                      V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
-		                      C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z" />
+		              V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
+		              C3.5,3.2,3.2,4.8,3.4,6.9l0.1,0.6H1.2v2.6h2.2V19.9z" />
                 </g>
               </svg>
               <span class="visually-hidden"> Мы в Фейсбуке</span>
@@ -998,17 +999,17 @@
           <fieldset class="user-filters__item  user-filters__item--open" title="Выберите диапазон уровня">
             <button class="user-filters__toggle" type="button">Левел<span>:</span></button>
             <div class="level-selector">
-              <input class="level-selector__input-min" id="level-min" type="text" name="level-min" placeholder="30" />
+              <input class="level-selector__input level-selector__input--min" id="level-min" type="text" name="level-min" placeholder="30" />
               <label class="visually-hidden" for="level-min">минимальный уровень</label>
-              <input class="level-selector__input-max" id="level-max" type="text" name="level-max" placeholder="100" />
+              <input class="level-selector__input level-selector__input--max" id="level-max" type="text" name="level-max" placeholder="100" />
               <label class="visually-hidden" for="level-max">максимальный уровень</label>
               <div class="level-selector__axis">
-                <span class="level-selector__slider-min" tabindex="0"></span>
-                <span class="level-selector__slider-max" tabindex="0"></span>
+                <span class="level-selector__slider level-selector__slider--min" tabindex="0"></span>
+                <span class="level-selector__slider level-selector__slider--max" tabindex="0"></span>
               </div>
             </div>
           </fieldset>
-          <button class="user-filters__button" type="submit" name="filters-button">
+          <button class="user-filters__button button" type="submit" name="filters-button">
             Показать
           </button>
         </form>
@@ -1019,13 +1020,13 @@
         <div class="container page-catalog__users-wrapper">
         <h2 class="visually-hidden">Каталог попутчиков</h2>
         <ul class="page-catalog__list">
-          <li class="page-catalog__item member">
+          <li class="page-catalog__item member member--catalog">
             <a class="member__link-img" href="#">
               <picture>
                 <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg">
                 <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg">
                 <img class="member__image" width="70" height="70" src="img/firsova-mobile@1x.jpg" alt="Таня Фирсова Фото" />
-               </picture>
+              </picture>
             </a>
             <div class="member__wrapper">
               <div class="member__wrapper-name">
@@ -1076,7 +1077,7 @@
               </div>
               <div class="member__wrapper-transport">
                 <p class="member__travel-title">транспорт:</p>
-                <ul class="member__travel-modes travel-way">
+                <ul class="member__travel-modes travel-way travel-way--catalog">
                   <li class="travel-way__item travel-way__item--plane travel-way__item--active">
                     <span class="travel-way__name">Авиаперелет</span>
                   </li>

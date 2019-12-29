@@ -1,9 +1,10 @@
-.user-filters {
-  padding-bottom: 22px;
-}
+// .user-filters {
+//   padding-bottom: 22px;
+// }
 
 .user-filters__wrapper {
   padding-top: 26px;
+  padding-bottom: 25px;
   color: @title;
   background-color: @map;
   border-radius: 20px;
@@ -115,7 +116,7 @@
     background-color: #ffffff;
   }
   .user-filters__input:checked + &::before {
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     background-size: 9px;
     background-position: center center;
@@ -132,6 +133,10 @@
 }
 
 .user-filters__button {
+  display: block;
+  width: 230px;
+  margin: 0 auto;
+  padding: 5px 0;
   color: @bg-header;
   font-family: inherit;
   font-size: 17px;
@@ -145,6 +150,7 @@
   &:hover,
   &:focus {
     cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   }
   &:active {
     opacity: 0.3;

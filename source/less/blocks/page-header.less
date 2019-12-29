@@ -41,28 +41,61 @@
 }
 
 .page-header__toggle {
+  position: relative;
   display: block;
   .size(25);
-  // .size(25; 11);
-  // padding-top: 73px;
   background-color: @bg-header;
-  background-image: url("../../img/menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   cursor: pointer;
 
+  &::before {
+    .pseudo();
+    .size(25; 3);
+    background-color: #ffffff;
+    left: 0;
+    top: 6px;
+  }
+
+  &::after {
+    .pseudo();
+    .size(25; 3);
+    background-color: #ffffff;
+    left: 0;
+    top: 13px;
+  }
+
   .page-header--scroll & {
     background-color: #ffffff;
-    background-image: url("../../img/menu.svg");
-    color: #cccccc; // сделать изображение currentColor
+
+    &::before,
+    &::after {
+      background-color: #cccccc;
+    }
   }
 
   .page-header--menu-open & {
     .size(19);
     background-color: #ffffff;
-    background-image: url("/img/menu-close.svg");
-    // background-size: 19px 19px;
+
+    &::before {
+      .pseudo();
+      .size(26; 2);
+      background-color: #cccccc;
+      left: -8px;
+      top: 8px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      .pseudo();
+      .size(26; 2);
+      background-color: #cccccc;
+      left: -8px;
+      top: 8px;
+      transform: rotate(-45deg);
+    }
   }
 
   .nojs & {
@@ -81,6 +114,10 @@
 
     &::after {
       display: none;
+    }
+
+    &--scroll {
+      background-color: #ffffff;
     }
 
     &--menu-open,
@@ -111,10 +148,14 @@
 @media (min-width: @desktop-width) {
   .page-header {
     // position: relative;
-    min-width: 91px;
+    min-height: 91px;
     .clear();
     padding-top: 29px;
     background-color: @bg-header;
+
+    &--scroll {
+      background-color: #ffffff;
+    }
   }
 
   .page-header__wrapper {
@@ -129,13 +170,6 @@
     .page-header--menu-open &,
     .nojs & {
       background-color: @bg-header;
-    }
-
-    .form-me__wrapper-bottom & {
-      flex-direction: column;
-      // align-items: flex-start;
-      justify-content: center;
-      flex-wrap: wrap;
     }
   }
 

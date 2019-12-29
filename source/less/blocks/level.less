@@ -1,5 +1,5 @@
 .level {
-  .form-me & {
+  &--form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,21 +9,21 @@
 }
 
 .level-line {
-  .form-me & {
+  .level--form & {
     display: block;
     position: absolute;
   }
 }
 
 .level-segment {
-  .form-me & {
+  .level--form & {
     transform-origin: center;
     stroke: @bg-sequence1;
   }
 }
 
 .level__value {
-  .form-me & {
+  .level--form & {
     color: @bg-header;
     font-size: 38px;
     font-weight: 700;
@@ -36,7 +36,7 @@
   font-weight: 400;
   line-height: 14px;
 
-  .form-me & {
+  .level--form & {
     color: @text;
     font-size: 18px;
     font-weight: 400;
@@ -46,7 +46,7 @@
 
 @media (min-width: @tablet-width) {
   .level-line {
-    .form-me & {
+    .level--form & {
       .size(94);
     }
   }
@@ -54,19 +54,19 @@
 
 @media (min-width: @desktop-width) {
   .level__value {
-    .form-me & {
+    .level--form & {
       color: #ffffff;
     }
   }
 
   .level__text {
-    .form-me & {
+    .level--form & {
       color: #ffffff;
     }
   }
 
   .level-line {
-    .form-me & {
+    .level--form & {
       .size(104);
     }
   }
