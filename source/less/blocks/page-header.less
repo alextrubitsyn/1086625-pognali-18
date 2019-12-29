@@ -3,11 +3,19 @@
   width: 100%;
   background-color: @bg-header;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
+  &--scroll {
+    background-color: #ffffff;
+    position: fixed;
+    z-index: 15;
+  }
 }
 
 .page-header__wrapper {
   position: relative;
   z-index: 5;
+
+  .page-header--scroll &,
   .page-header--menu-open &,
   .nojs & {
     background-color: #ffffff;
@@ -43,6 +51,12 @@
   background-position: center;
   border: none;
   cursor: pointer;
+
+  .page-header--scroll & {
+    background-color: #ffffff;
+    background-image: url("../../img/menu.svg");
+    color: #cccccc; // сделать изображение currentColor
+  }
 
   .page-header--menu-open & {
     .size(19);
@@ -96,7 +110,7 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    position: relative;
+    // position: relative;
     min-width: 91px;
     .clear();
     padding-top: 29px;
@@ -133,11 +147,15 @@
     padding-right: 100px;
 
     &::after {
-      .psevdo();
+      .pseudo();
       .size(60; 2);
       top: 25px;
       right: 0;
       background-color: #ffffff;
+    }
+
+    .page-header--scroll &::after {
+      background-color: @bg-index;
     }
   }
 

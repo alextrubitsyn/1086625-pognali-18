@@ -875,37 +875,38 @@
     <div class="page-catalog__wrapper">
       <section class="page-catalog__filter  user-filters">
         <div class="container">
+        <div class="user-filters__wrapper">
         <h2 class="user-filters__title">Подберите идеального попутчика</h2>
         <form class="user-filters__form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="user-filters__item" title="Выберите хобби">
             <button class="user-filters__toggle" type="button">Хобби<span>:</span></button>
             <ul class="user-filters__list hobby">
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="gim" type="checkbox" name="gim" checked />
                 <label class="user-filters__label" for="gim">Спортзал</label>
               </li>
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="hookah" type="checkbox" name="hookah" />
                 <label class="user-filters__label" for="hookah">Кальян</label>
               </li>
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="sofa" type="checkbox" name="sofa" />
                 <label class="user-filters__label" for="sofa">Диван</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="user-filters__item" title="Выберите музыку">
-            <button class="user-filters__toggle" type="button">Музыка<span>:</span></button>
+          <fieldset class="user-filters__item user-filters__item--open" title="Выберите музыку">
+            <button class="user-filters__toggle " type="button">Музыка<span>:</span></button>
             <ul class="user-filters__list music">
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="hard-rock" type="checkbox" name="hard-rock"  checked />
                 <label class="user-filters__label" for="hard-rock">Тяжелый рок</label>
               </li>
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="rus-rap" type="checkbox" name="rus-rap" />
                 <label class="user-filters__label" for="rus-rap">Русский рэп</label>
               </li>
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="eurodance" type="checkbox" name="eurodance" />
                 <label class="user-filters__label" for="eurodance">Евроденс</label>
               </li>
@@ -914,28 +915,28 @@
           <fieldset class="user-filters__item" title="Выберите еду">
             <button class="user-filters__toggle" type="button">Еда<span>:</span></button>
             <ul class="user-filters__list food">
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="meat-eater" type="checkbox" name="meat-eater"  checked />
                 <label class="user-filters__label" for="meat-eater">Мясоед</label>
               </li>
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="diet" type="checkbox" name="diet" />
                 <label class="user-filters__label" for="diet">Сидит на ПП</label>
               </li>
-              <li class="user-filters__item">
+              <li class="user-filters__item-inp">
                 <input class="user-filters__input visually-hidden" id="vegan" type="checkbox" name="vegan" />
                 <label class="user-filters__label" for="vegan">Веган-сыроед</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset class="user-filters__item" title="Выберите транспорт">
+          <fieldset class="user-filters__item  user-filters__item--open" title="Выберите транспорт">
             <button class="user-filters__toggle" type="button">Транспорт<span>:</span></button>
-            <ul class="user-filters__list travel-way">
+            <ul class="user-filters__list user-filters__list--travel travel-way travel-way--filters">
               <li class="travel-way__item travel-way__item--filter travel-way__item--plane travel-way__item--active">
                 <input class="travel-way__input visually-hidden" id="plane" type="checkbox" name="plane" checked />
                 <label class="travel-way__label" for="plane">
                   <span class="travel-way__name">Авиаперелет</span>
-                  <svg class="travel-way__img" version="1.1" width="19" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="travel-way__img travel-way__img--plane" version="1.1" width="19" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 fill="currentColor" viewBox="0 0 19 21"  xml:space="preserve">
                       <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
 	                      c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
@@ -951,7 +952,7 @@
                 <input class="travel-way__input visually-hidden" id="bus" type="checkbox" name="bus" checked />
                 <label class="travel-way__label" for="bus">
                   <span class="travel-way__name">Автотранспорт</span>
-                  <svg class="travel-way__img" version="1.1" width="17" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="travel-way__img travel-way__img--bus" version="1.1" width="17" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 fill="currentColor" viewBox="0 0 17 21" style="enable-background:new 0 0 17 21;" xml:space="preserve">
                       <path d="M16.2,3.1c-0.2-1.2-1-1.6-2.1-2.1C13,0.6,10.4,0,8.5,0C6.6,0,4,0.6,2.9,1C1.8,1.5,1.1,1.9,0.8,3.1L0,9.5v8.8h1.4v1.4
 	                      c0,1.7,2.5,1.7,2.5,0v-1.4h4.5h0h4.7v1.4c0,1.7,2.5,1.7,2.5,0v-1.4H17V9.5L16.2,3.1z M5,1.6h3.4H12c0.7,0,0.7,1,0,1H8.4H5
@@ -965,7 +966,7 @@
                 <input class="travel-way__input visually-hidden" id="bike" type="checkbox" name="bike" />
                 <label class="travel-way__label" for="bike">
                   <span class="travel-way__name">Велосипед</span>
-                  <svg class="travel-way__img" version="1.1" width="24" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="travel-way__img travel-way__img--bike" version="1.1" width="24" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   	 fill="currentColor" viewBox="0 0 24 21" style="enable-background:new 0 0 24 21;" xml:space="preserve">
                       <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
 	                      S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
@@ -979,7 +980,7 @@
                 <input class="travel-way__input visually-hidden" id="run" type="checkbox" name="run" checked />
                 <label class="travel-way__label" for="run">
                   <span class="travel-way__name">Пешком</span>
-                  <svg class="travel-way__img" version="1.1" width="20" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="travel-way__img travel-way__img--run" version="1.1" width="20" height="21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	                  fill="currentColor" viewBox="0 0 20 21" style="enable-background:new 0 0 20 21;" xml:space="preserve">
                     <g>
 	                    <ellipse cx="14.3" cy="2" rx="2.1" ry="2"/>
@@ -994,9 +995,9 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="user-filters__item level-selector" title="Выберите диапазон уровня">
+          <fieldset class="user-filters__item  user-filters__item--open" title="Выберите диапазон уровня">
             <button class="user-filters__toggle" type="button">Левел<span>:</span></button>
-            <div class="level-selector__container">
+            <div class="level-selector">
               <input class="level-selector__input-min" id="level-min" type="text" name="level-min" placeholder="30" />
               <label class="visually-hidden" for="level-min">минимальный уровень</label>
               <input class="level-selector__input-max" id="level-max" type="text" name="level-max" placeholder="100" />
@@ -1011,6 +1012,7 @@
             Показать
           </button>
         </form>
+        </div>
         </div>
       </section>
       <section class="page-catalog__users">

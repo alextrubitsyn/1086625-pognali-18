@@ -1,4 +1,3 @@
-
 .logo-pognali__image-opened,
 .logo-pognali__image-closed {
   .size(100; 19);
@@ -7,6 +6,7 @@
 .logo-pognali__image-opened {
   display: none;
 
+  .page-header--scroll &,
   .page-header--menu-open &,
   .nojs & {
     display: block;
@@ -16,12 +16,12 @@
 .logo-pognali__image-closed {
   display: block;
 
+  .page-header--scroll &,
   .page-header--menu-open &,
   .nojs & {
     display: none;
   }
 }
-
 
 @media (min-width: @desktop-width) {
   .logo-pognali__image-opened {
