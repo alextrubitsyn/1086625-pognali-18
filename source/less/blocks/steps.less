@@ -347,6 +347,10 @@
 
     &--active {
       opacity: 1;
+
+      &::before {
+        background-color: @title;
+      }
     }
 
     &::before {
@@ -356,12 +360,6 @@
       top: 2px;
       border-radius: 50%;
       background-color: #bbbfcc;
-    }
-
-    &--active {
-      &::before {
-        background-color: @title;
-      }
     }
   }
 

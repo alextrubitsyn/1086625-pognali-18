@@ -3,12 +3,15 @@
     &--plane {
       .size(14; 16);
     }
+
     &--bus {
       .size(13; 16);
     }
+
     &--bike {
       .size(19; 17);
     }
+
     &--run {
       .size(15; 17);
     }
@@ -49,6 +52,7 @@
       color: #101e44;
       opacity: 0.7;
     }
+
     &:active {
       opacity: 0.3;
     }
@@ -156,6 +160,7 @@
       left: calc(50% - 6px);
       transform: rotate(45deg);
     }
+
     .travel-way__item:hover& {
       display: block;
     }
@@ -170,12 +175,6 @@
   cursor: pointer;
   border-radius: 50%;
   opacity: 0.15;
-
-  &:hover,
-  &:focus {
-  }
-  &:active {
-  }
 
   .travel-way__input:checked + & {
     opacity: 1;
@@ -220,7 +219,6 @@
       &--run {
         &::before {
           background: url("../img/run.svg") no-repeat;
-          background-position: left center;
           background-size: 20px 21px;
           background-position: center;
         }
@@ -229,6 +227,28 @@
       &--active {
         &::before {
           opacity: 1;
+        }
+      }
+    }
+
+    &--filter {
+      .size(43);
+
+      & .travel-way__img {
+        &--plane {
+          .size(19; 21);
+        }
+
+        &--bus {
+          .size(17; 21);
+        }
+
+        &--bike {
+          .size(24; 21);
+        }
+
+        &--run {
+          .size(20; 21);
         }
       }
     }

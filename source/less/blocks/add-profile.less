@@ -107,6 +107,7 @@
     opacity: 0.7;
     cursor: pointer;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -215,9 +216,9 @@
       opacity: 0.7;
     }
 
-    &:active::after {
-      opacity: 0.3;
-    }
+    // &:active::after {
+    //   opacity: 0.3;
+    // }
 
     &::after {
       .pseudo();
@@ -239,6 +240,7 @@
       background-color: @bg-country;
       border-radius: 50%;
     }
+
     &:active::after {
       opacity: 1;
     }
