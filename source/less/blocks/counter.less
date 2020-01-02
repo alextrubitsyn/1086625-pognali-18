@@ -6,7 +6,7 @@
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
-  letter-spacing: 2.15px;
+  letter-spacing: 1.5px;
 }
 
 .counter__name {
@@ -25,37 +25,133 @@
   display: flex;
 }
 
+// .counter__label {
+//   &:hover .counter__input {
+//     border-color: #959bb2;
+//     border-color: red;
+//   }
+// }
+
 .counter__less,
 .counter__more {
-  width: 33.3334%;
+  position: relative;
+  width: 20%;
   background-color: #ffffff;
-  border: 1px solid #cbced9;
+  border: 1px solid @letter;
+
+  &::before {
+    .pseudo();
+    opacity: 0.2;
+  }
+
+  &::after {
+    .pseudo();
+    opacity: 0.2;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      .pseudo();
+      opacity: 0.4;
+    }
+
+    &::after {
+      .pseudo();
+      opacity: 0.4;
+    }
+  }
+
+  &:active {
+    &::before {
+      .pseudo();
+      opacity: 0.1;
+    }
+
+    &::after {
+      .pseudo();
+      opacity: 0.1;
+    }
+  }
 }
 
 .counter__less {
-  border-right: none;
   border-radius: 4px 0 0 4px;
+  border-right: none;
+
+  &::before {
+    .size(14; 2);
+    top: 21px;
+    left: 14px;
+    background-color: @title;
+  }
 }
 
 .counter__more {
+  border-radius: 0 4px 4px 0;
   border-left: none;
-  border-radius: 0 0 4px 4px;
+  order: 3;
+
+  &::before {
+    .size(14; 2);
+    top: 21px;
+    right: 14px;
+    background-color: @title;
+  }
+
+  &::after {
+    .size(14; 2);
+    top: 21px;
+    right: 14px;
+    transform: rotate(90deg);
+    background-color: @title;
+  }
 }
 
 .counter__input {
-  width: 33.33%;
+  order: 2;
+  width: 60%;
   .clear();
-  padding: 16px;
+  padding: 13px 0 14px;
   color: @title;
+  font-family: inherit;
   font-size: 15px;
   font-weight: 500;
   line-height: 13.37px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 2px;
-  border: 1px solid #cbced9;
-  border-left: none;
+  border: 1px solid @letter;
   border-right: none;
+  border-left: none;
+
+  &:hover {
+    border-color: #959bb2;
+
+    & ~ .counter__less,
+    & ~ .counter__more {
+      border-color: #959bb2;
+
+      &:before,
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  &:focus {
+    border-color: @bg-header;
+
+    & ~ .counter__less,
+    & ~ .counter__more {
+      border-color: @bg-header;
+
+      &:before,
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -89,7 +185,7 @@
   .counter__more {
     width: 33.33%;
     background-color: #ffffff;
-    border: 1px solid #cbced9;
+    border: 1px solid @letter;
   }
 
   .counter__less {
@@ -108,7 +204,7 @@
     padding: 27px;
     font-size: 20px;
     line-height: 18px;
-    border: 1px solid #cbced9;
+    border: 1px solid @letter;
     border-left: none;
     border-right: none;
   }
@@ -148,7 +244,7 @@
   .counter__more {
     width: 20%;
     background-color: #ffffff;
-    border: 1px solid #cbced9;
+    border: 1px solid @letter;
   }
 
   .counter__less {
@@ -167,7 +263,7 @@
     padding: 27px 0;
     font-size: 20px;
     line-height: 18px;
-    border: 1px solid #cbced9;
+    border: 1px solid @letter;
     border-left: none;
     border-right: none;
   }

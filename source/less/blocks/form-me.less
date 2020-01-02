@@ -1,22 +1,28 @@
 .form-me {
-  padding-top: 50px;
+  padding-top: 45px;
   background-color: @bg-catalog;
 }
 
 .form-me__wrapper-top {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  margin-bottom: 20px;
 }
 
 .form-me__level {
   .size(100);
+  margin-right: 35px;
   margin-left: 20px;
+}
+
+.form-me__level-line {
+  .size(110);
 }
 
 .form-me__image {
   display: block;
-  margin-right: 20px;
+  .size(100);
   border-radius: 50%;
 }
 
@@ -34,8 +40,8 @@
   display: block;
   width: 100%;
   margin-bottom: 25px;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 2px;
+  padding-bottom: 5px;
   border-radius: 20px;
   background-color: @blue-btn;
   text-decoration: none;
@@ -66,7 +72,7 @@
 .form-me__hashtags {
   .clear();
   width: 270px;
-  margin-bottom: 19px;
+  margin-bottom: 17px;
   background-color: inherit;
   border: 1px solid @letter;
   border-radius: 10px;
@@ -90,7 +96,7 @@
 .form-me__hashtags-list {
   .clear();
   width: 100%;
-  padding: 25px;
+  padding: 11px 25px 21px;
   color: @text;
   font-family: inherit;
   font-size: 16px;
@@ -114,6 +120,8 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  margin-right: 6px;
+  padding-bottom: 4px;
 }
 
 @media (min-width: @tablet-width) {

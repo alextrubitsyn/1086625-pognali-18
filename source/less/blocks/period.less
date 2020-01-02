@@ -1,12 +1,15 @@
 .period__month-year {
   display: flex;
   width: 100%;
-  padding: 0 5px;
-  margin-bottom: 35px;
+  padding: 10px 5px 12px 5px;
+  margin-bottom: 21px;
   color: @title;
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
+  border: 1px solid @letter;
+  border-left: none;
+  border-right: none;
 }
 
 .period__month {
@@ -18,11 +21,37 @@
   margin-right: auto;
 }
 
+.period__btn {
+  background-color: inherit;
+  background-repeat: no-repeat;
+  background-size: 9px 18px;
+  background-position: center center;
+  opacity: 0.3;
+  border: none;
+
+  &--previous {
+    background-image: url("../img/month-arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../img/month-arrow-right.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+  &:active {
+    opacity: 0.1;
+  }
+}
+
 .period__week {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   .clear();
-  margin: 0 6px 12px;
+  margin-bottom: 3px;
+  padding-left: 20px;
   list-style: none;
   font-size: 14px;
   font-weight: 400;
@@ -30,12 +59,17 @@
 }
 
 .period__week-item {
+  display: inline-block;
   & span {
     font-size: 0;
   }
 
   &:nth-child(n + 6) {
     color: @holiday;
+  }
+
+  &:not(:last-child) {
+    margin-right: 20px;
   }
 }
 
@@ -44,47 +78,47 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  // width: 221px;
   .clear();
-  margin: 0 6px 30px;
-  padding: 1px;
+  margin-bottom: 22px;
+  padding-left: 7px;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
   list-style: none;
-  background-color: @letter;
 }
 
-.period__day {
-  .size(30);
+.period__day-btn {
+  width: 31.5px;
+  height: 31.2px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgba(68, 68, 68, 0.3);
-  background-color: #ffffff;
+  color: @text;
+  letter-spacing: 1.8px;
+  background-color: @bg-catalog;
+  border: 1px solid @letter;
   z-index: 2;
 
+  &:disabled {
+    color: rgba(68, 68, 68, 0.3);
+    background-color: #ffffff;
+  }
+
   & span {
-    font-size: 0;
+    display: none;
   }
 
-  &:not(:nth-child(7n)) {
-    margin-right: 1px;
-  }
-
-  &:nth-child(-n + 35) {
-    margin-bottom: 1px;
-  }
-
-  &--start {
+  &--start,
+  &:hover,
+  &:focus {
     opacity: 1;
     color: #ffffff;
     border: 2px solid @holiday;
     background-color: @title;
   }
 
-  &--active {
+  &--chosen {
     opacity: 1;
     color: #ffffff;
     background-color: @title;
@@ -96,6 +130,40 @@
     background-color: @bg-catalog;
   }
 }
+// .period__day {
+//   width: 31.5px;
+//   height: 31.2px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: rgba(68, 68, 68, 0.3);
+//   background-color: #ffffff;
+//   border: 1px solid @letter;
+//   z-index: 2;
+
+//   & span {
+//     font-size: 0;
+//   }
+
+//   &--start {
+//     opacity: 1;
+//     color: #ffffff;
+//     border: 2px solid @holiday;
+//     background-color: @title;
+//   }
+
+//   &--active {
+//     opacity: 1;
+//     color: #ffffff;
+//     background-color: @title;
+//   }
+
+//   &--trip {
+//     opacity: 1;
+//     color: @text;
+//     background-color: @bg-catalog;
+//   }
+// }
 
 @media (min-width: @tablet-width) {
   .period__month-year {

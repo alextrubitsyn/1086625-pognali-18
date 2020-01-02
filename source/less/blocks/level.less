@@ -1,33 +1,44 @@
 .level {
-  &--form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
+  // &--form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  // }
 }
 
 .level-line {
-  .level--form & {
-    display: block;
-    position: absolute;
-  }
+  // .level--form & {
+  display: block;
+  position: absolute;
+  // }
 }
 
 .level-segment {
-  .level--form & {
-    transform-origin: center;
-    stroke: @bg-sequence1;
-  }
+  // .level--form & {
+  transform-origin: center;
+  stroke: @bg-sequence1;
+  // }
 }
 
 .level__value {
   .level--form & {
+    position: relative;
     color: @bg-header;
     font-size: 38px;
     font-weight: 700;
     line-height: 38px;
+
+    &::after {
+      .pseudo();
+      height: 2px;
+      background-color: @title;
+      left: -4px;
+      right: -4px;
+      bottom: 0;
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 .travel-way {
-  &--filters .travel-way__img {
+  .travel-way__img {
     &--plane {
       .size(14; 16);
     }
@@ -16,6 +16,26 @@
       .size(15; 17);
     }
   }
+
+  &--index {
+    .travel-way__img {
+      &--plane {
+        .size(19; 21);
+      }
+
+      &--bus {
+        .size(17; 21);
+      }
+
+      &--bike {
+        .size(24; 21);
+      }
+
+      &--run {
+        .size(20; 21);
+      }
+    }
+  }
 }
 
 .travel-way__item {
@@ -24,121 +44,23 @@
   justify-content: center;
   align-items: center;
   .size(32);
-  margin-right: 3px;
   list-style: none;
   border-radius: 50%;
-  // opacity: 0.15;
-  // .olg();
+  background-color: #ffffff;
 
-  &::before {
-    position: absolute;
-    content: "";
-    .size(32);
-    top: 0;
-    left: 0;
-    opacity: 0.15;
-  }
-
-  &--filter {
-    .size(33);
-    margin-right: 0;
-    color: @title;
-    background-color: #ffffff;
-    border-radius: 50%;
-    opacity: 1;
-
-    &:hover,
-    &:focus {
-      color: #101e44;
-      opacity: 0.7;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-
-    &::before {
-      display: none;
-    }
-  }
-
-  .travel-way--catalog & {
-    margin: 0;
+  &--catalog {
     background-color: @bg-catalog;
   }
 
-  &--plane {
-    &::before {
-      background: url("../img/plane.svg") no-repeat;
-      background-position: center;
-      background-size: 19px 21px;
-
-      .travel-way--catalog & {
-        background-size: 14px 16px;
-      }
-    }
-  }
-
-  &--bus {
-    &::before {
-      background: url("../img/bus.svg") no-repeat;
-      background-position: center;
-      background-size: 17px 21px;
-
-      .travel-way--catalog & {
-        background-size: 13px 16px;
-      }
-    }
-
-    .travel-way--catalog & {
-      margin: 0;
-    }
-  }
-
-  &--bike {
-    &::before {
-      background: url("../img/bike.svg") no-repeat;
-      background-position: center;
-      background-size: 24px 21px;
-
-      .travel-way--catalog & {
-        background-size: 19px 17px;
-      }
-    }
-
-    .travel-way--catalog & {
-      margin: 0;
-    }
-  }
-
-  &--run {
-    &::before {
-      background: url("../img/run.svg") no-repeat;
-      background-position: left center;
-      background-size: 20px 21px;
-
-      .travel-way--catalog & {
-        background-size: 15px 17px;
-        background-position: center;
-      }
-    }
-
-    .travel-way--catalog & {
-      margin: 0;
-    }
-  }
-
-  &--active {
-    &::before {
-      opacity: 1;
-    }
+  &--index {
+    margin-right: 3px;
   }
 }
 
 .travel-way__name {
   display: none;
 
-  &--main {
+  &--index {
     position: absolute;
     top: calc(100% + 6px);
     left: 50%;
@@ -161,7 +83,7 @@
       transform: rotate(45deg);
     }
 
-    .travel-way__item:hover& {
+    .travel-way__item:hover & {
       display: block;
     }
   }
@@ -172,12 +94,30 @@
   justify-content: center;
   align-items: center;
   .size(33);
-  cursor: pointer;
+  color: rgba(29, 46, 91, 0.15);
   border-radius: 50%;
-  opacity: 0.15;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: rgba(16, 30, 68, 0.3);
+  }
+
+  &:active {
+    color: rgba(16, 30, 68, 0.1);
+    background-color: @bg-country;
+  }
 
   .travel-way__input:checked + & {
-    opacity: 1;
+    color: rgba(29, 46, 91, 1);
+
+    &:hover,
+    &:focus {
+      color: rgba(16, 30, 68, 0.7);
+    }
+    &:active {
+      color: rgba(16, 30, 68, 0.3);
+    }
   }
 }
 
