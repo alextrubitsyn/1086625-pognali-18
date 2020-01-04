@@ -166,10 +166,9 @@
   }
 
   .counter__name {
-    // display: flex;
     width: auto;
     .clear();
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 
   .counter__type {
@@ -181,11 +180,21 @@
     width: 100%;
   }
 
-  .counter__less,
+  .counter__less {
+    &::before {
+      width: 20px;
+      top: 33px;
+      left: 22px;
+    }
+  }
+
   .counter__more {
-    width: 33.33%;
-    background-color: #ffffff;
-    border: 1px solid @letter;
+    &::before,
+    &::after {
+      width: 20px;
+      top: 33px;
+      right: 19px;
+    }
   }
 
   .counter__less {
@@ -199,9 +208,8 @@
   }
 
   .counter__input {
-    width: 33.33%;
     .clear();
-    padding: 27px;
+    padding: 24px;
     font-size: 20px;
     line-height: 18px;
     border: 1px solid @letter;
@@ -220,24 +228,28 @@
   }
 
   .counter__name {
+    width: 200px;
     .clear();
-    margin-right: 32px;
+    margin-right: 20px;
 
-    .counter--days & {
-      margin-right: 57px;
-    }
+    // .counter--days & {
+    //   margin-right: 57px;
+    // }
   }
 
   .counter__type {
     .clear();
     order: 10;
     opacity: 1;
-    // margin-left: auto;
+
+    .counter--days & {
+      padding-left: 3px;
+    }
   }
 
   .counter__wrapper {
     width: 181px;
-    margin-right: 32px;
+    margin-right: 35px;
   }
 
   .counter__less,
@@ -260,7 +272,7 @@
   .counter__input {
     width: 60%;
     .clear();
-    padding: 27px 0;
+    padding: 23px 0 25px;
     font-size: 20px;
     line-height: 18px;
     border: 1px solid @letter;

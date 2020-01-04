@@ -181,15 +181,15 @@
         </div>
         <div class="form-me__favor">
           <div class="container form-me__wrapper-favor">
-            <input class="form-me__input visually-hidden" id="user-photo" type="file" name="user-photo" />
-            <label class="form-me__photo-btn button" for="user-photo">
+            <input class="form-me__input visually-hidden" id="user-photo" type="file" name="user-photo"/>
+            <label class="form-me__photo-btn button" for="user-photo" tabindex="1">
             <span>Сменить</span>фото
             </label>
             <!-- теги -->
             <fieldset class="form-me__hashtags" title="Напишите свои теги">
-              <legend class="form-me__legend-hashtag">Тэги</legend>
               <textarea class="form-me__hashtags-list" name="hashtag"
-                id="hashtag">#бургер #бар #футбол #концерт #крафт</textarea>
+              id="hashtag">#бургер #бар #футбол #концерт #крафт</textarea>
+              <span class="form-me__legend-hashtag">Тэги</span>
             </fieldset>
             <!-- Транспорт -->
             <fieldset class="form-me__transport" title="Выберите способ передвижения">
@@ -274,8 +274,9 @@
                   <div class="steps__wrapper-title">
                     <a class="steps__label" id="step1">Шаг 1.</a>
                     <h3 class="steps__title">Даты пребывания</h3>
-                    <p class="steps__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
-                      позвать в поездку и ее предполагаемую длительность.
+                    <p class="steps__description">
+                      <span>Укажите предпочтительное количество попутчиков, которых</span>
+                      <span> вы хотели бы позвать в поездку и ее предполагаемую длительность.</span>
                     </p>
                   </div>
                   <ul class="steps__step-list steps__step-list--active">
@@ -301,7 +302,7 @@
                       </button>
                       <label class="visually-hidden" for="counter-companions">количество попутчиков</label>
                       <button class="counter__more" type="button">
-                        <span class="visually-hidden">Увеличить</span>                        
+                        <span class="visually-hidden">Увеличить</span>
                       </button>
                     </div>
                   </div>
@@ -315,7 +316,7 @@
                       </button>
                       <label class="visually-hidden" for="counter-days">количество дней</label>
                       <button class="counter__more" type="button">
-                        <span class="visually-hidden">Увеличить</span>                        
+                        <span class="visually-hidden">Увеличить</span>
                       </button>
                     </div>
                   </div>
@@ -361,7 +362,9 @@
                     <button class="period__day-btn" type="button" disabled>28</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>1<span>мар</span></button>
+                    <button class="period__day-btn" type="button" disabled>
+                      1<span class="period__day-month">мар</span>
+                    </button>
                   </li>
                   <li class="period__day">
                     <button class="period__day-btn" type="button" disabled>2</button>
@@ -436,13 +439,17 @@
                     <button class="period__day-btn" type="button" disabled>25</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn  period__day-btn--start" type="button">26</button>
+                    <button class="period__day-btn  period__day-btn--start" type="button">
+                      26<span class="period__day-action">Заезд</span>
+                    </button>
                   </li>
                   <li class="period__day">
                     <button class="period__day-btn  period__day-btn--chosen" type="button">27</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn  period__day-btn--chosen" type="button">28</button>
+                    <button class="period__day-btn  period__day-btn--end" type="button">
+                      28<span class="period__day-action">Выезд</span>
+                    </button>
                   </li>
                   <li class="period__day">
                     <button class="period__day-btn" type="button">29</button>
@@ -454,7 +461,9 @@
                     <button class="period__day-btn" type="button">31</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button">1<span>апр</span></button>
+                    <button class="period__day-btn" type="button">
+                      1<span class="period__day-month">апр</span>
+                    </button>
                   </li>
                   <li class="period__day">
                     <button class="period__day-btn" type="button">2</button>
@@ -477,7 +486,7 @@
                   <div class="steps__wrapper-title">
                     <a class="steps__label" id="step2">Шаг 2.</a>
                     <h3 class="steps__title">Маршрут</h3>
-                    <p class="steps__description">Укажите страны, которые вы хотели по посетить. Это может быть одна или
+                    <p class="steps__description">Укажите страны, которые вы хотели посетить. Это может быть одна или
                       сразу несколько.
                     </p>
                   </div>
@@ -493,31 +502,25 @@
                     </li>
                   </ul>
                 </div>
+                <div class="steps__country-wrapper">
                 <fieldset class="steps__country country" title="Выберите страну">
                   <button class="country__btn" type="button">Босния и герцеговина</button>
-                  <span class="country__flag country__flag--bosnia"></span> 
+                  <span class="country__flag country__flag--bosnia"></span>
                   <button class="country__button-del" type="button">
                     <span class="visually-hidden">удалить</span>
                   </button>
                 </fieldset>
                 <fieldset class="steps__country country" title="Выберите страну">
                   <button class="country__btn" type="button">Чехия</button>
-                  <span class="country__flag country__flag--czechia"></span> 
+                  <span class="country__flag country__flag--czech"></span>
                   <button class="country__button-del" type="button">
                     <span class="visually-hidden">удалить</span>
                   </button>
                 </fieldset>
                 <div class="steps__country country">
-                  <button class="country__btn country__btn--null" type="button">Выберите страну</button>
-                  <button class="country__button-del" type="button">
-                    <span class="visually-hidden">удалить</span>
-                  </button>
-                </div>
-                <section class="steps__country country-filter country-filter--open">
-                  <h2 class="visually-hidden">Выбор страны</h2>
-                  <!-- <div class="country-filter__wrapper country-filter__wrapper--close"> -->
-                  <div class="country-filter__wrapper">
-                    <ul class="country-filter__letter-list">
+                  <section class="steps__country-filter country-filter country-filter--form">
+                    <h3 class="visually-hidden">Выбор страны</h3>
+                    <ul class="country-filter__letter-list country-filter__letter-list--form">
                       <li class="country-filter__letter-item">
                         <button class="country-filter__letter-btn country-filter__letter-btn--active"
                           type="button">А</button>
@@ -595,7 +598,7 @@
                         <button class="country-filter__letter-btn" type="button">Я</button>
                       </li>
                     </ul>
-                    <ul class="country-filter__country-list">
+                    <ul class="country-filter__country-list country-filter__country-list--form">
                       <li class="country-filter__country-item">
                         <a class="country-filter__country-link" href="/Afghanistan">Афганистан</a>
                       </li>
@@ -624,22 +627,31 @@
                         <a class="country-filter__country-link" href="#">Азербайджан</a>
                       </li>
                     </ul>
-                  </div>
-                </section>
-                <button class="steps__add-country button" type="button">Добавить страну</button>
+                  </section>
+                  <button class="country__btn country__btn--null" type="button">Выберите страну</button>
+                  <span class="country__flag country__flag--null"></span>
+                  <button class="country__button-del" type="button">
+                    <span class="visually-hidden">удалить</span>
+                  </button>
+                </div>
+                <button class="country__add-country button" type="button">
+                  <span class="country__add-name">Добавить страну</span>
+                </button>
+                </div>
                 <div class="steps__change">
                   <a class="steps__next button button--yellow button--arrow-right" href="#step3">Следующий шаг</a>
                   <a class="steps__previous button button--arrow-left" href="#step1">На шаг назад</a>
                 </div>
               </li>
               <!-- шаг 3 -->
-              <li class="steps__item">
+              <li class="steps__item steps__item--step-3">
                 <div class="steps__wrapper-switch">
                   <div class="steps__wrapper-title">
                     <a class="steps__label" id="step3">Шаг 3.</a>
                     <h3 class="steps__title">Развлечения</h3>
-                    <p class="steps__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
-                      свободной форме и ставить тэги.
+                    <p class="steps__description">
+                      <span>Наконец, расскажите о своих планах времяпровождения.</span>
+                      <span>Можно писать в свободной форме и ставить тэги.</span>
                     </p>
                   </div>
                   <ul class="steps__step-list">
@@ -654,17 +666,25 @@
                     </li>
                   </ul>
                 </div>
-                <fieldset class="steps__country-fun country  country--bosnia">
-                  <legend class="country__name">Босния и герцеговина</legend>
-                  <textarea class="country__fun-description" name="Босния и герцеговина" id="bosnia"
-                    placeholder="План действий"></textarea>
-                </fieldset>
-                <fieldset class="steps__country-fun country country--czechia">
-                  <legend class="country__name">Чехия</legend>
-                  <textarea class="country__fun-description" name="czechia" id="czechia" placeholder="План действий">
-                  Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.
-                </textarea>
-                </fieldset>
+                <ul class="steps__fun">
+                  <li class="steps__fun-item">
+                    <span class="steps__fun-country">Босния и герцеговина</span>
+                    <span class="steps__fun-flag steps__fun-flag--bosnia"></span>
+                    <div class="steps__fun-wrapper">
+                      <textarea class="steps__fun-description" name="bosnia" id="bosnia" placeholder="План действий" required></textarea>
+                      <span class="steps__fun-error">Это поле должно быть заполнено</span>
+                    </div>
+                  </li>
+                  <li class="steps__fun-item">
+                    <span class="steps__fun-country">Чехия</span>
+                    <span class="steps__fun-flag steps__fun-flag--czech"></span>
+                    <div class="steps__fun-wrapper">
+                      <textarea class="steps__fun-description" name="czech" id="czechia" placeholder="План действий" required>Пить пиво и лазить           по старым замкам, наслаждаться архитектурой и вот это все.
+                      </textarea>
+                      <span class="steps__fun-error">Это поле должно быть заполнено</span>
+                    </div>
+                  </li>
+                </ul>
                 <div class="steps__change">
                   <button class="steps__submit button button--yellow button--arrow-right" type="submit" name="button-submit">
                     Отправить

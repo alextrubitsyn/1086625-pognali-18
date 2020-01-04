@@ -39,7 +39,7 @@
 .form-me__photo-btn {
   display: block;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 33px;
   padding-top: 2px;
   padding-bottom: 5px;
   border-radius: 20px;
@@ -56,7 +56,7 @@
   }
 
   &:hover,
-  &:focus {
+  .form-me__input:focus + & {
     background-color: #d1d7e9;
   }
 
@@ -65,17 +65,13 @@
   }
 }
 
-// .form-me__input {
-//   display: none;
-// }
-
 .form-me__hashtags {
+  position: relative;
   .clear();
   width: 270px;
-  margin-bottom: 17px;
+  margin-bottom: 16px;
   background-color: inherit;
-  border: 1px solid @letter;
-  border-radius: 10px;
+  border: none;
 }
 
 .form-me__legend-hashtag,
@@ -89,14 +85,10 @@
   text-transform: uppercase;
 }
 
-// .form-me__legend-hashtag {
-//   border-color: red;
-// }
-
 .form-me__hashtags-list {
   .clear();
   width: 100%;
-  padding: 11px 25px 21px;
+  padding: 20px 25px 23px;
   color: @text;
   font-family: inherit;
   font-size: 16px;
@@ -104,8 +96,24 @@
   line-height: 22px;
   text-align: left;
   background-color: inherit;
-  opacity: 0.4;
-  border: none;
+  border: 1px solid @letter;
+  border-radius: 10px;
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:focus {
+    border-color: @bg-header;
+  }
+}
+
+.form-me__legend-hashtag {
+  position: absolute;
+  padding: 5px 17px;
+  top: -14px;
+  left: calc(50% - 35px);
+  background-color: @bg-catalog;
 }
 
 .form-me__transport {
@@ -125,9 +133,18 @@
 }
 
 @media (min-width: @tablet-width) {
+  .form-me {
+    padding-top: 124px;
+  }
+
   .form-me__level {
-    margin-left: 35px;
+    margin-left: 31px;
     margin-right: auto;
+    padding-bottom: 4px;
+  }
+
+  .form-me__level-line {
+    .size(105);
   }
 
   .form-me__image {
@@ -136,10 +153,14 @@
     border-radius: 5px;
   }
 
+  .form-me__favor {
+    padding-bottom: 44px;
+  }
+
   .form-me__photo-btn {
     order: 20;
-    width: 100%;
-    // margin: 0 35px 51px;
+    width: 618px;
+    margin: 0 35px 52px;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
@@ -154,7 +175,6 @@
   }
 
   .form-me__hashtags {
-    transform: rotate(180deg);
     order: 30;
     width: 100%;
     border-radius: 10px;
@@ -162,18 +182,29 @@
 
   .form-me__legend-hashtag,
   .form-me__legend-transport {
-    transform: rotate(180deg);
     font-size: 20px;
     font-weight: 500;
     line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  .form-me__legend-hashtag {
+    top: auto;
+    bottom: -14px;
+    left: calc(50% - 42px);
   }
 
   .form-me__hashtags-list {
-    width: 100%;
-    padding: 37px 40px;
-    transform: rotate(180deg);
+    display: block;
+    margin: 0 auto;
+    width: 618px;
+    padding: 32px 39px 13px;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  .form-me__legend-transport {
+    transform: rotate(180deg);
   }
 
   .form-me__transport {
@@ -181,15 +212,16 @@
     order: 10;
     .clear();
     width: 308px;
-    margin: -113px auto 50px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    margin: -133px auto 44px;
+    padding-top: 18px;
+    padding-bottom: 23px;
     border-radius: 10px;
   }
 
   .form-me__travel-modes {
     transform: rotate(180deg);
     justify-content: center;
+    .clear();
   }
 }
 
@@ -209,6 +241,10 @@
     }
   }
 
+  .form-me__wrapper-top {
+    margin-bottom: 0;
+  }
+
   .form-me__level {
     margin: 44px 45px 0 896px;
     .size(94);
@@ -223,6 +259,10 @@
     border-radius: 5px;
   }
 
+  .form-me__favor {
+    padding-bottom: 30px;
+  }
+
   .form-me__wrapper-favor {
     flex-direction: row;
     align-items: flex-start;
@@ -232,7 +272,7 @@
   .form-me__photo-btn {
     order: 30;
     width: 190px;
-    margin: 0 95px 52px 1035px;
+    margin: 0 95px 27px 1035px;
     padding-top: 13px;
     padding-bottom: 15px;
     border-radius: 0 0 10px 10px;
@@ -265,7 +305,16 @@
     line-height: 18px;
   }
 
+  .form-me__legend-hashtag {
+    top: auto;
+    bottom: -14px;
+    left: 22px;
+  }
+
   .form-me__hashtags-list {
+    width: 730px;
+    margin: 0;
+    padding: 32px 40px 12px;
     font-size: 20px;
     line-height: 24px;
   }
@@ -273,9 +322,9 @@
   .form-me__transport {
     order: 50;
     .clear();
-    width: 308px;
+    width: 384px;
     margin: 0 auto;
-    padding-top: 24px;
+    padding-top: 16px;
     padding-bottom: 24px;
     border-radius: 10px;
   }

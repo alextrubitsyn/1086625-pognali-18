@@ -1,43 +1,3 @@
-.travel-way {
-  .travel-way__img {
-    &--plane {
-      .size(14; 16);
-    }
-
-    &--bus {
-      .size(13; 16);
-    }
-
-    &--bike {
-      .size(19; 17);
-    }
-
-    &--run {
-      .size(15; 17);
-    }
-  }
-
-  &--index {
-    .travel-way__img {
-      &--plane {
-        .size(19; 21);
-      }
-
-      &--bus {
-        .size(17; 21);
-      }
-
-      &--bike {
-        .size(24; 21);
-      }
-
-      &--run {
-        .size(20; 21);
-      }
-    }
-  }
-}
-
 .travel-way__item {
   position: relative;
   display: flex;
@@ -54,6 +14,44 @@
 
   &--index {
     margin-right: 3px;
+  }
+}
+
+.travel-way--index {
+  .travel-way__img {
+    &--plane {
+      .size(19; 21);
+    }
+
+    &--bus {
+      .size(17; 21);
+    }
+
+    &--bike {
+      .size(24; 21);
+    }
+
+    &--run {
+      .size(20; 21);
+    }
+  }
+}
+
+.travel-way__img {
+  &--plane {
+    .size(14; 16);
+  }
+
+  &--bus {
+    .size(13; 16);
+  }
+
+  &--bike {
+    .size(19; 17);
+  }
+
+  &--run {
+    .size(15; 17);
   }
 }
 
@@ -99,7 +97,7 @@
   cursor: pointer;
 
   &:hover,
-  &:focus {
+  .travel-way__input:focus + & {
     color: rgba(16, 30, 68, 0.3);
   }
 
@@ -111,64 +109,30 @@
   .travel-way__input:checked + & {
     color: rgba(29, 46, 91, 1);
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: rgba(16, 30, 68, 0.7);
     }
     &:active {
       color: rgba(16, 30, 68, 0.3);
     }
   }
+
+  .travel-way__input:focus:checked + & {
+    color: rgba(16, 30, 68, 0.7);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .travel-way__item {
+    .size(43);
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
     .travel-way--catalog & {
       .size(34);
       background-color: inherit;
-
-      &::before {
-        .size(34);
-        opacity: 0.15;
-      }
-
-      &--plane {
-        &::before {
-          background: url("../img/plane.svg") no-repeat;
-          background-position: center;
-          background-size: 19px 21px;
-        }
-      }
-
-      &--bus {
-        &::before {
-          background: url("../img/bus.svg") no-repeat;
-          background-position: center;
-          background-size: 17px 21px;
-        }
-      }
-
-      &--bike {
-        &::before {
-          background: url("../img/bike.svg") no-repeat;
-          background-position: center;
-          background-size: 24px 21px;
-        }
-      }
-
-      &--run {
-        &::before {
-          background: url("../img/run.svg") no-repeat;
-          background-size: 20px 21px;
-          background-position: center;
-        }
-      }
-
-      &--active {
-        &::before {
-          opacity: 1;
-        }
-      }
     }
 
     &--filter {
@@ -191,6 +155,77 @@
           .size(20; 21);
         }
       }
+    }
+  }
+
+  .travel-way__img {
+    &--plane {
+      .size(19; 21);
+    }
+
+    &--bus {
+      .size(17; 21);
+    }
+
+    &--bike {
+      .size(24; 21);
+    }
+
+    &--run {
+      .size(20; 21);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travel-way__item {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    .travel-way--catalog & {
+      .size(34);
+      background-color: inherit;
+    }
+
+    &--filter {
+      .size(43);
+
+      & .travel-way__img {
+        &--plane {
+          .size(19; 21);
+        }
+
+        &--bus {
+          .size(17; 21);
+        }
+
+        &--bike {
+          .size(24; 21);
+        }
+
+        &--run {
+          .size(20; 21);
+        }
+      }
+    }
+  }
+
+  .travel-way__img {
+    &--plane {
+      .size(19; 21);
+    }
+
+    &--bus {
+      .size(17; 21);
+    }
+
+    &--bike {
+      .size(24; 21);
+    }
+
+    &--run {
+      .size(20; 21);
     }
   }
 }

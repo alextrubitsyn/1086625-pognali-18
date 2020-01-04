@@ -11,11 +11,21 @@
     padding-bottom: 27px;
   }
 
-  .page-form & {
+  &--form {
+    display: none;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &--open {
+    position: absolute;
+    top: calc(100% - 16px);
+    display: block;
+    padding-bottom: 17px;
     box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
     border-radius: 0 0 10px 10px;
     border: 1px solid @letter;
     background-color: #ffffff;
+    z-index: 3;
   }
 }
 
@@ -155,12 +165,19 @@
   padding-left: 25px;
   margin-bottom: 48px;
   list-style: none;
+
+  &--form {
+    width: 220px;
+    .clear();
+    margin-bottom: 53px;
+  }
 }
 
 .country-filter__letter-btn {
   .clear();
   .size(44; 41);
   color: @title;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -168,11 +185,12 @@
   letter-spacing: 1.4px;
   background-color: #ffffff;
   border: 1px solid @letter;
-  border-radius: 4px;
+  // border-radius: 4px;
 
   &:hover,
   &:focus {
     border: 1px solid #959bb2;
+    cursor: pointer;
   }
 
   &:active {
@@ -184,8 +202,8 @@
     color: #ffffff;
     background-color: @title;
 
-    .page-form & {
-      background-color: @bg-catalog;
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -208,6 +226,12 @@
   margin-bottom: 38px;
   padding-left: 25px;
   list-style: none;
+
+  &--form {
+    display: block;
+    .clear();
+    padding-left: 20px;
+  }
 
   &--mobile {
     display: block;
@@ -291,6 +315,21 @@
     border-radius: 0 0 60px 60px;
     padding-bottom: 1px;
     margin-bottom: 50px;
+
+    &--form {
+      border-radius: 0 0 10px 10px;
+    }
+
+    &--form&--open {
+      position: absolute;
+      width: 575px;
+      top: 100%;
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 36px;
+      background-color: #ffffff;
+      border: none;
+    }
   }
 
   .country-filter__menu {
@@ -412,9 +451,11 @@
       background-color: @bg-country;
     }
 
-    .page-form & {
+    &--form {
       width: 287px;
       .clear();
+      margin-right: 125px;
+      padding-top: 4px;
       padding-left: 27px;
     }
   }
@@ -446,7 +487,7 @@
     }
 
     .page-form & {
-      .size(52; 70);
+      .size(52; 69);
       font-size: 20px;
 
       &--active {
@@ -464,6 +505,10 @@
 
     &--mobile {
       display: none;
+    }
+
+    &--form {
+      width: 180px;
     }
   }
 
@@ -505,6 +550,13 @@
   .country-filter {
     background-color: @bg-catalog;
     margin-bottom: 150px;
+
+    &--form&--open {
+      width: 730px;
+      top: 100%;
+      padding-top: 30px;
+      padding-bottom: 17px;
+    }
   }
 
   .country-filter__menu {
@@ -647,8 +699,8 @@
       display: none;
     }
 
-    .page-form & {
-      width: 384px;
+    &--form {
+      width: 390px;
     }
   }
 

@@ -68,26 +68,40 @@
   text-decoration: none;
   letter-spacing: 1.4px;
   opacity: 0.3;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .form__plans {
-    padding-top: 29px;
-    padding-bottom: 60px;
-    border-radius: 60px 60px 0 0;
+    padding-top: 45px;
+    padding-bottom: 106px;
+    border-radius: 30px 30px 0 0;
   }
 
   .form__plans-title {
-    margin-bottom: 60px;
+    margin-bottom: 44px;
+    padding-left: 35px;
     font-size: 36px;
     line-height: 50px;
+  }
+
+  .form__plans-list {
+    padding-right: 35px;
+    padding-left: 35px;
   }
 
   .form__plans-item {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 40px 32px 19px;
+    padding: 26px 32px 12px;
     font-size: 20px;
     line-height: 18px;
   }
@@ -95,7 +109,8 @@
   .form__plans-countries {
     display: flex;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 41px;
+    padding-left: 4px;
     font-size: 24px;
     line-height: 50px;
   }
@@ -103,13 +118,15 @@
   .form__plans-countries-n {
     order: 2;
     margin-left: auto;
+    padding-top: 18px;
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
   }
 
   .form__plans-companions {
-    margin-right: 45px;
+    width: 180px;
+    margin-right: 7px;
     letter-spacing: 2px;
   }
 
@@ -126,20 +143,34 @@
 
 @media (min-width: @desktop-width) {
   .form__plans {
-    padding-top: 29px;
+    padding-top: 45px;
+    padding-bottom: 124px;
+    border-radius: 60px 60px 0 0;
   }
 
   .form__plans-title {
-    margin-bottom: 56px;
+    margin-bottom: 45px;
+    padding-left: 70px;
+  }
+
+  .form__plans-list {
+    .clear();
+    padding-left: 64px;
   }
 
   .form__plans-item {
     flex-wrap: nowrap;
-    padding: 37px 40px 37px 44px;
+    align-items: baseline;
+    padding: 21px 40px 24px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 
   .form__plans-countries {
     display: flex;
+    align-items: baseline;
     width: 50%;
     .clear();
   }
@@ -147,11 +178,12 @@
   .form__plans-countries-n {
     order: -1;
     margin-left: 2px;
-    margin-right: 38px;
+    margin-right: 33px;
   }
 
   .form__plans-companions {
-    margin-right: 39px;
+    width: 175px;
+    .clear();
   }
 
   .form__plans-change {

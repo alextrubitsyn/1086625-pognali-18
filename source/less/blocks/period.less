@@ -94,6 +94,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: inherit;
   color: @text;
   letter-spacing: 1.8px;
   background-color: @bg-catalog;
@@ -105,10 +106,6 @@
     background-color: #ffffff;
   }
 
-  & span {
-    display: none;
-  }
-
   &--start,
   &:hover,
   &:focus {
@@ -118,7 +115,8 @@
     background-color: @title;
   }
 
-  &--chosen {
+  &--chosen,
+  &--end {
     opacity: 1;
     color: #ffffff;
     background-color: @title;
@@ -130,59 +128,46 @@
     background-color: @bg-catalog;
   }
 }
-// .period__day {
-//   width: 31.5px;
-//   height: 31.2px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   color: rgba(68, 68, 68, 0.3);
-//   background-color: #ffffff;
-//   border: 1px solid @letter;
-//   z-index: 2;
 
-//   & span {
-//     font-size: 0;
-//   }
+.period__day-month {
+  display: none;
+}
 
-//   &--start {
-//     opacity: 1;
-//     color: #ffffff;
-//     border: 2px solid @holiday;
-//     background-color: @title;
-//   }
-
-//   &--active {
-//     opacity: 1;
-//     color: #ffffff;
-//     background-color: @title;
-//   }
-
-//   &--trip {
-//     opacity: 1;
-//     color: @text;
-//     background-color: @bg-catalog;
-//   }
-// }
+.period__day-action {
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
   .period__month-year {
     display: flex;
     width: 100%;
     .clear();
-    margin-bottom: 60px;
+    margin-bottom: 31px;
+    padding: 26px 16px 25px;
     font-size: 36px;
+  }
+
+  .period__btn {
+    width: 19px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .period__month {
     margin-right: 7px;
+    padding-top: 6px;
+  }
+
+  .period__year {
+    padding-top: 6px;
   }
 
   .period__week {
     display: flex;
     justify-content: space-around;
     .clear();
-    margin: 0 6px 12px;
+    margin: 0 12px 4px;
     font-size: 18px;
     line-height: 30px;
   }
@@ -200,119 +185,86 @@
   .period__days {
     .clear();
     margin-bottom: 46px;
-    padding: 0 5px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 18px;
     background-color: #ffffff;
   }
 
-  .period__day {
-    width: calc(100% / 7);
+  .period__day-btn {
+    width: 77px;
     height: 70px;
-    color: rgba(68, 68, 68, 0.3);
-    border-top: 1px solid @letter;
-    border-left: 1px solid @letter;
-
-    .period__days & {
-      .clear();
-    }
-
-    &:nth-child(7n) {
-      border-right: 1px solid @letter;
-      margin-right: auto;
-    }
-
-    &:nth-child(n + 35) {
-      border-bottom: 1px solid @letter;
-    }
-
-    &--start {
-      opacity: 1;
-      color: #ffffff;
-      border: 4px solid @holiday;
-      background-color: @title;
-    }
-
-    &--active {
-      opacity: 1;
-      color: #ffffff;
-      background-color: @title;
-    }
-
-    &--trip {
-      opacity: 1;
-      color: @text;
-      background-color: @bg-catalog;
-    }
+    margin-left: -1px;
+    margin-top: -1px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .period__month-year {
     .clear();
-    margin-bottom: 42px;
+    margin-bottom: 8px;
+    padding: 26px 0;
   }
 
   .period__week {
+    justify-content: flex-start;
     .clear();
-    margin: 0 6px 22px;
+    margin-bottom: 16px;
+    // padding-left: 16px;
   }
+
+  .period__week-item {
+    padding-left: 16px;
+
+    &:not(:last-child) {
+      margin-right: 109px;
+    }
+  }
+
+  // .period__day {
+  //   .period__days & {
+  //     justify-content: flex-start;
+  //     align-items: flex-start;
+  //     height: 72px;
+  //   }
+  // }
 
   .period__days {
     .clear();
     margin-bottom: 56px;
-    padding: 0 5px;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    background-color: #ffffff;
+    margin-left: -1px;
   }
 
-  .period__day {
-    .period__days & {
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding-top: 5px;
-      padding-left: 10px;
-      height: 72px;
-      color: rgba(68, 68, 68, 0.3);
-      border-top: 1px solid @letter;
-      border-left: 1px solid @letter;
+  .period__day-btn {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 143px;
+    height: 72px;
+    .clear();
+    margin-top: -1px;
+    padding-left: 15px;
+    padding-top: 7px;
+    font-size: 18px;
+    font-weight: 400;
+    // color: rgba(68, 68, 68, 0.3);
+    line-height: 30px;
+    letter-spacing: 1.8px;
 
-      & span {
-        font-size: 18px;
-        text-transform: none;
-        margin-left: 5px;
-      }
-
-      &:nth-child(7n) {
-        border-right: 1px solid @letter;
-        margin-right: auto;
-      }
-
-      &:nth-child(n + 35) {
-        border-bottom: 1px solid @letter;
-      }
-
-      &--start {
-        opacity: 1;
-        color: #ffffff;
-        border: 4px solid @holiday;
-        background-color: @title;
-      }
-
-      &--active {
-        opacity: 1;
-        color: #ffffff;
-        background-color: @title;
-      }
-
-      &--trip {
-        opacity: 1;
-        color: @text;
-        background-color: @bg-catalog;
-      }
+    &--start,
+    &--end {
+      flex-direction: column;
     }
+  }
+
+  .period__day-month {
+    display: block;
+    text-transform: none;
+    padding-left: 5px;
+  }
+
+  .period__day-action {
+    display: block;
+    margin-top: -4px;
   }
 }
