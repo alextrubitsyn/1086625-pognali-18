@@ -46,8 +46,30 @@
 }
 
 .directions__item {
+  position: relative;
   background-color: #ffffff;
   border-radius: 10px;
+
+  &::before {
+    .pseudo();
+    .size(35; 24);
+    top: 87px;
+    left: 25px;
+    background-size: 35px 24px;
+    z-index: 3;
+  }
+
+  &--thailand::before {
+    .flag(thailand);
+  }
+
+  &--france::before {
+    .flag(france);
+  }
+
+  &--czech::before {
+    .flag(czech);
+  }
 
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -66,27 +88,6 @@
   padding: 13px 24px 18px 25px;
   border-radius: 0 0 10px 10px;
   background-color: #ffffff;
-
-  &::before {
-    .pseudo();
-    .size(35; 24);
-    top: -21px;
-    left: 25px;
-    background-size: 35px 24px;
-    z-index: 3;
-  }
-
-  &--thailand::before {
-    .flag(thailand);
-  }
-
-  &--france::before {
-    .flag(france);
-  }
-
-  &--czech::before {
-    .flag(czech);
-  }
 
   &::after {
     .pseudo();
@@ -209,6 +210,15 @@
     flex-direction: row;
     justify-content: space-between;
     border-radius: 20px;
+
+    &::before {
+      .size(70; 47);
+      top: 16px;
+      left: auto;
+      right: 150px;
+      background-size: 70px 47px;
+      z-index: 3;
+    }
   }
 
   .directions__pic {
@@ -221,14 +231,14 @@
   }
 
   .directions__wrapper-country {
-    flex-grow: 0;
+    // flex-grow: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 32px 0 15px 30px;
     border-radius: 20px 0 0 20px;
 
-    &::before {
+    &::after {
       display: none;
     }
   }
@@ -332,6 +342,13 @@
   .directions__item {
     width: 559px;
     border-radius: 20px;
+
+    &::before {
+      top: 23px;
+      right: 151px;
+      background-size: 70px 47px;
+      z-index: 3;
+    }
   }
 
   .directions__image {
