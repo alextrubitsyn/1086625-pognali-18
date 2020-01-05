@@ -16,9 +16,11 @@
     border-radius: 0 0 10px 10px;
   }
 
-  &--open {
+  &--open&--form {
+    // position: static;
     position: absolute;
     top: calc(100% - 16px);
+    left: 0;
     display: block;
     padding-bottom: 17px;
     box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
@@ -355,7 +357,7 @@
     line-height: 24px;
     text-transform: uppercase;
 
-    .page-catalog & {
+    &--catalog {
       margin-left: auto;
       order: 2;
     }
@@ -393,43 +395,76 @@
   }
 
   .country-filter__region-list {
-    .page-catalog & {
-      width: 65%;
-      display: flex;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      .clear();
-      padding-top: 2px;
-      padding-left: 33px;
-    }
+    width: 65%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .clear();
+    padding-top: 2px;
+    padding-left: 33px;
   }
+
+  // .country-filter__region-list {
+  //   .page-catalog & {
+  //     width: 65%;
+  //     display: flex;
+  //     align-items: flex-start;
+  //     flex-wrap: wrap;
+  //     .clear();
+  //     padding-top: 2px;
+  //     padding-left: 33px;
+  //   }
+  // }
 
   .country-filter__region-link {
-    .page-catalog & {
-      display: block;
-      min-width: 70px;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 24px;
-    }
+    display: block;
+    min-width: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
   }
+
+  // .country-filter__region-link {
+  //   .page-catalog & {
+  //     display: block;
+  //     min-width: 70px;
+  //     font-size: 20px;
+  //     font-weight: 700;
+  //     line-height: 24px;
+  //   }
+  // }
 
   .country-filter__region-item {
-    .page-catalog & {
-      &:not(:last-child) {
-        margin-right: 25px;
-        margin-bottom: 0;
-      }
+    &:not(:last-child) {
+      margin-right: 25px;
+      margin-bottom: 0;
+    }
 
-      &:nth-child(2) {
-        margin-right: 6px;
-      }
+    &:nth-child(2) {
+      margin-right: 6px;
+    }
 
-      &:nth-child(3) {
-        margin-right: 30px;
-      }
+    &:nth-child(3) {
+      margin-right: 30px;
     }
   }
+
+  // .country-filter__region-item {
+  //   .page-catalog & {
+  //     &:not(:last-child) {
+  //       margin-right: 25px;
+  //       margin-bottom: 0;
+  //     }
+
+  //     &:nth-child(2) {
+  //       margin-right: 6px;
+  //     }
+
+  //     &:nth-child(3) {
+  //       margin-right: 30px;
+  //     }
+  //   }
+  // }
 
   .country-filter__wrapper {
     .country-filter--open & {
@@ -444,7 +479,7 @@
   }
 
   .country-filter__letter-list {
-    .page-catalog & {
+    &--catalog {
       width: 410px;
       .clear();
       padding-left: 17px;
@@ -461,13 +496,17 @@
   }
 
   .country-filter__letter-item {
-    .page-catalog & {
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
   }
 
+  // .country-filter__letter-item {
+  //   .page-catalog & {
+  //     margin-bottom: 0;
+  //   }
+  // }
+
   .country-filter__letter-btn {
-    .page-catalog & {
+    .country-filter__letter-list--catalog & {
       .size(71);
       .clear();
       margin-right: 7px;
@@ -486,7 +525,7 @@
       }
     }
 
-    .page-form & {
+    .country-filter__letter-list--form & {
       .size(52; 69);
       font-size: 20px;
 
@@ -548,7 +587,7 @@
 
 @media (min-width: @desktop-width) {
   .country-filter {
-    background-color: @bg-catalog;
+    // background-color: @bg-catalog;
     margin-bottom: 150px;
 
     &--form&--open {
@@ -561,12 +600,12 @@
 
   .country-filter__menu {
     margin-bottom: 44px;
-    background-color: @bg-catalog;
+    // background-color: @bg-catalog;
   }
 
   .country-filter__toggle {
-    .page-catalog & {
-      background-color: @bg-catalog;
+    &--catalog {
+      // background-color: @bg-catalog;
       margin-left: auto;
       order: 2;
     }
@@ -584,15 +623,15 @@
   }
 
   .country-filter__region-list {
-    .page-catalog & {
+    &--catalog {
       width: 50%;
       .clear();
-      background-color: @bg-catalog;
+      // background-color: @bg-catalog;
     }
   }
 
   .country-filter__region-item {
-    .page-catalog & {
+    .country-filter__region-list--catalog & {
       &:not(:last-child) {
         margin-right: 25px;
       }
@@ -600,7 +639,7 @@
   }
 
   .country-filter__region-link {
-    .page-catalog & {
+    .country-filter__region-list--catalog & {
       min-width: 55px;
     }
   }
@@ -629,73 +668,116 @@
   }
 
   .country-filter__letter {
-    .page-catalog & {
-      display: block;
-      .clear();
-      margin-bottom: 49px;
-      // .olo();
+    display: block;
+    .clear();
+    margin-bottom: 49px;
+    // .olo();
 
-      &:nth-child(5n + 2) {
-        width: 254px;
-      }
+    &:nth-child(5n + 2) {
+      width: 254px;
+    }
 
-      &:nth-child(5n + 3) {
-        width: 252px;
-      }
+    &:nth-child(5n + 3) {
+      width: 252px;
+    }
 
-      &:nth-child(5n + 4) {
-        width: 250px;
-      }
+    &:nth-child(5n + 4) {
+      width: 250px;
+    }
 
-      &:nth-child(5n + 5) {
-        width: 246px;
-      }
+    &:nth-child(5n + 5) {
+      width: 246px;
+    }
 
-      &:nth-child(5n + 6) {
-        width: 204px;
-      }
-      // &:nth-child(5n + 6) {
-      //   width: 204px;
-      // }
-      // &:nth-child(n + 2):nth-child(-n + 6) {
-      //   margin-bottom: 49px;
-      // }
-      // &:nth-child(n + 7):nth-child(-n + 11) {
-      //   margin-bottom: 50px;
-      // }
+    &:nth-child(5n + 6) {
+      width: 204px;
+    }
 
-      &:nth-child(n + 12):nth-child(-n + 16) {
-        margin-bottom: 90px;
-      }
+    &:nth-child(n + 12):nth-child(-n + 16) {
+      margin-bottom: 90px;
+    }
 
-      &:nth-child(n + 17):nth-child(-n + 21) {
-        margin-bottom: 45px;
-      }
+    &:nth-child(n + 17):nth-child(-n + 21) {
+      margin-bottom: 45px;
+    }
 
-      &:nth-child(n + 22):nth-child(-n + 26) {
-        & .country-filter__letter-title {
-          margin-bottom: 40px;
-        }
+    &:nth-child(n + 22):nth-child(-n + 26) {
+      & .country-filter__letter-title {
+        margin-bottom: 40px;
       }
     }
   }
+
+  // .country-filter__letter {
+  //   .page-catalog & {
+  //     display: block;
+  //     .clear();
+  //     margin-bottom: 49px;
+  //     // .olo();
+
+  //     &:nth-child(5n + 2) {
+  //       width: 254px;
+  //     }
+
+  //     &:nth-child(5n + 3) {
+  //       width: 252px;
+  //     }
+
+  //     &:nth-child(5n + 4) {
+  //       width: 250px;
+  //     }
+
+  //     &:nth-child(5n + 5) {
+  //       width: 246px;
+  //     }
+
+  //     &:nth-child(5n + 6) {
+  //       width: 204px;
+  //     }
+
+  //     &:nth-child(n + 12):nth-child(-n + 16) {
+  //       margin-bottom: 90px;
+  //     }
+
+  //     &:nth-child(n + 17):nth-child(-n + 21) {
+  //       margin-bottom: 45px;
+  //     }
+
+  //     &:nth-child(n + 22):nth-child(-n + 26) {
+  //       & .country-filter__letter-title {
+  //         margin-bottom: 40px;
+  //       }
+  //     }
+  //   }
+  // }
 
   .country-filter__letter-title {
-    .page-catalog & {
-      // display: block;
-      display: flex;
-      align-items: center;
-      min-height: 60px;
-      .clear();
-      margin-bottom: 30px;
-      font-size: 60px;
-      font-weight: 700;
-      line-height: 24px;
-    }
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    .clear();
+    margin-bottom: 30px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 24px;
   }
 
+  // .country-filter__letter-title {
+  //   .page-catalog & {
+  //     // display: block;
+  //     display: flex;
+  //     align-items: center;
+  //     min-height: 60px;
+  //     .clear();
+  //     margin-bottom: 30px;
+  //     font-size: 60px;
+  //     font-weight: 700;
+  //     line-height: 24px;
+  //   }
+  // }
+
   .country-filter__letter-list {
-    .page-catalog & {
+    &--catalog {
       display: none;
     }
 
@@ -705,13 +787,17 @@
   }
 
   .country-filter__country-list {
-    .page-catalog & {
-      .clear();
-    }
+    .clear();
   }
 
+  // .country-filter__country-list {
+  //   .page-catalog & {
+  //     .clear();
+  //   }
+  // }
+
   .country-filter__letter-item {
-    .page-form & {
+    .country-filter__letter-list--form & {
       margin-bottom: 15px;
 
       &:not(:nth-child(5n)) {
@@ -721,7 +807,7 @@
   }
 
   .country-filter__letter-btn {
-    .page-form & {
+    .country-filter__letter-list--form & {
       .size(60; 70);
       border-radius: 4px;
     }

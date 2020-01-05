@@ -50,6 +50,14 @@
   border: none;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+
   &::before {
     .pseudo();
     .size(25; 3);
