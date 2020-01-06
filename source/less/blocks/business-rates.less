@@ -1,3 +1,151 @@
 .business-rates {
+  position: fixed;
+  top: 50%;
+  left: 50%;
   display: none;
+  width: 270px;
+  .clear();
+  // margin: 0 auto;
+  padding-top: 30px;
+  text-align: left;
+  color: @text;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(29, 46, 91, 0.1);
+  transform: translate(-50%, -50%);
+  z-index: 600;
+  // z-index: 6;
+
+  &--open {
+    display: block;
+    animation: modal 0.4s;
+  }
+}
+
+.business-rates {
+  .business-rates__title {
+    text-align: center;
+    margin-bottom: 29px;
+  }
+}
+
+.business-rates__list {
+  width: 220px;
+  .clear();
+  margin: 0 auto 28px;
+  padding-top: 13px;
+  list-style: none;
+  border-top: 1px solid rgba(68, 68, 68, 0.05);
+}
+
+.business-rates__item {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(68, 68, 68, 0.05);
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.business-rates__description {
+  display: block;
+}
+
+.business-rates__price {
+  display: block;
+}
+
+.business-rates__close {
+  display: block;
+  width: 100%;
+  .clear();
+  padding: 20px 0;
+  color: @title;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  border-radius: 0 0 20px 20px;
+  background-color: #f3f4f8;
+
+  &:hover,
+  &:focus {
+    background-color: @bg-catalog;
+  }
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .business-rates {
+    width: 688px;
+    padding-top: 50px;
+    font-size: 22px;
+    line-height: 28px;
+    border-radius: 30px;
+  }
+
+  .business-rates {
+    .business-rates__title {
+      margin-bottom: 45px;
+    }
+  }
+
+  .business-rates__list {
+    width: 100%;
+    .clear();
+    margin-bottom: 56px;
+    padding: 15px 94px 0 89px;
+  }
+
+  .business-rates__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 11px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .business-rates__close {
+    .clear();
+    padding: 40px 0;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 0 0 30px 30px;
+    text-transform: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .business-rates {
+    width: 750px;
+    padding-top: 50px;
+  }
+
+  .business-rates {
+    .business-rates__title {
+      margin-bottom: 45px;
+    }
+  }
+
+  .business-rates__list {
+    .clear();
+    margin-bottom: 56px;
+    padding: 15px 60px 0;
+  }
+
+  .business-rates__close {
+    .clear();
+    padding: 40px 0;
+    font-size: 24px;
+    text-transform: none;
+  }
 }

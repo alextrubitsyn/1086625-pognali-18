@@ -7,8 +7,14 @@
   &--scroll {
     background-color: #ffffff;
     position: fixed;
-    z-index: 15;
+    z-index: 150;
   }
+
+  // Белый фон на всю ширину меню
+  // &--menu-open {
+  //   background-color: #ffffff;
+  //   z-index: 10;
+  // }
 }
 
 .page-header__wrapper {
@@ -120,21 +126,19 @@
   .page-header {
     background-color: @bg-head-tablet;
 
-    &::after {
-      display: none;
+    // Белый фон на всю ширину меню
+    &--menu-open {
+      background-color: #ffffff;
+      z-index: 10;
     }
 
     &--scroll {
       background-color: #ffffff;
     }
 
-    &--menu-open,
-    .nojs & {
-      background-color: #ffffff;
-    }
-
     .nojs & {
       display: block;
+      background-color: #ffffff;
     }
   }
 
@@ -160,6 +164,11 @@
     .clear();
     padding-top: 29px;
     background-color: @bg-header;
+
+    // &--menu-open {
+    //   background-color: @bg-header;
+    //   z-index: 1;
+    // }
 
     &--scroll {
       background-color: #ffffff;

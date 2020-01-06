@@ -4,10 +4,12 @@
   color: @text;
   border-radius: 10px;
   background-color: #ffffff;
+  transition: all 0.3s ease-out;
 
   &:hover,
   &:focus {
     box-shadow: 0 6px 21px rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
   }
 
   &--catalog {
@@ -114,42 +116,60 @@
 }
 
 .member__liked {
+  position: absolute;
+  top: 41px;
+  left: 48px;
+  width: 50%;
+  padding: 5px 0 5px 38px;
   color: @title;
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;
   text-transform: uppercase;
-
-  .member--catalog & {
-    position: absolute;
-    top: 41px;
-    left: 48px;
-    width: 50%;
-    padding: 5px 0 5px 38px;
-  }
 }
 
 .member__like-btn {
-  .member--catalog & {
-    position: absolute;
-    top: 0;
-    left: 0;
-    .size(31);
-    background: url("../img/heart.svg") no-repeat;
-    background-color: @bg-catalog;
-    background-size: 13px 11px;
-    background-position: 54% center;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  .size(31);
+  color: rgba(25, 33, 68, 0.3);
+  background-color: @bg-catalog;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
 
-    &--active {
-      background: url("../img/heart-active.svg") no-repeat;
-      background-color: @heart-active;
-      background-size: 13px 11px;
-      background-position: center;
+  &:hover,
+  &:focus {
+    color: rgba(25, 33, 68, 0.5);
+    background-color: @bg-country;
+  }
+
+  &:active {
+    color: rgba(25, 33, 68, 0.1);
+  }
+
+  &--active {
+    color: rgba(240, 35, 35, 1);
+    background-color: @heart-active;
+
+    &:hover,
+    &:focus {
+      color: rgba(240, 35, 35, 1);
+      background-color: #f9d8d8;
+    }
+
+    &:active {
+      color: rgba(240, 35, 35, 0.3);
     }
   }
+}
+
+.member__like-img {
+  .size(13; 11);
 }
 
 .member__hashtags {
@@ -254,6 +274,26 @@
     .flag(czech);
   }
 
+  &--usa {
+    .flag(usa);
+  }
+
+  &--australia {
+    .flag(australia);
+  }
+
+  &--dominica {
+    .flag(dominica);
+  }
+
+  &--united-kingdom {
+    .flag(united-kingdom);
+  }
+
+  &--germany {
+    .flag(germany);
+  }
+
   &--index {
     &::before {
       display: none;
@@ -298,12 +338,14 @@
   .member--catalog & {
     display: block;
     padding-left: 38px;
+    width: 26px;
     height: 18px;
     font-size: 15px;
     font-weight: 500;
     line-height: 18px;
     white-space: nowrap;
     margin-bottom: 9px;
+    background-size: 26px 18px;
 
     &:not(:last-child) {
       margin-right: 0;
@@ -617,33 +659,30 @@
   }
 
   .member__liked {
-    .member--catalog & {
-      display: flex;
-      align-items: center;
-      position: static;
-      order: 80;
-      .clear();
-      color: @bg-header;
-      font-size: 20px;
-      line-height: 30px;
-    }
+    display: flex;
+    align-items: center;
+    position: static;
+    order: 80;
+    .clear();
+    color: @bg-header;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .member__like-btn {
-    .member--catalog & {
-      position: static;
-      top: auto;
-      left: auto;
-      .size(50);
-      margin-right: 8px;
-      background-size: 20px 17px;
-    }
+    position: static;
+    top: auto;
+    left: auto;
+    .size(50);
+    margin-right: 8px;
+  }
+
+  .member__like-img {
+    .size(20; 17);
   }
 
   .member__like-vol {
-    .member--catalog & {
-      padding-top: 4px;
-    }
+    padding-top: 4px;
   }
 
   .member__hashtags {
@@ -700,11 +739,13 @@
   .member__country {
     .member--catalog & {
       width: auto;
+      height: 24px;
       padding-left: 43px;
       color: @title;
       font-size: 20px;
       line-height: 30px;
       white-space: nowrap;
+      background-size: 35px 24px;
 
       &--short {
         margin-bottom: 3px;
@@ -927,16 +968,16 @@
   }
 
   .member__liked {
-    .member--catalog & {
-      position: static;
-      align-self: center;
-      order: 90;
-      width: 150px;
-      .clear();
-      margin-right: 30px;
-      font-size: 20px;
-      line-height: 30px;
-    }
+    // .member--catalog & {
+    position: static;
+    align-self: center;
+    order: 90;
+    width: 150px;
+    .clear();
+    margin-right: 30px;
+    font-size: 20px;
+    line-height: 30px;
+    // }
   }
 
   .member__hashtags {

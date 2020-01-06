@@ -42,6 +42,24 @@
   background-repeat: no-repeat;
 }
 
+.flag-small(@country) {
+  background-image: url("../img/flag-@{country}.svg");
+  background-repeat: no-repeat;
+  background-size: 26px 18px;
+}
+
+.flag-middle(@country) {
+  background-image: url("../img/flag-@{country}.svg");
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
+}
+
+.flag-big(@country) {
+  background-image: url("../img/flag-@{country}.svg");
+  background-repeat: no-repeat;
+  background-size: 70px 47px;
+}
+
 // Отладочные миксины
 .olr() {
   outline: 3px solid red;
