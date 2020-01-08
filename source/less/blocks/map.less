@@ -71,10 +71,18 @@
   &:focus {
     color: #ffffff;
     background-color: @bg-index;
+
+    &::after {
+      border-left-color: #ffffff;
+    }
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+
+    &::after {
+      border-left-color: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 

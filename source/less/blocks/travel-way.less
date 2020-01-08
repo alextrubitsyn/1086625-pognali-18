@@ -124,19 +124,25 @@
 
 @media (min-width: @tablet-width) {
   .travel-way__item {
-    .size(43);
+    .travel-way--form & {
+      .size(43);
 
-    &:not(:last-child) {
-      margin-right: 8px;
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
     }
 
     .travel-way--catalog & {
-      .size(34);
+      // .size(34);
       background-color: inherit;
     }
 
     &--filter {
       .size(43);
+
+      & .travel-way__label {
+        .size(43);
+      }
 
       & .travel-way__img {
         &--plane {
@@ -155,6 +161,19 @@
           .size(20; 21);
         }
       }
+    }
+  }
+
+  .travel-way__label {
+    width: inherit;
+    height: inherit;
+
+    .travel-way--catalog & {
+      .size(32);
+    }
+
+    .travel-way--form & {
+      .size(43);
     }
   }
 
@@ -181,6 +200,12 @@
   .travel-way__item {
     &:not(:last-child) {
       margin-right: 0;
+    }
+
+    .travel-way--form & {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
 
     .travel-way--catalog & {

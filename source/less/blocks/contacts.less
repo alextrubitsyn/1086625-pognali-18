@@ -13,6 +13,7 @@
   &--main {
     display: flex;
     flex-direction: row;
+    .clear();
   }
 
   &--reg {
@@ -22,7 +23,6 @@
   .page-header--menu-open &,
   .nojs & {
     display: flex;
-    // display: block;
 
     &:hover,
     &:focus {
@@ -187,15 +187,6 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    // display: none;
-    // .clear();
-    // font-size: 28px;
-    // font-weight: 700;
-    // line-height: 28px;
-    // text-align: left;
-    // text-transform: uppercase;
-    // list-style: none;
-
     &--main {
       display: none;
     }
@@ -288,107 +279,4 @@
       .size(36; 26);
     }
   }
-
-  // .contacts {
-  //   .page-header & {
-  //     display: flex;
-  //     flex-direction: row;
-  //     flex-wrap: wrap;
-  //     .clear();
-  //   }
-
-  //   .page-main__user & {
-  //     display: none;
-  //   }
-  // }
-
-  // .contacts__item {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  // }
-
-  // .contacts__link {
-  //   .size(50);
-  //   font-size: 0;
-  //   border-radius: 50%;
-
-  //   .main-nav & {
-  //     .clear();
-
-  //     &::before {
-  //       .size(50);
-  //       left: 0;
-  //       top: 0;
-  //       border-radius: 50%;
-  //     }
-
-  //     &--phone {
-  //       &:hover::before,
-  //       &:focus::before {
-  //         background-color: #f26926;
-  //       }
-
-  //       &:active::before {
-  //         background-image: url("../img/topmenu-phone-active.svg");
-  //       }
-
-  //       &::before {
-  //         background-image: url("../img/topmenu-phone.svg");
-  //         background-color: @bg-sequence1;
-  //         background-size: 18px;
-  //       }
-  //     }
-
-  //     &--email {
-  //       &:hover::before,
-  //       &:focus::before {
-  //         background-color: @bg-sequence1;
-  //       }
-
-  //       &:active::before {
-  //         background-image: url("../img/topmenu-mail-active.svg");
-  //       }
-
-  //       &::before {
-  //         background-image: url("../img/topmenu-mail.svg");
-  //         background-color: @bg-sequence3;
-  //         background-size: 18px 14px;
-  //       }
-  //     }
-  //   }
-
-  //   .registration & {
-  //     .size(440; 90);
-  //     padding-left: 123px;
-  //     background-color: @bg-index;
-  //     border-radius: 0;
-
-  //     &::before {
-  //       .size(90);
-  //     }
-
-  //     &--phone {
-  //       margin-bottom: 0;
-
-  //       &::before {
-  //         background-size: 36px;
-  //       }
-  //     }
-
-  //     &--email {
-  //       &::before {
-  //         background-size: 36px 26px;
-  //       }
-  //     }
-  //   }
-
-  //   &--phone {
-  //     background-color: @bg-sequence1;
-  //   }
-
-  //   &--email {
-  //     background-color: @bg-sequence3;
-  //   }
-  // }
 }

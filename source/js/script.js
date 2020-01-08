@@ -74,7 +74,7 @@ if (modalOpenEl && modalCloseEl && modalOverlayEl && businessRatesEl) {
 if (headerEl) {
   var headerFixed = false;
 
-  window.addEventListener("scroll", headerOnScroll);
+  window.addEventListener("scroll", throttle(headerOnScroll, 300));
 
   function headerOnScroll() {
     if (document.documentElement.scrollTop > 0) {
@@ -93,4 +93,33 @@ if (headerEl) {
       headerFixed = false;
     }
   }
+}
+
+function throttle(func, ms) {
+  var isThrottled = false;
+  var savedArgs;
+  var savedThis;
+
+  function wrapper() {
+    if (isThrottled) {
+      savedArgs = arguments;
+      savedThis = this;
+      return;
+    }
+
+    func.apply(this, arguments);
+
+    isThrottled = true;
+
+    setTimeout(function() {
+      isThrottled = false;
+
+      if (savedArgs) {
+        wrapper.apply(savedThis, savedArgs);
+        savedArgs = savedThis = null;
+      }
+    }, ms);
+  }
+
+  return wrapper;
 }

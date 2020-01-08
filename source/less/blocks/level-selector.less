@@ -106,12 +106,13 @@
 
   &:hover,
   &:focus {
-    .size(16);
+    .size(15);
     cursor: pointer;
   }
 
   &:active {
     box-shadow: 0 3px 7px rgba(29, 46, 91, 0.35);
+    cursor: grabbing;
   }
 }
 
@@ -200,6 +201,12 @@
 
     &--max {
       right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      .size(19);
+      cursor: pointer;
     }
   }
 }

@@ -12,8 +12,6 @@
     padding-bottom: 27px;
     left: 0;
     right: 0;
-    // left: 50%;
-    // transform: translateX(-50%);
     z-index: 3;
   }
 
@@ -23,7 +21,6 @@
   }
 
   &--open&--form {
-    // position: static;
     position: absolute;
     top: calc(100% - 16px);
     left: 0;
@@ -87,7 +84,7 @@
   position: relative;
   display: block;
   .size(17; 12);
-  margin-bottom: 4px;
+  // margin-bottom: 4px;
   margin-right: 5px;
 
   &::after {
@@ -98,7 +95,6 @@
     background-image: url("../img/dots.svg");
     background-size: 17px 12px;
     background-repeat: no-repeat;
-    // background-position: right center;
   }
 
   .country-filter--open & {
@@ -121,7 +117,6 @@
     background-image: url("../img/close-country.svg");
     background-size: 12px 12px;
     background-repeat: no-repeat;
-    // background-position: right center;
   }
 
   .country-filter--open & {
@@ -196,7 +191,6 @@
   letter-spacing: 1.4px;
   background-color: #ffffff;
   border: 1px solid @letter;
-  // border-radius: 4px;
 
   &:hover,
   &:focus {
@@ -327,6 +321,10 @@
     padding-bottom: 1px;
     margin-bottom: 50px;
 
+    &--catalog {
+      margin-bottom: 44px;
+    }
+
     &--open {
       z-index: 2;
     }
@@ -350,7 +348,6 @@
   .country-filter__menu {
     padding-top: 116px;
     margin-bottom: 57px;
-    // margin-bottom: 48px;
   }
 
   .country-filter__menu-wrapper {
@@ -485,8 +482,8 @@
   //   }
   // }
 
-  .country-filter__wrapper {
-    .country-filter--open & {
+  .country-filter--open {
+    .country-filter__wrapper {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -658,16 +655,14 @@
     }
   }
 
-  .country-filter__region-item {
-    .country-filter__region-list--catalog & {
+  .country-filter__region-list--catalog {
+    .country-filter__region-item {
       &:not(:last-child) {
         margin-right: 25px;
       }
     }
-  }
 
-  .country-filter__region-link {
-    .country-filter__region-list--catalog & {
+    .country-filter__region-link {
       min-width: 55px;
     }
   }
@@ -761,8 +756,8 @@
     .clear();
   }
 
-  .country-filter__letter-item {
-    .country-filter__letter-list--form & {
+  .country-filter__letter-list--form {
+    .country-filter__letter-item {
       margin-bottom: 15px;
 
       &:not(:nth-child(5n)) {
@@ -771,8 +766,8 @@
     }
   }
 
-  .country-filter__letter-btn {
-    .country-filter__letter-list--form & {
+  .country-filter__letter-list--form {
+    .country-filter__letter-btn {
       .size(60; 70);
       border-radius: 4px;
     }

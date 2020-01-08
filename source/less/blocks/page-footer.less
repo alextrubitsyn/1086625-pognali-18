@@ -34,6 +34,11 @@
   .size(100; 18);
 }
 
+.page-footer__social {
+  .clear();
+  margin-bottom: 52px;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer {
     padding-top: 0px;
@@ -66,12 +71,22 @@
   }
 
   .page-footer__social {
+    .clear();
+    margin-right: 10px;
     z-index: 3;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    top: -9px;
+  }
+
   .page-footer__logo-img {
     .size(198; 52);
+  }
+
+  .page-footer__social {
+    margin-right: 44px;
   }
 }
