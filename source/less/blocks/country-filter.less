@@ -404,6 +404,7 @@
       background-size: 18px 18px;
     }
   }
+
   .country-filter__region-list {
     width: 65%;
     display: flex;
@@ -482,8 +483,8 @@
   //   }
   // }
 
-  .country-filter--open {
-    .country-filter__wrapper {
+  .country-filter__wrapper {
+    .country-filter--open & {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -667,8 +668,8 @@
     }
   }
 
-  .country-filter--open {
-    .country-filter__wrapper {
+  .country-filter__wrapper {
+    .country-filter--open & {
       flex-wrap: wrap;
       justify-content: flex-start;
       margin-bottom: 14px;
@@ -756,8 +757,8 @@
     .clear();
   }
 
-  .country-filter__letter-list--form {
-    .country-filter__letter-item {
+  .country-filter__letter-item {
+    .country-filter__letter-list--form & {
       margin-bottom: 15px;
 
       &:not(:nth-child(5n)) {
@@ -766,8 +767,8 @@
     }
   }
 
-  .country-filter__letter-list--form {
-    .country-filter__letter-btn {
+  .country-filter__letter-btn {
+    .country-filter__letter-list--form & {
       .size(60; 70);
       border-radius: 4px;
     }

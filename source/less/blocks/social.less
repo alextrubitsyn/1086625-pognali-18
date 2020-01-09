@@ -3,14 +3,14 @@
 
   &--nav {
     display: none;
+    justify-content: center;
+    flex-wrap: wrap;
     .clear();
 
-    .page-header--menu-open &,
-    .nojs & {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    // .page-header--menu-open &,
+    // .nojs & {
+    //   display: flex;
+    // }
   }
 }
 
@@ -78,7 +78,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .social--nav {
+  .social.social--nav {
     display: none;
   }
 }

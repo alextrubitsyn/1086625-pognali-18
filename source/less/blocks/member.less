@@ -13,7 +13,7 @@
   &:hover,
   &:focus {
     box-shadow: 0 6px 21px rgba(0, 0, 0, 0.08);
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 
   &--catalog {
@@ -584,7 +584,7 @@
       border-radius: 20px;
     }
 
-    .page-main & {
+    .member--index & {
       .size(285);
       border-radius: 20px 20px 0 0;
     }
@@ -755,9 +755,6 @@
       background-position: left 3px;
       margin-right: 27px;
 
-      &:not(:last-child) {
-      }
-
       &--long {
         margin-right: 30px;
       }
@@ -782,8 +779,8 @@
     }
   }
 
-  .member--catalog {
-    .member__wrapper-transport {
+  .member__wrapper-transport {
+    .member--catalog & {
       position: absolute;
       right: 0;
       top: 0;
@@ -864,8 +861,8 @@
     }
   }
 
-  .member--catalog {
-    .member__level-line {
+  .member__level-line {
+    .member--catalog & {
       .size(66);
     }
   }
@@ -896,8 +893,8 @@
     }
   }
 
-  .member--catalog {
-    .member__link-img {
+  .member__link-img {
+    .member--catalog & {
       flex-shrink: 0;
       .clear();
     }
@@ -926,8 +923,8 @@
     }
   }
 
-  .member--catalog {
-    .member__wrapper-name {
+  .member__wrapper-name {
+    .member--catalog & {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -939,8 +936,8 @@
     }
   }
 
-  .member--catalog {
-    .member__link-name {
+  .member__link-name {
+    .member--catalog & {
       margin-bottom: 13px;
     }
   }
@@ -1013,8 +1010,8 @@
     }
   }
 
-  .member--catalog {
-    .member__country {
+  .member__country {
+    .member--catalog & {
       // height: 24px;
       margin: 0;
       padding-left: 54px;
@@ -1030,8 +1027,8 @@
     }
   }
 
-  .member--catalog {
-    .member__country-wish {
+  .member__country-wish {
+    .member--catalog & {
       display: none;
     }
   }
@@ -1041,8 +1038,8 @@
     display: none;
   }
 
-  .member--catalog {
-    .member__wrapper-transport {
+  .member__wrapper-transport {
+    .member--catalog & {
       position: static;
       align-self: center;
       .clear();
@@ -1052,8 +1049,8 @@
     }
   }
 
-  .member--catalog {
-    .member__travel-modes {
+  .member__travel-modes {
+    .member--catalog & {
       position: relative;
       display: flex;
       flex-direction: row;

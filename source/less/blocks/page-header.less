@@ -84,6 +84,7 @@
   &:focus {
     opacity: 0.6;
   }
+
   &:active {
     opacity: 0.3;
   }
@@ -141,6 +142,54 @@
   }
 }
 
+.page-header__nav {
+  display: none;
+
+  .page-header--menu-open & {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 50;
+  }
+}
+
+.page-header__site {
+  display: none;
+
+  .page-header--menu-open &,
+  .nojs & {
+    display: flex;
+  }
+}
+
+.page-header__user {
+  display: none;
+
+  .page-header--menu-open &,
+  .nojs & {
+    display: block;
+    margin-bottom: 50px;
+  }
+}
+
+.page-header__contacts {
+  .page-header--menu-open &,
+  .nojs & {
+    display: flex;
+  }
+}
+
+.page-header__social {
+  display: none;
+
+  .page-header--menu-open &,
+  .nojs & {
+    display: flex;
+  }
+}
+
 .page-header__list {
   .clear();
   list-style: none;
@@ -178,6 +227,45 @@
     width: 52%;
     min-height: 130px;
     padding-bottom: 0;
+  }
+
+  .page-header__nav {
+    display: block;
+    .clear();
+
+    .page-header--menu-open & {
+      display: flex;
+      position: absolute;
+      // top: 100%;
+      // right: 0;
+      // left: 0;
+      // z-index: 50;
+      padding-top: 53px;
+      padding-bottom: 74px;
+
+      .nojs & {
+        display: flex;
+        position: static;
+      }
+    }
+  }
+
+  .page-header__site {
+    .page-header--menu-open &,
+    .nojs & {
+      display: flex;
+      margin-bottom: 130px;
+      padding-left: 99px;
+    }
+  }
+
+  .page-header__user {
+    display: block;
+
+    .page-header--menu-open &,
+    .nojs & {
+      top: -90px;
+    }
   }
 }
 
@@ -268,5 +356,37 @@
 
   .page-header__toggle {
     display: none;
+  }
+
+  .page-header__nav {
+    display: flex;
+
+    .page-header--menu-open & {
+      position: static;
+      background-color: inherit;
+      .clear();
+    }
+  }
+
+  .page-header__site {
+    .page-header--menu-open &,
+    .nojs & {
+      .clear();
+      margin-right: auto;
+      padding-top: 6px;
+
+      .page-header--scroll & {
+        color: @bg-index;
+      }
+    }
+  }
+
+  .page-header__user {
+    .page-header--menu-open &,
+    .nojs & {
+      .clear();
+      order: 100;
+      background-color: inherit;
+    }
   }
 }

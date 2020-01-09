@@ -26,8 +26,8 @@
   color: @text;
 }
 
-.add-profile {
-  .add-profile__title {
+.add-profile__title {
+  .add-profile & {
     display: block;
     margin-bottom: 35px;
     padding: 15px 144px 13px 25px;
@@ -132,8 +132,8 @@
     margin-bottom: 70px;
   }
 
-  .add-profile {
-    .add-profile__title {
+  .add-profile__title {
+    .add-profile & {
       .clear();
       margin-bottom: 74px;
       text-align: center;
@@ -200,8 +200,8 @@
     margin-right: 34px;
   }
 
-  .add-profile {
-    .add-profile__business-link {
+  .add-profile__business-link {
+    .add-profile& {
       position: relative;
       margin-bottom: 5px;
       padding-left: 90px;
@@ -260,8 +260,8 @@
     background-position: right center;
   }
 
-  .add-profile {
-    .add-profile__title {
+  .add-profile__title {
+    .add-profile & {
       margin-bottom: 132px;
       text-align: center;
     }
@@ -301,8 +301,9 @@
   }
 
   .add-profile__business-link {
-    .page-main & {
+    .add-profile & {
       margin-left: 71px;
+      width: 400px;
     }
   }
 }

@@ -58,12 +58,15 @@
 .about__next {
   display: block;
   .clear();
+  margin-bottom: 23px;
   padding-left: 25px;
   padding-right: 30px;
 }
 
 .about__more {
-  display: none;
+  .about & {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -169,19 +172,20 @@
 
   .about__wrapper {
     &::before {
-      top: auto;
+      top: -47px;
       right: 60px;
-      bottom: -163px;
+      // bottom: -163px;
       .size(630; 665);
       background-image: url("../img/about-desktop@1x.png");
       background-repeat: no-repeat;
       background-size: 630px 665px;
+      background-color: inherit;
       z-index: 10;
     }
 
     &::after {
       left: 60px;
-      top: 71px;
+      top: -62px;
       .size(213);
       background-color: #141b3b;
       background-image: none;

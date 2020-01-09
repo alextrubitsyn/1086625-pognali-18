@@ -115,6 +115,7 @@
   border: 1px solid @letter;
   border-right: none;
   border-left: none;
+  outline: none;
 
   &:hover {
     border-color: #959bb2;
@@ -122,12 +123,24 @@
     & ~ .counter__less,
     & ~ .counter__more {
       border-color: #959bb2;
-
-      &:before,
-      &:after {
-        opacity: 0;
-      }
     }
+
+    & ~ .counter__less::before,
+    & ~ .counter__less::after,
+    & ~ .counter__more::before,
+    & ~ .counter__more::after {
+      opacity: 0;
+    }
+
+    // & ~ .counter__less,
+    // & ~ .counter__more {
+    //   border-color: #959bb2;
+
+    //   &:before,
+    //   &:after {
+    //     opacity: 0;
+    //   }
+    // }
   }
 
   &:focus {
@@ -136,12 +149,24 @@
     & ~ .counter__less,
     & ~ .counter__more {
       border-color: @bg-header;
-
-      &:before,
-      &:after {
-        opacity: 0;
-      }
     }
+
+    & ~ .counter__less::before,
+    & ~ .counter__less::after,
+    & ~ .counter__more::before,
+    & ~ .counter__more::after {
+      opacity: 0;
+    }
+
+    // & ~ .counter__less,
+    // & ~ .counter__more {
+    //   border-color: @bg-header;
+
+    //   &:before,
+    //   &:after {
+    //     opacity: 0;
+    //   }
+    // }
   }
 }
 
@@ -172,6 +197,9 @@
   }
 
   .counter__less {
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+
     &::before {
       width: 20px;
       top: 33px;
@@ -180,22 +208,15 @@
   }
 
   .counter__more {
+    border-left: none;
+    border-radius: 0 0 4px 4px;
+
     &::before,
     &::after {
       width: 20px;
       top: 33px;
       right: 19px;
     }
-  }
-
-  .counter__less {
-    border-right: none;
-    border-radius: 4px 0 0 4px;
-  }
-
-  .counter__more {
-    border-left: none;
-    border-radius: 0 0 4px 4px;
   }
 
   .counter__input {

@@ -1,24 +1,21 @@
 .site-list {
+  flex-direction: column;
   .clear();
   margin-bottom: 50px;
+  color: @bg-index;
 }
 
 .site-list__item {
-  display: none;
+  display: flex;
   flex-direction: column;
   overflow: hidden;
-
-  .page-header--menu-open &,
-  .nojs & {
-    display: flex;
-    // display: block;
-  }
 }
 
 .site-list__link {
   position: relative;
-  display: inline-block;
-  color: @bg-index;
+  // display: inline-block;
+  display: block;
+  // color: @bg-index;
   font-size: 30px;
   font-weight: 500;
   line-height: 36px;
@@ -26,6 +23,11 @@
   text-transform: uppercase;
   text-decoration: none;
   transition: transform 0.3s;
+  // overflow: hidden;
+
+  &[href] {
+    color: inherit;
+  }
 
   &::before {
     position: absolute;
@@ -37,13 +39,19 @@
     letter-spacing: inherit;
     text-transform: uppercase;
     top: 100%;
-    transform: translate3d(0, 0, 0);
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 
-  .site-list__item:hover &,
-  .site-list__item:focus & {
+  &:hover,
+  &:focus {
     transform: translateY(-100%);
   }
+
+  // .site-list__item:hover &,
+  // .site-list__item:focus & {
+  //   transform: translateY(-100%);
+  // }
 
   .site-list__item:active & {
     opacity: 0.3;
@@ -52,18 +60,8 @@
 
 @media (min-width: @tablet-width) {
   .site-list {
-    // .main-nav & {
     .clear();
     flex-direction: column;
-
-    .page-header--menu-open &,
-    .nojs & {
-      display: flex;
-      margin-bottom: 130px;
-      padding-left: 99px;
-      // display: block;
-      // }
-    }
   }
 
   .site-list__link {
@@ -72,12 +70,16 @@
     letter-spacing: -0.8px;
     text-transform: uppercase;
     text-decoration: none;
+
+    &::before {
+      left: 0;
+      transform: translate(0, 0);
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
-    // .page-header & {
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -85,18 +87,15 @@
     .clear();
     margin-right: auto;
     padding-top: 6px;
-    // }
+    color: #ffffff;
 
-    .page-header--menu-open &,
-    .nojs & {
-      .clear();
-      margin-right: auto;
-      padding-top: 6px;
-    }
+    // .page-header--scroll & {
+    //   color: @bg-index;
+    // }
   }
 
-  .site-list {
-    .site-list__item {
+  .site-list__item {
+    .site-list & {
       margin-right: 36px;
       overflow: hidden;
       display: block;
@@ -104,16 +103,11 @@
   }
 
   .site-list__link {
-    // padding-top: 2px;
-    color: #ffffff;
+    // color: #ffffff;
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
     text-transform: uppercase;
     letter-spacing: -0.2px;
-
-    .page-header--scroll & {
-      color: @bg-index;
-    }
   }
 }

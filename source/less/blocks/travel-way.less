@@ -58,33 +58,33 @@
 .travel-way__name {
   display: none;
 
-  &--index {
-    position: absolute;
-    top: calc(100% + 6px);
-    left: 50%;
-    transform: translateX(-50%);
-    color: #ffffff;
-    padding: 20px 24px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    border-radius: 4px;
-    background-color: #101d41;
-    z-index: 100;
+  // &--index {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  padding: 20px 24px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #101d41;
+  z-index: 100;
 
-    &::before {
-      .pseudo();
-      .size(11);
-      background-color: inherit;
-      top: -6px;
-      left: calc(50% - 6px);
-      transform: rotate(45deg);
-    }
-
-    .travel-way__item:hover & {
-      display: block;
-    }
+  &::before {
+    .pseudo();
+    .size(11);
+    background-color: inherit;
+    top: -6px;
+    left: calc(50% - 6px);
+    transform: rotate(45deg);
   }
+
+  .travel-way__item:hover & {
+    display: block;
+  }
+  // }
 }
 
 .travel-way__label {
@@ -112,6 +112,7 @@
     &:hover {
       color: rgba(16, 30, 68, 0.7);
     }
+
     &:active {
       color: rgba(16, 30, 68, 0.3);
     }

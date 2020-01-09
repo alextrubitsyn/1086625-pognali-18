@@ -39,8 +39,8 @@
   }
 }
 
-.companions {
-  .companions__title {
+.companions__title {
+  .companions & {
     padding-top: 32px;
     margin-bottom: 19px;
     // padding-left: 25px;
@@ -132,8 +132,8 @@
     padding-left: 33px;
   }
 
-  .companions {
-    .companions__title {
+  .companions__title {
+    .companions & {
       margin-bottom: 55px;
       padding-top: 72px;
     }
@@ -202,6 +202,16 @@
     padding-top: 0;
     background-position: 191px 256px;
 
+    &::before {
+      .pseudo();
+      .size(213);
+      left: 60px;
+      top: -62px;
+      background-color: #141b3b;
+      border-radius: 20px;
+      z-index: -1;
+    }
+
     &::after {
       top: 4px;
       left: 547px;
@@ -216,8 +226,8 @@
     padding-bottom: 40px;
   }
 
-  .companions {
-    .companions__title {
+  .companions__title {
+    .companions & {
       margin-bottom: 54px;
       padding-top: 0;
       padding-left: 0;

@@ -41,6 +41,7 @@
   &:focus {
     opacity: 0.5;
   }
+
   &:active {
     opacity: 0.1;
   }
@@ -60,6 +61,7 @@
 
 .period__week-item {
   display: inline-block;
+
   & span {
     font-size: 0;
   }
@@ -246,6 +248,15 @@
     &--start,
     &--end {
       flex-direction: column;
+    }
+
+    &--chosen:hover,
+    &--end:hover,
+    &--chosen:focus,
+    &--end:focus {
+      flex-direction: column;
+      padding-left: 14px;
+      padding-top: 6px;
     }
   }
 
