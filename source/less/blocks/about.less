@@ -138,21 +138,23 @@
   }
 
   .about__more {
-    width: 274px;
-    margin-left: 35px;
-    padding: 29px 126px 27px 33px;
-    color: @title;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    border-radius: 20px;
-    background-color: @map;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+    .about & {
+      display: block;
+      width: 274px;
+      margin-left: 35px;
+      padding: 29px 126px 27px 33px;
+      color: @title;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      border-radius: 20px;
+      background-color: @map;
+      text-decoration: none;
+      text-align: left;
 
-    &::after {
-      right: 36px;
+      &::after {
+        right: 36px;
+      }
     }
   }
 }

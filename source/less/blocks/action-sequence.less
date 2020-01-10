@@ -104,7 +104,11 @@
   }
 
   .action-sequence__number {
-    margin-top: -34px;
+    position: relative;
+    display: block;
+    top: -40px;
+    height: 30px;
+    // margin-top: -34px;
     font-size: 30px;
     line-height: 120px;
   }
@@ -123,7 +127,8 @@
 
   .action-sequence__item {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: flex-start;
     height: 107px;
     .clear();
     padding-left: 31px;
@@ -165,15 +170,17 @@
 
   .action-sequence__text {
     width: 185px;
+    margin-right: 84px;
     font-size: 24px;
     line-height: 24px;
   }
 
   .action-sequence__number {
-    display: block;
-    margin-top: -48px;
+    // display: block;
+    position: static;
+    top: auto;
+    margin-top: -50px;
     margin-right: 54px;
     font-size: 24px;
-    line-height: 120px;
   }
 }
