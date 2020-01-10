@@ -47,6 +47,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
+  background-color: inherit;
 }
 
 .country-filter__title {
@@ -63,11 +64,12 @@
 }
 
 .country-filter__toggle {
+  // .country-filter & {
   .clear();
   margin-left: auto;
   // .size(12);
   font-size: 0;
-  background-color: inherit;
+  background-color: @bg-country;
   border: none;
 
   &:hover,
@@ -78,6 +80,7 @@
   &:active {
     opacity: 0.3;
   }
+  // }
 }
 
 .country-filter__toggle-open {
@@ -86,6 +89,7 @@
   .size(17; 12);
   // margin-bottom: 4px;
   margin-right: 5px;
+  background-color: inherit;
 
   &::after {
     .pseudo();
@@ -108,6 +112,7 @@
   .size(12);
   margin-bottom: 4px;
   margin-right: 7px;
+  background-color: inherit;
 
   &::after {
     .pseudo();
@@ -629,9 +634,12 @@
 
   .country-filter__toggle {
     &--catalog {
-      // background-color: @bg-catalog;
       margin-left: auto;
       order: 2;
+
+      .country-filter--open & {
+        background-color: @bg-catalog;
+      }
     }
   }
 
