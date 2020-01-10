@@ -10,7 +10,7 @@
   </script>
   </head>
   
-  <!-- <style>
+  <style>
   html {
     background-image: url("c:/pognali-all/preview/pognali-index-mobile.jpg");
     background-position: center top;
@@ -32,7 +32,7 @@
   body {
     opacity: 0.5;
   }
-</style> -->
+</style>
 
   <body class="nojs">
 
@@ -171,6 +171,7 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
+              <source media="(min-width: 320px)" srcset="img/logo-mobile-white@1x.png">
               <img class="page-header__img page-header__img--white" src="img/logo-mobile-white@1x.png" width="100"
                 height="19" alt="Погнали?" />
             </picture>
@@ -271,7 +272,7 @@
           </div>
           <div class="reviews">
             <q class="reviews__text">Лучшее приложение, что я видел в жизни!</q>
-            <b class="reviews__author">Мурат Эльтазин<br />
+            <b class="reviews__author">Мурат Эльтазин<br/>
             главный редактор газеты «гаджетлайф»</b>
           </div>
         </div>
@@ -720,6 +721,6 @@
       <button class="business-rates__close button" type="button">Закрыть окно</button>
     </section>
     <script src="js/script.js"></script>
-    <script src="js/picturefill.js"></script>
+    <script src="js/picturefill.js" defer></script>
   </body>
 </html>
