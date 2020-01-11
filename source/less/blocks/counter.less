@@ -21,12 +21,16 @@
 
 .counter__wrapper {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 .counter__less,
 .counter__more {
   position: relative;
-  width: 20%;
+  display: block;
+  width: 44px;
   background-color: #ffffff;
   border: 1px solid @letter;
 
@@ -100,10 +104,11 @@
 }
 
 .counter__input {
+  display: block;
   order: 2;
-  width: 60%;
+  width: calc(100% - 88px);
+  height: 43px;
   .clear();
-  padding: 13px 0 14px;
   color: @title;
   font-family: inherit;
   font-size: 15px;
@@ -131,16 +136,6 @@
     & ~ .counter__more::after {
       opacity: 0;
     }
-
-    // & ~ .counter__less,
-    // & ~ .counter__more {
-    //   border-color: #959bb2;
-
-    //   &:before,
-    //   &:after {
-    //     opacity: 0;
-    //   }
-    // }
   }
 
   &:focus {
@@ -157,16 +152,6 @@
     & ~ .counter__more::after {
       opacity: 0;
     }
-
-    // & ~ .counter__less,
-    // & ~ .counter__more {
-    //   border-color: @bg-header;
-
-    //   &:before,
-    //   &:after {
-    //     opacity: 0;
-    //   }
-    // }
   }
 }
 
@@ -221,7 +206,8 @@
 
   .counter__input {
     .clear();
-    padding: 24px;
+    // padding: 24px;
+    height: 70px;
     font-size: 20px;
     line-height: 18px;
     border: 1px solid @letter;

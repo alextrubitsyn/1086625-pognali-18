@@ -1,6 +1,7 @@
 .form-me {
   padding-top: 45px;
   background-color: @bg-catalog;
+  padding-bottom: 30px;
 }
 
 .form-me__wrapper-top {
@@ -29,7 +30,7 @@
 }
 
 .form-me__favor {
-  padding-bottom: 33px;
+  margin-bottom: 33px;
 }
 
 .form-me__wrapper-favor {
@@ -69,11 +70,6 @@
 
 .form-me__hashtags {
   position: relative;
-  .clear();
-  width: 270px;
-  margin-bottom: 16px;
-  background-color: inherit;
-  border: none;
 }
 
 .form-me__legend-hashtag,
@@ -88,8 +84,11 @@
 }
 
 .form-me__hashtags-list {
+  display: block;
+  width: 270px;
+  min-height: 89px;
   .clear();
-  width: 100%;
+  margin-bottom: 25px;
   padding: 20px 25px 23px;
   color: @text;
   font-family: inherit;
@@ -97,9 +96,10 @@
   font-weight: 400;
   line-height: 22px;
   text-align: left;
-  background-color: inherit;
+  background-color: @bg-catalog;
   border: 1px solid @letter;
   border-radius: 10px;
+  overflow: hidden;
 
   &:hover {
     border-color: #aeb4cb;
@@ -119,9 +119,20 @@
 }
 
 .form-me__transport {
+  position: relative;
   width: 100%;
+  padding-top: 15px;
+  padding-bottom: 14px;
   border: 1px solid @letter;
   border-radius: 10px;
+}
+
+.form-me__legend-transport {
+  position: absolute;
+  padding: 5px 17px;
+  top: -14px;
+  left: calc(50% - 58px);
+  background-color: @bg-catalog;
 }
 
 .form-me__travel-modes {
@@ -131,7 +142,6 @@
   justify-content: center;
   flex-wrap: wrap;
   margin-right: 6px;
-  padding-bottom: 4px;
 }
 
 @media (min-width: @tablet-width) {
@@ -157,7 +167,7 @@
   }
 
   .form-me__favor {
-    padding-bottom: 44px;
+    padding-bottom: 28px;
   }
 
   .form-me__photo-btn {
@@ -207,22 +217,25 @@
   }
 
   .form-me__legend-transport {
-    transform: rotate(180deg);
+    // transform: rotate(180deg);
+    top: auto;
+    bottom: -14px;
+    left: 78px;
   }
 
   .form-me__transport {
-    transform: rotate(180deg);
+    // transform: rotate(180deg);
     order: 10;
-    .clear();
     width: 308px;
-    margin: -133px auto 44px;
-    padding-top: 18px;
-    padding-bottom: 23px;
+    .clear();
+    margin: -133px auto 52px;
+    padding-top: 24px;
+    padding-bottom: 25px;
     border-radius: 10px;
   }
 
   .form-me__travel-modes {
-    transform: rotate(180deg);
+    // transform: rotate(180deg);
     justify-content: center;
     .clear();
   }
@@ -315,6 +328,10 @@
     margin-left: auto;
   }
 
+  .form-me__legend-transport {
+    left: 116px;
+  }
+
   .form-me__hashtags-list {
     width: 730px;
     margin: 0;
@@ -328,7 +345,7 @@
     .clear();
     width: 384px;
     margin: 0 auto;
-    padding-top: 16px;
+    padding-top: 25px;
     padding-bottom: 24px;
     border-radius: 10px;
   }

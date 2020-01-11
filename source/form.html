@@ -5,7 +5,36 @@
     <title>HTML Academy: Погнали</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
+    <script>
+      document.createElement( "picture" );
+    </script>
   </head>
+
+  <!-- <style>
+  html {
+    background-image: url("c:/pognali-all/preview/pognali-form-mobile.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      background-image: url("c:/pognali-all/preview/pognali-form-tablet.jpg");
+    }
+  }
+
+  @media (min-width: 1440px) {
+    html {
+      background-image: url("c:/pognali-all/preview/pognali-form-desktop.jpg");
+    }
+  }
+
+  body {
+    opacity: 0.5;
+  }
+</style> -->
+
+
   <body class="nojs">
 
   <div style="display:none">
@@ -135,12 +164,14 @@
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
+              <source media="(min-width: 320px)" srcset="img/logo-mobile-blue@1x.png">
               <img class="page-header__img page-header__img--blue" src="img/logo-mobile-blue@1x.png" width="100"
                 height="19" alt="Погнали?" />
             </picture>
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
+              <source media="(min-width: 320px)" srcset="img/logo-mobile-white@1x.png">
               <img class="page-header__img page-header__img--white" src="img/logo-mobile-white@1x.png" width="100"
                 height="19" alt="Погнали?" />
             </picture>
@@ -193,6 +224,30 @@
             </li>
           </ul>
           <ul class="page-header__social main-nav__list social social--nav">
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com/htmlacademy">
+                <svg class="social__link-img social__link-img--fb" width="11px" height="21px">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
+                <span class="visually-hidden"> Мы в Фейсбуке</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://vk.com/htmlacademy">
+                <svg class="social__link-img social__link-img--vk" width="23" height="12">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">Мы во Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.instagram.com/htmlacademy">
+                <svg class="social__link-img social__link-img--inst" width="18" height="18">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg>
+                <span class="visually-hidden">Мы в Инстаграме</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -231,14 +286,14 @@
             <span>Сменить</span>фото
             </label>
             <!-- теги -->
-            <fieldset class="form-me__hashtags" title="Напишите свои теги">
+            <div class="form-me__hashtags" title="Напишите свои теги">
               <textarea class="form-me__hashtags-list" name="hashtag"
               id="hashtag">#бургер #бар #футбол #концерт #крафт</textarea>
               <span class="form-me__legend-hashtag">Тэги</span>
-            </fieldset>
+            </div>
             <!-- Транспорт -->
-            <fieldset class="form-me__transport" title="Выберите способ передвижения">
-              <legend class="form-me__legend-transport">Транспорт</legend>
+            <div class="form-me__transport" title="Выберите способ передвижения">
+              <span class="form-me__legend-transport">Транспорт</span>
               <ul class="form-me__travel-modes travel-way travel-way--form">
                 <li class="travel-way__item travel-way__item--plane">
                     <input class="travel-way__input visually-hidden" id="plane" type="checkbox" name="plane" checked/>
@@ -277,7 +332,7 @@
                     </label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
           </div>
         </div>
       </form>
@@ -713,18 +768,22 @@
                 </div>
                 <ul class="steps__fun">
                   <li class="steps__fun-item">
-                    <span class="steps__fun-country">Босния и герцеговина</span>
-                    <span class="steps__fun-flag steps__fun-flag--bosnia"></span>
+                    <div class="steps__wrapper-flag">
+                      <span class="steps__fun-country">Босния и герцеговина</span>
+                      <span class="steps__fun-flag steps__fun-flag--bosnia"></span>
+                    </div>
                     <div class="steps__fun-wrapper">
                       <textarea class="steps__fun-description" name="bosnia" id="bosnia" placeholder="План действий" required></textarea>
                       <span class="steps__fun-error">Это поле должно быть заполнено</span>
                     </div>
                   </li>
                   <li class="steps__fun-item">
-                    <span class="steps__fun-country">Чехия</span>
-                    <span class="steps__fun-flag steps__fun-flag--czech"></span>
+                    <div class="steps__wrapper-flag">
+                      <span class="steps__fun-country">Чехия</span>
+                      <span class="steps__fun-flag steps__fun-flag--czech"></span>
+                    </div>
                     <div class="steps__fun-wrapper">
-                      <textarea class="steps__fun-description" name="czech" id="czechia" placeholder="План действий" required>Пить пиво и лазить           по старым замкам, наслаждаться архитектурой и вот это все.
+                      <textarea class="steps__fun-description" name="czech" id="czechia" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.
                       </textarea>
                       <span class="steps__fun-error">Это поле должно быть заполнено</span>
                     </div>
@@ -787,5 +846,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/picturefill.js" defer></script>
   </body>
 </html>
