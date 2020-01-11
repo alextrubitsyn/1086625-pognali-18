@@ -248,6 +248,42 @@
   }
 }
 
+//FORM
+
+.country-filter__btn {
+  .country-filter--open ~ & {
+    color: #ffffff;
+    background-color: @title;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      .size(9);
+      background-image: url("../img/small-cross.svg");
+      background-size: 9px 9px;
+    }
+
+    &:hover::before,
+    &:focus::before {
+      opacity: 1;
+    }
+
+    &:active::before {
+      opacity: 0.1;
+    }
+  }
+}
+
+.country-filter__btn-del {
+  .country-filter--open ~ & {
+    display: none;
+  }
+}
+
+/////////
+
 .country-filter__country-link {
   color: @text;
   font-weight: 400;
@@ -574,6 +610,27 @@
     }
   }
 
+  //FORM
+
+  .country-filter__btn {
+    .country-filter--open ~ & {
+      &::before {
+        .size(18);
+        top: 37%;
+        background-image: url("../img/menu-close.svg");
+        background-size: 18px 18px;
+      }
+    }
+  }
+
+  .country-filter__btn-del {
+    .country-filter--open ~ & {
+      display: block;
+    }
+  }
+
+  /////////
+
   .country-filter__country-link {
     display: block;
     font-size: 20px;
@@ -764,6 +821,27 @@
   .country-filter__country-list {
     .clear();
   }
+
+  //FORM
+
+  .country-filter__btn {
+    .country-filter--open ~ & {
+      &::before {
+        .size(18);
+        top: 37%;
+        background-image: url("../img/menu-close.svg");
+        background-size: 18px 18px;
+      }
+    }
+  }
+
+  .country-filter__btn-del {
+    .country-filter--open ~ & {
+      display: block;
+    }
+  }
+
+  /////////
 
   .country-filter__letter-item {
     .country-filter__letter-list--form & {
