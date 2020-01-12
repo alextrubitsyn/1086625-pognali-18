@@ -1,0 +1,11 @@
+<svg>
+  <symbol id="icon-level" viewBox="0 0 32 32">
+    <g transform="rotate(-90 16 16)">
+      <circle r="16" cx="16" cy="16"
+      fill="transparent"
+      stroke="#ff8d30"
+       stroke-dasharray="25 100"
+      stroke-width="3"/>
+    </g>
+  </symbol>
+</svg>
