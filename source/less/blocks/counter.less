@@ -30,9 +30,10 @@
 .counter__more {
   position: relative;
   display: block;
-  width: 44px;
+  width: 33%;
   background-color: #ffffff;
   border: 1px solid @letter;
+  outline: none;
 
   &::before {
     .pseudo();
@@ -106,7 +107,7 @@
 .counter__input {
   display: block;
   order: 2;
-  width: calc(100% - 88px);
+  width: 34%;
   height: 43px;
   .clear();
   color: @title;
@@ -244,7 +245,6 @@
 
   .counter__less,
   .counter__more {
-    width: 20%;
     background-color: #ffffff;
     border: 1px solid @letter;
   }
@@ -260,7 +260,6 @@
   }
 
   .counter__input {
-    width: 60%;
     .clear();
     padding: 23px 0 25px;
     font-size: 20px;

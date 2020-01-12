@@ -2,12 +2,16 @@
   position: relative;
   width: 100%;
   background-color: @bg-header;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
+  &--index {
+    background-color: unset;
+  }
 
   &--scroll {
     background-color: #ffffff;
     position: fixed;
     z-index: 150;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   }
 
   // Белый фон на всю ширину меню
@@ -83,14 +87,14 @@
   justify-content: center;
   align-items: center;
   .clear();
-  background-color: @bg-header;
+  // background-color: @bg-header;
+  background-color: inherit;
   border: none;
   cursor: pointer;
 
   .page-header--scroll &,
   .page-header--menu-open & {
     color: #cccccc;
-    background-color: #ffffff;
   }
 
   .nojs & {
@@ -192,7 +196,11 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    background-color: @bg-head-tablet;
+    background-color: @bg-header;
+
+    &--index {
+      background-color: @bg-head-tablet;
+    }
 
     // Белый фон на всю ширину меню
     // &--menu-open {
@@ -278,16 +286,18 @@
     min-height: 91px;
     .clear();
     padding-top: 29px;
-    background-color: @bg-header;
     z-index: 6;
 
+    &--index {
+      background-color: unset;
+    }
+
     // &--menu-open {
-    //   background-color: @bg-header;
-    //   z-index: 1;
+    //   background-color: transparent;
     // }
 
     &--scroll {
-      padding-top: 0;
+      // padding-top: 0;
       background-color: #ffffff;
     }
   }
@@ -303,7 +313,8 @@
 
     .page-header--menu-open &,
     .nojs & {
-      background-color: @bg-header;
+      background-color: unset;
+      // background-color: @bg-header;
     }
 
     .page-header--scroll & {
