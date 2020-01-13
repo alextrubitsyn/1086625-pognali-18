@@ -8,33 +8,43 @@
   padding: 0;
 }
 
-.v-h() {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-  overflow: hidden;
-}
+// .segment(@wt; @level; @sw:3px) {
+//   @lev: @level / 100;
+//   @l: (@wt - @sw) * 3.1415926;
+//   cx: @wt / 2;
+//   cy: @wt / 2;
+//   r: (@wt - @sw) / 2;
+//   stroke-width: @sw;
+//   stroke-dasharray: @l * @lev @l * (1 - @lev);
+//   stroke-dashoffset: @l * 0.25;
+// }
 
-.segment(@wt; @level; @sw:3px) {
-  @lev: @level / 100;
-  @l: (@wt - @sw) * 3.1415926;
-  cx: @wt / 2;
-  cy: @wt / 2;
-  r: (@wt - @sw) / 2;
-  stroke-width: @sw;
-  stroke-dasharray: @l * @lev @l * (1 - @lev);
-  stroke-dashoffset: @l * 0.25;
-}
-
-.psevdo() {
+.pseudo() {
   position: absolute;
   content: "";
+}
+
+.flag(@country) {
+  background-image: url("../img/flag-@{country}.svg");
+  background-repeat: no-repeat;
+}
+
+.flag-small(@country) {
+  background-image: url("../img/flag-@{country}.svg");
+  background-repeat: no-repeat;
+  background-size: 26px 18px;
+}
+
+.flag-middle(@country) {
+  background-image: url("../img/flag-@{country}.svg");
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
+}
+
+.flag-big(@country) {
+  background-image: url("../img/flag-@{country}.svg");
+  background-repeat: no-repeat;
+  background-size: 70px 47px;
 }
 
 // Отладочные миксины

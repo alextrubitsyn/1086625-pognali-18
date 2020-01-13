@@ -4,196 +4,254 @@
   justify-content: center;
   align-items: center;
   .size(32);
-  margin-right: 3px;
   list-style: none;
   border-radius: 50%;
-  opacity: 0.15;
-  // .olg();
+  background-color: #ffffff;
 
-  &::before {
-    position: absolute;
-    content: "";
-    .size(32);
-    top: 0;
-    left: 0;
-    opacity: 0.15;
-  }
-
-  .travel-way__name {
-    display: none;
-
-    &--main {
-      position: absolute;
-      top: calc(100% + 6px);
-      left: 50%;
-      transform: translateX(-50%);
-      color: #ffffff;
-      padding: 20px 24px;
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 24px;
-      border-radius: 4px;
-      background-color: #101d41;
-      z-index: 100;
-
-      &::before {
-        .psevdo();
-        .size(11);
-        background-color: inherit;
-        top: -6px;
-        left: calc(50% - 6px);
-        transform: rotate(45deg);
-      }
-      .travel-way__item:hover& {
-        display: block;
-      }
-    }
-  }
-
-  &--filter {
-    color: @title;
-    opacity: 1;
-
-    &:hover,
-    &:focus {
-      color: #101e44;
-      opacity: 0.7;
-    }
-    &:active {
-      opacity: 0.3;
-    }
-
-    &::before {
-      display: none;
-    }
-  }
-
-  .page-catalog__users & {
-    margin: 0;
+  &--catalog {
     background-color: @bg-catalog;
   }
 
-  &--plane {
-    &::before {
-      background: url("../../img/plane.svg") no-repeat;
-      background-position: center;
-      background-size: 19px 21px;
-
-      .page-catalog__users & {
-        background-size: 14px 16px;
-      }
-    }
+  &--index {
+    margin-right: 3px;
   }
+}
 
-  &--bus {
-    &::before {
-      background: url("../../img/bus.svg") no-repeat;
-      background-position: center;
-      background-size: 17px 21px;
-
-      .page-catalog__users & {
-        background-size: 13px 16px;
-      }
+.travel-way--index {
+  .travel-way__img {
+    &--plane {
+      .size(19; 21);
     }
 
-    .page-catalog__users & {
-      margin: 0;
-    }
-  }
-
-  &--bike {
-    &::before {
-      background: url("../../img/bike.svg") no-repeat;
-      background-position: center;
-      background-size: 24px 21px;
-
-      .page-catalog__users & {
-        background-size: 19px 17px;
-      }
+    &--bus {
+      .size(17; 21);
     }
 
-    .page-catalog__users & {
-      margin: 0;
-    }
-  }
-
-  &--run {
-    &::before {
-      background: url("../../img/run.svg") no-repeat;
-      background-position: left center;
-      background-size: 20px 21px;
-
-      .page-catalog__users & {
-        background-size: 15px 17px;
-        background-position: center;
-      }
+    &--bike {
+      .size(24; 21);
     }
 
-    .page-catalog__users & {
-      margin: 0;
-    }
-  }
-
-  &--active {
-    &::before {
-      opacity: 1;
+    &--run {
+      .size(20; 21);
     }
   }
 }
 
+.travel-way__img {
+  &--plane {
+    .size(14; 16);
+  }
+
+  &--bus {
+    .size(13; 16);
+  }
+
+  &--bike {
+    .size(19; 17);
+  }
+
+  &--run {
+    .size(15; 17);
+  }
+}
+
+.travel-way__name {
+  display: none;
+
+  // &--index {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  padding: 20px 24px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #101d41;
+  z-index: 100;
+
+  &::before {
+    .pseudo();
+    .size(11);
+    background-color: inherit;
+    top: -6px;
+    left: calc(50% - 6px);
+    transform: rotate(45deg);
+  }
+
+  .travel-way__item:hover & {
+    display: block;
+  }
+  // }
+}
+
 .travel-way__label {
-  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .size(33);
+  color: rgba(29, 46, 91, 0.15);
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover,
+  .travel-way__input:focus + & {
+    color: rgba(16, 30, 68, 0.3);
+  }
+
+  &:active {
+    color: rgba(16, 30, 68, 0.1);
+    background-color: @bg-country;
+  }
+
+  .travel-way__input:checked + & {
+    color: rgba(29, 46, 91, 1);
+
+    &:hover {
+      color: rgba(16, 30, 68, 0.7);
+    }
+
+    &:active {
+      color: rgba(16, 30, 68, 0.3);
+    }
+  }
+
+  .travel-way__input:focus:checked + & {
+    color: rgba(16, 30, 68, 0.7);
+  }
 }
 
 @media (min-width: @tablet-width) {
   .travel-way__item {
-    .page-catalog__users & {
+    .travel-way--form & {
+      .size(43);
+
+      &:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+
+    .travel-way--catalog & {
+      // .size(34);
+      background-color: inherit;
+    }
+
+    &--filter {
+      .size(43);
+
+      & .travel-way__label {
+        .size(43);
+      }
+
+      & .travel-way__img {
+        &--plane {
+          .size(19; 21);
+        }
+
+        &--bus {
+          .size(17; 21);
+        }
+
+        &--bike {
+          .size(24; 21);
+        }
+
+        &--run {
+          .size(20; 21);
+        }
+      }
+    }
+  }
+
+  .travel-way__label {
+    width: inherit;
+    height: inherit;
+
+    .travel-way--catalog & {
+      .size(32);
+    }
+
+    .travel-way--form & {
+      .size(43);
+    }
+  }
+
+  .travel-way__img {
+    &--plane {
+      .size(19; 21);
+    }
+
+    &--bus {
+      .size(17; 21);
+    }
+
+    &--bike {
+      .size(24; 21);
+    }
+
+    &--run {
+      .size(20; 21);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travel-way__item {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    .travel-way--form & {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    .travel-way--catalog & {
       .size(34);
       background-color: inherit;
+    }
 
-      &::before {
-        .size(34);
-        opacity: 0.15;
-      }
+    &--filter {
+      .size(43);
 
-      &--plane {
-        &::before {
-          background: url("../../img/plane.svg") no-repeat;
-          background-position: center;
-          background-size: 19px 21px;
+      & .travel-way__img {
+        &--plane {
+          .size(19; 21);
+        }
+
+        &--bus {
+          .size(17; 21);
+        }
+
+        &--bike {
+          .size(24; 21);
+        }
+
+        &--run {
+          .size(20; 21);
         }
       }
+    }
+  }
 
-      &--bus {
-        &::before {
-          background: url("../../img/bus.svg") no-repeat;
-          background-position: center;
-          background-size: 17px 21px;
-        }
-      }
+  .travel-way__img {
+    &--plane {
+      .size(19; 21);
+    }
 
-      &--bike {
-        &::before {
-          background: url("../../img/bike.svg") no-repeat;
-          background-position: center;
-          background-size: 24px 21px;
-        }
-      }
+    &--bus {
+      .size(17; 21);
+    }
 
-      &--run {
-        &::before {
-          background: url("../../img/run.svg") no-repeat;
-          background-position: left center;
-          background-size: 20px 21px;
-          background-position: center;
-        }
-      }
+    &--bike {
+      .size(24; 21);
+    }
 
-      &--active {
-        &::before {
-          opacity: 1;
-        }
-      }
+    &--run {
+      .size(20; 21);
     }
   }
 }

@@ -1,38 +1,429 @@
-.country-fun {
+.country {
+  position: relative;
+  display: flex;
+  min-width: 220px;
   border: none;
+
+  &--del {
+    display: none;
+  }
 }
 
 .country__name {
-  .steps & {
-    padding-left: 37px;
-    color: @title;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 18px;
-  }
-}
-
-.country__fun-description {
-  padding-top: 13px;
-  padding-left: 15px;
-  color: @text;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  border-radius: 4px;
-  border: 1px solid @letter;
-
-  &::placeholder {
-    opacity: 0.3;
-  }
+  display: none;
 }
 
 .country__btn {
-  text-decoration: none;
+  position: relative;
+  width: 168px;
+  padding: 13px 0 10px 10px;
+  font-family: inherit;
+  background-color: inherit;
+  color: @title;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 1.4px;
+  border-radius: 4px;
+  border: 1px solid @letter;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &::after {
+    .pseudo();
+    .size(49; 36);
+    right: 0;
+    top: 1px;
+    bottom: 1px;
+    background-image: linear-gradient(to right, transparent, #ffffff 14px);
+    z-index: 2;
+  }
+
+  &::before {
+    .pseudo();
+    .size(12; 7);
+    right: 13px;
+    top: 46%;
+    background-image: url("../img/dropdown-form.svg");
+    background-repeat: no-repeat;
+    z-index: 3;
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #959bb2;
+    cursor: pointer;
+
+    & + .country__flag {
+      border-color: #959bb2;
+    }
+
+    &::before {
+      opacity: 0.5;
+      border-color: #959bb2;
+    }
+  }
+
+  &--empty {
+    width: 100%;
+
+    &:active {
+      &::after {
+        background-color: @title;
+      }
+    }
+
+    &::after {
+      .size(8);
+      top: calc(50% - 4px);
+      right: 48px;
+      background-image: none;
+      border: 1px solid @letter;
+      border-radius: 50%;
+    }
+  }
+}
+
+.country__flag {
+  position: relative;
+  width: 53px;
+  border-radius: 4px;
+  border: 1px solid @letter;
+
+  &--empty {
+    display: none;
+  }
+
+  &::before {
+    .pseudo();
+    .size(8);
+    top: calc(50% - 4px);
+    left: -5px;
+    border-radius: 50%;
+    background-color: @title;
+    z-index: 2;
+  }
+
+  &::after {
+    .pseudo();
+    .size(35; 24);
+    top: 9px;
+    left: 9px;
+    background-repeat: no-repeat;
+    background-size: 35px 24px;
+  }
+
+  &--bosnia::after {
+    .flag(bosnia);
+  }
+
+  &--czech::after {
+    .flag(czech);
+  }
+}
+
+.country__button-del {
+  position: absolute;
+  .size(21);
+  right: -11px;
+  top: -11px;
+  background-color: @bg-catalog;
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
+  cursor: pointer;
+
+  &::before {
+    .pseudo();
+    .size(13; 1);
+    top: 10px;
+    right: 4px;
+    transform: rotate(45deg);
+    background-color: #000000;
+    opacity: 0.3;
+  }
+
+  &::after {
+    .pseudo();
+    .size(13; 1);
+    top: 10px;
+    right: 4px;
+    transform: rotate(-45deg);
+    background-color: #000000;
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      opacity: 0.5;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.05;
+    }
+  }
+}
+
+.country__add-country {
+  position: relative;
+  display: block;
+  margin: 0 auto 25px;
+  padding: 13px 75px 12px 12px;
   color: @title;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   text-transform: uppercase;
   letter-spacing: 1.4px;
+  border-radius: 4px;
+  background-color: @bg-catalog;
+
+  &::before,
+  &::after {
+    .pseudo();
+    .size(14; 2);
+    top: 46%;
+    right: 14px;
+    background-color: @title;
+    opacity: 0.2;
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @blue-btn;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::before,
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
+
+.country__add-name {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    .pseudo();
+    .size(8);
+    top: 4px;
+    right: -24px;
+    border-radius: 50%;
+    border: 1px solid @letter;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .country {
+    z-index: 1;
+  }
+
+  .country__btn {
+    width: 369px;
+    margin-right: 19px;
+    padding: 24px 0 26px 24px;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      .pseudo();
+      .size(17; 9);
+      right: 26px;
+      top: 46%;
+    }
+  }
+
+  .country__flag {
+    // display: block;
+    width: 104px;
+    border: none;
+    padding-left: 34px;
+
+    &--empty {
+      display: block;
+
+      &::before {
+        background-color: #ffffff;
+        border: 1px solid #cbced9;
+      }
+    }
+
+    &::before {
+      .size(15);
+      top: calc(50% - 9px);
+      left: 0;
+    }
+
+    &::after {
+      .size(70; 47);
+      top: 12px;
+      left: auto;
+      right: 0;
+      background-size: 70px 47px;
+    }
+  }
+
+  .country__button-del {
+    position: absolute;
+    .size(18);
+    right: -3px;
+    top: 27px;
+    background-color: #ffffff;
+    // .olo();
+
+    &::before {
+      .size(25; 1);
+      top: 9px;
+      right: -4px;
+    }
+
+    &::after {
+      .size(25; 1);
+      top: 9px;
+      right: -4px;
+    }
+  }
+
+  .country__add-country {
+    display: inline-block;
+    width: 369px;
+    .clear();
+    margin-bottom: 48px;
+    padding: 25px 75px 25px 26px;
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 2px;
+
+    &::before,
+    &::after {
+      .size(18; 2);
+      top: 48%;
+      right: 27px;
+    }
+  }
+
+  .country__add-name {
+    text-align: left;
+
+    &::after {
+      .size(15);
+      top: 0;
+      right: -185px;
+      background-color: @bg-catalog;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country__btn {
+    width: 730px;
+    margin-right: 38px;
+
+    // &::after {
+    //   display: none;
+    // }
+
+    // &::before {
+    //   .pseudo();
+    //   .size(17; 9);
+    //   right: 26px;
+    //   top: 46%;
+    // }
+  }
+
+  .country__flag {
+    // display: block;
+    width: 118px;
+    // border: none;
+    // padding-left: 34px;
+
+    &--empty {
+      display: block;
+
+      &::before {
+        background-color: #ffffff;
+        border: 1px solid #cbced9;
+      }
+    }
+
+    &::before {
+      .size(15);
+      top: calc(50% - 9px);
+      left: 0;
+    }
+
+    &::after {
+      top: 12px;
+    }
+  }
+
+  .country__button-del {
+    position: absolute;
+    .size(18);
+    right: -3px;
+    top: -10px;
+    background-color: #ffffff;
+
+    &::before {
+      .size(25; 1);
+      top: 43px;
+      right: 0;
+    }
+
+    &::after {
+      .size(25; 1);
+      top: 43px;
+      right: 0;
+    }
+  }
+
+  .country__add-country {
+    display: inline-block;
+    width: 730px;
+    .clear();
+    margin-bottom: 56px;
+    padding: 25px 75px 25px 26px;
+  }
+
+  .country__add-name {
+    text-align: left;
+
+    &::after {
+      .size(15);
+      top: 0;
+      right: -563px;
+      background-color: @bg-catalog;
+    }
+  }
 }

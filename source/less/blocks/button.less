@@ -10,7 +10,7 @@
   &--arrow-left,
   &--arrow-right {
     &::after {
-      .psevdo();
+      .pseudo();
       .size(20; 14);
       border-top-width: 7px;
       border-right-width: 10px;
@@ -26,8 +26,9 @@
   &--arrow-left {
     &::after {
       border-right-color: @title;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -65%);
     }
+
     &:active::after {
       border-right-color: rgba(29, 46, 91, 0.3);
     }
@@ -38,6 +39,7 @@
       border-left-color: @title;
       transform: translate(50%, -50%);
     }
+
     &:active::after {
       border-left-color: rgba(29, 46, 91, 0.3);
     }
@@ -48,9 +50,7 @@
     &:focus {
       background-color: @bg-sequence3;
     }
-  }
 
-  &--yellow {
     &:active {
       color: rgba(29, 46, 91, 0.3);
     }
