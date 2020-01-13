@@ -21,11 +21,19 @@
 
 .companions__wrapper {
   position: relative;
-  background-image: url("../img/smolov-back-desktop@1x.png");
-  background-position: 180px 0;
-  background-repeat: no-repeat;
-  background-size: 143px 143px;
   z-index: 1;
+
+  &::before {
+    .pseudo();
+    .size(143);
+    top: 0;
+    right: 25px;
+    background-image: url("../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 143px 143px;
+    border-radius: 20px;
+    z-index: -1;
+  }
 
   &::after {
     .pseudo();
@@ -35,6 +43,7 @@
     background-image: url("../img/rogovaya-back-mobile@1x.png");
     background-repeat: no-repeat;
     background-size: 71px 71px;
+    border-radius: 20px;
     z-index: -1;
   }
 }
@@ -61,8 +70,19 @@
 }
 
 .companions__wrapper-title {
+  position: relative;
   margin-bottom: 56px;
   padding-left: 25px;
+
+  &::before {
+    .pseudo();
+    .size(132);
+    top: 0;
+    left: -44px;
+    background-color: #141b3b;
+    border-radius: 20px;
+    z-index: -1;
+  }
 }
 
 .companions__list {
@@ -112,17 +132,25 @@
   }
 
   .companions__wrapper {
-    background-image: url("../img/rogovaya-back-desktop@1x.png");
-    background-position: 408px 7px;
-    background-repeat: no-repeat;
-    background-size: 285px 285px;
-
-    &::after {
+    &::before {
       .size(143);
-      top: 357px;
+      top: 358px;
       left: 40px;
+      right: auto;
       background-image: url("../img/smolov-back-desktop@1x.png");
       background-size: 143px 143px;
+      z-index: -1;
+    }
+
+    &::after {
+      .size(285);
+      top: 12px;
+      left: auto;
+      right: 74px;
+      background-image: url("../img/rogovaya-back-desktop@1x.png");
+      background-size: 143px 143px;
+      background-repeat: no-repeat;
+      background-size: 285px 285px;
       z-index: -1;
     }
   }
@@ -130,6 +158,12 @@
   .companions__wrapper-title {
     margin-bottom: 58px;
     padding-left: 33px;
+
+    &::before {
+      .size(213);
+      top: 12px;
+      left: 0;
+    }
   }
 
   .companions__title {
@@ -203,18 +237,13 @@
     background-position: 191px 256px;
 
     &::before {
-      .pseudo();
-      .size(213);
-      left: 60px;
-      top: -62px;
-      background-color: #141b3b;
-      border-radius: 20px;
-      z-index: -1;
+      left: 548px;
+      top: 5px;
     }
 
     &::after {
-      top: 4px;
-      left: 547px;
+      top: 255px;
+      left: 191px;
     }
   }
 
@@ -224,6 +253,11 @@
     margin-right: auto;
     padding-left: 68px;
     padding-bottom: 40px;
+
+    &::before {
+      top: -62px;
+      left: 0;
+    }
   }
 
   .companions__title {
@@ -276,5 +310,6 @@
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
+    z-index: 2;
   }
 }
