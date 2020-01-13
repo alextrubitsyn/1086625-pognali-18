@@ -87,8 +87,7 @@
   justify-content: center;
   align-items: center;
   .clear();
-  // background-color: @bg-header;
-  background-color: inherit;
+  background-color: @bg-header;
   border: none;
   cursor: pointer;
 
@@ -227,11 +226,11 @@
     .size(166; 42);
   }
 
-  // @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  //   .page-header__img {
-  //     display: none;
-  //   }
-  // }
+  .page-header__toggle {
+    .page-header--index & {
+      background-color: @bg-head-tablet;
+    }
+  }
 
   .page-header__wrapper-logo {
     width: 52%;
@@ -289,7 +288,7 @@
     z-index: 6;
 
     &--index {
-      background-color: unset;
+      background-color: transparent;
     }
 
     // &--menu-open {
