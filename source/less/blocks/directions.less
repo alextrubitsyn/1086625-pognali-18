@@ -172,6 +172,12 @@
     background-size: 289px 575px;
     background-position: 438px 6px;
 
+    @media (min-resolution: 144dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/flags-back@2x.png") no-repeat;
+      background-position: 438px 6px;
+      background-size: 289px 575px;
+    }
+
     &::before {
       .pseudo();
       .size(141);

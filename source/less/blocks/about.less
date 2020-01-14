@@ -41,6 +41,12 @@
     background-image: url("../img/about-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 292px 352px;
+
+    @media (min-resolution: 144dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/about-mobile@2x.png");
+    }
+
     z-index: -1;
   }
 }
@@ -109,6 +115,11 @@
       background-image: url("../img/about-tablet@1x.png");
       background-repeat: no-repeat;
       background-size: 376px 548px;
+
+      @media (min-resolution: 144dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/about-tablet@2x.png");
+      }
+
       z-index: -1;
     }
   }
@@ -193,6 +204,11 @@
       .size(630; 665);
       background-image: url("../img/about-desktop@1x.png");
       background-size: 630px 665px;
+
+      @media (min-resolution: 144dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/about-desktop@2x.png");
+      }
+
       z-index: 10;
     }
   }
