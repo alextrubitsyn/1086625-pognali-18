@@ -14,11 +14,10 @@
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   }
 
-  // Белый фон на всю ширину меню
-  // &--menu-open {
-  //   background-color: #ffffff;
-  //   z-index: 10;
-  // }
+  .nojs & {
+    background-color: #ffffff;
+    z-index: 10;
+  }
 }
 
 .page-header__wrapper {
@@ -214,10 +213,10 @@
       background-color: #ffffff;
     }
 
-    .nojs & {
-      display: block;
-      background-color: #ffffff;
-    }
+    // .nojs & {
+    // display: block;
+    // background-color: #ffffff;
+    // }
   }
 
   .page-header__logo {
@@ -246,6 +245,11 @@
     display: block;
     .clear();
 
+    .nojs & {
+      padding-bottom: 74px;
+      padding-top: 53px;
+    }
+
     .page-header--menu-open & {
       display: flex;
       position: absolute;
@@ -256,19 +260,23 @@
       padding-top: 53px;
       padding-bottom: 74px;
 
-      .nojs & {
-        display: flex;
-        position: static;
-      }
+      // .nojs & {
+      //   display: flex;
+      //   position: static;
+      // }
     }
   }
 
   .page-header__site {
-    .page-header--menu-open &,
-    .nojs & {
+    .page-header--menu-open & {
       display: flex;
       margin-bottom: 130px;
       padding-left: 99px;
+    }
+
+    .nojs & {
+      margin-bottom: 130px;
+      padding-left: 59px;
     }
   }
 
@@ -290,13 +298,17 @@
     padding-top: 29px;
     z-index: 6;
 
-    &--index {
-      background-color: transparent;
+    .nojs & {
+      background-color: @bg-header;
     }
 
-    // &--menu-open {
-    //   background-color: transparent;
-    // }
+    &--index {
+      background-color: transparent;
+
+      .nojs & {
+        background-color: transparent;
+      }
+    }
 
     &--scroll {
       // padding-top: 0;
@@ -379,6 +391,11 @@
 
   .page-header__nav {
     display: flex;
+
+    .nojs & {
+      display: flex;
+      padding: 0;
+    }
 
     .page-header--menu-open & {
       position: static;
