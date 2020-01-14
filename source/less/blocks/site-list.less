@@ -13,21 +13,20 @@
 
 .site-list__link {
   position: relative;
-  // display: inline-block;
   display: block;
-  // color: @bg-index;
   font-size: 30px;
   font-weight: 500;
   line-height: 36px;
   letter-spacing: -0.5px;
   text-transform: uppercase;
   text-decoration: none;
+  white-space: nowrap;
   transition: transform 0.3s;
   // overflow: hidden;
+  color: inherit;
 
-  &[href] {
-    color: inherit;
-  }
+  // &[href] {
+  // }
 
   &::before {
     position: absolute;

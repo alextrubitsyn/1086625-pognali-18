@@ -52,8 +52,13 @@
 @media (min-width: @tablet-width) {
   .social {
     &--nav {
+      justify-content: flex-start;
       padding-left: 100px;
       order: 5;
+
+      .nojs & {
+        padding-left: 60px;
+      }
     }
   }
 
