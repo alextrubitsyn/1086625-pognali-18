@@ -81,7 +81,6 @@
 }
 
 .page-header__toggle {
-  // position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +91,7 @@
 
   .page-header--scroll &,
   .page-header--menu-open & {
-    color: #cccccc;
+    fill: #cccccc;
     background-color: #ffffff;
   }
 
@@ -102,23 +101,23 @@
 }
 
 .page-header__toggle-img {
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
   &--open {
     display: block;
     .size(25; 11);
-    color: #ffffff;
+    fill: #ffffff;
 
     .page-header--scroll & {
-      color: #cccccc;
+      fill: #cccccc;
       background-color: #ffffff;
+
+      &:hover,
+      &:focus {
+        fill: rgba(204, 204, 204, 0.6);
+      }
+
+      &:active {
+        fill: rgba(204, 204, 204, 0.3);
+      }
     }
 
     .page-header--menu-open & {
@@ -129,7 +128,16 @@
   &--close {
     display: none;
     .size(19; 19);
-    color: #cccccc;
+    fill: #cccccc;
+
+    &:hover,
+    &:focus {
+      fill: rgba(204, 204, 204, 0.6);
+    }
+
+    &:active {
+      fill: rgba(204, 204, 204, 0.3);
+    }
 
     .page-header--scroll & {
       display: none;
