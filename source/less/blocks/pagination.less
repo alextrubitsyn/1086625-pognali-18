@@ -8,7 +8,11 @@
 }
 
 .pagination__btn {
+  position: relative;
   width: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 10px 20px;
 
   &:hover,
   &:focus {
@@ -20,15 +24,11 @@
   }
 
   &--before {
-    background: url("../img/triangle-arrow-left.svg") no-repeat;
-    background-size: 10px 20px;
-    background-position: center;
+    background-image: url("../img/triangle-arrow-left.svg");
   }
 
-  &--after {
-    background: url("../img/triangle-arrow-right.svg") no-repeat;
-    background-size: 10px 20px;
-    background-position: center;
+  .pagination &--after {
+    background-image: url("../img/triangle-arrow-right.svg");
   }
 }
 

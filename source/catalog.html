@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link href="css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.min.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
     </script>
@@ -37,9 +37,16 @@
 
   <body class="nojs">
 
-  <div style="display:none">
+
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
+
+
+  <!-- <div style="display:none">
     <svg>
-      <symbol  viewBox="0 0 19 21" id="icon-plane" fill="currentColor">
+      <symbol viewBox="0 0 19 21" id="icon-plane" fill="currentColor">
         <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
           c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
           C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
@@ -94,7 +101,7 @@
           c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z">
         </path>
       </symbol>
-      <symbol  viewBox="0 0 11 21" id="icon-facebook" fill="currentColor">
+      <symbol viewBox="0 0 11 21" id="icon-facebook" fill="currentColor">
         <g>
           <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
             V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
@@ -132,13 +139,13 @@
         </path>
         <circle cx="17.6" cy="5.4" r="1.3"></circle>
       </symbol>
-      <symbol  viewBox="0 0 23 17" id="icon-heart" fill="currentColor">
+      <symbol viewBox="0 0 23 17" id="icon-heart" fill="currentColor">
         <path d="M18.5,1.5c-2-2-5.3-2-7.3,0L10,2.7L8.8,1.5c-2-2-5.3-2-7.3,0c-2,2-2,5.2,0,7.2l1.2,1.2L10,17l7.3-7.2l1.2-1.2
           C20.5,6.7,20.5,3.5,18.5,1.5z M14.9,9.8L10,14.6L5.1,9.8L2.7,7.5C1.4,6.1,1.4,4,2.7,2.7c1.3-1.3,3.5-1.3,4.9,0L10,5.1l2.4-2.4
           c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z">
         </path>
       </symbol>
-      <symbol  viewBox="0 0 13 11" id="icon-heart-active" fill="currentColor">
+      <symbol viewBox="0 0 13 11" id="icon-heart-active" fill="currentColor">
         <path fill="#f02323" d="M12,1c-1.3-1.3-3.4-1.3-4.7,0L6.5,1.7L5.7,1C4.4-0.3,2.3-0.3,1,1c-1.3,1.3-1.3,3.4,0,4.6l0.8,0.8L6.5,11l4.7-4.6L12,5.6
           C13.3,4.3,13.3,2.2,12,1z">
         </path>
@@ -155,7 +162,7 @@
           L10.3,9z"></path>
       </symbol>
     </svg>
-  </div>
+  </div> -->
 
 
     <header class="page-header">
@@ -166,21 +173,17 @@
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
               <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-          
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-              <img class="page-header__img page-header__img--blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100"
-                height="19" alt="Погнали?" />
+              <img class="page-header__img page-header__img--blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
             </picture>
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
               <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-          
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img class="page-header__img page-header__img--white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100"
-                height="19" alt="Погнали?" />
+              <img class="page-header__img page-header__img--white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
             </picture>
           </a>
           <button class="page-header__toggle" type="button" aria-label="Закрыть/открыть форму">
@@ -1030,68 +1033,68 @@
             <form class="user-filters__form" action="https://echo.htmlacademy.ru" method="get">
               <div class="user-filters__item" title="Выберите хобби">
                 <!-- <button class="user-filters__toggle" type="button">Хобби<span>:</span></button> -->
-                <input class="user-filters__toggle-input visually-hidden" id="hobby" type="checkbox" name="hobby" />
+                <input class="user-filters__toggle-input visually-hidden" id="hobby" type="checkbox" name="hobby">
                 <label class="user-filters__toggle-label" for="hobby">Хобби<span>:</span></label>
                 <ul class="user-filters__list">
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="gim" type="checkbox" name="gim" checked />
+                    <input class="user-filters__input visually-hidden" id="gim" type="checkbox" name="gim" checked="">
                     <label class="user-filters__label" for="gim">Спортзал</label>
                   </li>
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="hookah" type="checkbox" name="hookah" />
+                    <input class="user-filters__input visually-hidden" id="hookah" type="checkbox" name="hookah">
                     <label class="user-filters__label" for="hookah">Кальян</label>
                   </li>
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="sofa" type="checkbox" name="sofa" />
+                    <input class="user-filters__input visually-hidden" id="sofa" type="checkbox" name="sofa">
                     <label class="user-filters__label" for="sofa">Диван</label>
                   </li>
                 </ul>
               </div>
               <div class="user-filters__item" title="Выберите музыку">
                 <!-- <button class="user-filters__toggle " type="button">Музыка<span>:</span></button> -->
-                <input class="user-filters__toggle-input visually-hidden" id="music" type="checkbox" name="hobby" />
+                <input class="user-filters__toggle-input visually-hidden" id="music" type="checkbox" name="hobby">
                 <label class="user-filters__toggle-label" for="music">Музыка<span>:</span></label>
                 <ul class="user-filters__list">
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="hard-rock" type="checkbox" name="hard-rock"  checked />
+                    <input class="user-filters__input visually-hidden" id="hard-rock" type="checkbox" name="hard-rock" checked="">
                     <label class="user-filters__label" for="hard-rock">Тяжелый рок</label>
                   </li>
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="rus-rap" type="checkbox" name="rus-rap" />
+                    <input class="user-filters__input visually-hidden" id="rus-rap" type="checkbox" name="rus-rap">
                     <label class="user-filters__label" for="rus-rap">Русский рэп</label>
                   </li>
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="eurodance" type="checkbox" name="eurodance" />
+                    <input class="user-filters__input visually-hidden" id="eurodance" type="checkbox" name="eurodance">
                     <label class="user-filters__label" for="eurodance">Евроденс</label>
                   </li>
                 </ul>
               </div>
               <div class="user-filters__item" title="Выберите еду">
                 <!-- <button class="user-filters__toggle" type="button">Еда<span>:</span></button> -->
-                <input class="user-filters__toggle-input visually-hidden" id="eat" type="checkbox" name="hobby" />
+                <input class="user-filters__toggle-input visually-hidden" id="eat" type="checkbox" name="hobby">
                 <label class="user-filters__toggle-label" for="eat">Еда<span>:</span></label>
                 <ul class="user-filters__list">
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="meat-eater" type="checkbox" name="meat-eater"  checked />
+                    <input class="user-filters__input visually-hidden" id="meat-eater" type="checkbox" name="meat-eater" checked="">
                     <label class="user-filters__label" for="meat-eater">Мясоед</label>
                   </li>
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="diet" type="checkbox" name="diet" />
+                    <input class="user-filters__input visually-hidden" id="diet" type="checkbox" name="diet">
                     <label class="user-filters__label" for="diet">Сидит на ПП</label>
                   </li>
                   <li class="user-filters__item-inp">
-                    <input class="user-filters__input visually-hidden" id="vegan" type="checkbox" name="vegan" />
+                    <input class="user-filters__input visually-hidden" id="vegan" type="checkbox" name="vegan">
                     <label class="user-filters__label" for="vegan">Веган-сыроед</label>
                   </li>
                 </ul>
               </div>
               <div class="user-filters__item" title="Выберите транспорт">
                 <!-- <button class="user-filters__toggle" type="button">Транспорт<span>:</span></button> -->
-                <input class="user-filters__toggle-input visually-hidden" id="transport" type="checkbox" name="hobby" />
+                <input class="user-filters__toggle-input visually-hidden" id="transport" type="checkbox" name="hobby">
                 <label class="user-filters__toggle-label" for="transport">Транспорт<span>:</span></label>
                 <ul class="user-filters__list user-filters__list--travel travel-way travel-way--filters">
                   <li class="travel-way__item travel-way__item--filter travel-way__item--plane">
-                    <input class="travel-way__input visually-hidden" id="plane" type="checkbox" name="plane" checked />
+                    <input class="travel-way__input visually-hidden" id="plane" type="checkbox" name="plane" checked="">
                     <label class="travel-way__label" for="plane">
                       <span class="travel-way__name">Авиаперелет</span>
                       <svg class="travel-way__img travel-way__img--plane" width="19" height="21">
@@ -1100,7 +1103,7 @@
                     </label>
                   </li>
                   <li class="travel-way__item travel-way__item--filter travel-way__item--bus">
-                    <input class="travel-way__input visually-hidden" id="bus" type="checkbox" name="bus" checked />
+                    <input class="travel-way__input visually-hidden" id="bus" type="checkbox" name="bus" checked="">
                     <label class="travel-way__label" for="bus">
                       <span class="travel-way__name">Автотранспорт</span>
                       <svg class="travel-way__img travel-way__img--bus" width="17" height="21">
@@ -1109,7 +1112,7 @@
                     </label>
                   </li>
                   <li class="travel-way__item travel-way__item--filter travel-way__item--bike">
-                    <input class="travel-way__input visually-hidden" id="bike" type="checkbox" name="bike" />
+                    <input class="travel-way__input visually-hidden" id="bike" type="checkbox" name="bike">
                     <label class="travel-way__label" for="bike">
                       <span class="travel-way__name">Велосипед</span>
                       <svg class="travel-way__img travel-way__img--bike" width="24" height="21">
@@ -1118,7 +1121,7 @@
                     </label>
                   </li>
                   <li class="travel-way__item travel-way__item--filter travel-way__item--run">
-                    <input class="travel-way__input visually-hidden" id="run" type="checkbox" name="run" checked />
+                    <input class="travel-way__input visually-hidden" id="run" type="checkbox" name="run" checked="">
                     <label class="travel-way__label" for="run">
                       <span class="travel-way__name">Пешком</span>
                       <svg class="travel-way__img travel-way__img--run" width="20" height="21">
@@ -1130,12 +1133,12 @@
               </div>
               <div class="user-filters__item" title="Выберите диапазон уровня">
                 <!-- <button class="user-filters__toggle" type="button">Левел<span>:</span></button> -->
-                <input class="user-filters__toggle-input visually-hidden" id="level" type="checkbox" name="hobby" />
+                <input class="user-filters__toggle-input visually-hidden" id="level" type="checkbox" name="hobby">
                 <label class="user-filters__toggle-label" for="level">Левел<span>:</span></label>
                 <div class="user-filters__level-selector level-selector">
-                  <input class="level-selector__input level-selector__input--min" id="level-min" type="text" name="level-min" value="30" />
+                  <input class="level-selector__input level-selector__input--min" id="level-min" type="text" name="level-min" value="30">
                   <label class="level-selector__label" for="level-min">минимальный уровень</label>
-                  <input class="level-selector__input level-selector__input--max" id="level-max" type="text" name="level-max" value="100" />
+                  <input class="level-selector__input level-selector__input--max" id="level-max" type="text" name="level-max" value="100">
                   <label class="visually-hidden" for="level-max">максимальный уровень</label>
                   <div class="level-selector__axis">
                     <span class="level-selector__slider level-selector__slider--min" tabindex="1"></span>
@@ -1159,10 +1162,9 @@
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
-          
                     <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
-                    <img class="member__image" width="70" height="70" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова Фото" />
+                    <img class="member__image" width="70" height="70" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова Фото">
                   </picture>
                 </a>
                 <div class="member__wrapper">
@@ -1196,7 +1198,7 @@
                   </div>
                   <div class="member__liked">
                     <button class="member__like-btn member__like-btn--active" type="button" aria-label="Лайкнуть попутчика">
-                      <svg class="member__like-img member__like-img--active"  width="13px" height="11px">
+                      <svg class="member__like-img member__like-img--active" width="13px" height="11px">
                         <use xlink:href="#icon-heart-active"></use>
                       </svg>
                     </button>
@@ -1220,7 +1222,7 @@
                     <p class="member__travel-title">транспорт:</p>
                     <ul class="member__travel-modes travel-way travel-way--catalog">
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--plane">
-                        <input class="travel-way__input visually-hidden" id="plane1" type="checkbox" name="plane1" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="plane1" type="checkbox" name="plane1" checked="" disabled="">
                         <label class="travel-way__label" for="plane1">
                           <span class="travel-way__name">Авиаперелет</span>
                           <svg class="travel-way__img travel-way__img--plane" width="19" height="21">
@@ -1229,7 +1231,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bus">
-                        <input class="travel-way__input visually-hidden" id="bus1" type="checkbox" name="bus1" disabled />
+                        <input class="travel-way__input visually-hidden" id="bus1" type="checkbox" name="bus1" disabled="">
                         <label class="travel-way__label" for="bus1">
                           <span class="travel-way__name">Автотранспорт</span>
                           <svg class="travel-way__img travel-way__img--bus" width="17" height="21">
@@ -1238,7 +1240,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bike">
-                        <input class="travel-way__input visually-hidden" id="bike1" type="checkbox" name="bike1" disabled />
+                        <input class="travel-way__input visually-hidden" id="bike1" type="checkbox" name="bike1" disabled="">
                         <label class="travel-way__label" for="bike1">
                           <span class="travel-way__name">Велосипед</span>
                           <svg class="travel-way__img travel-way__img--bike" width="24" height="21">
@@ -1247,7 +1249,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--run">
-                        <input class="travel-way__input visually-hidden" id="run1" type="checkbox" name="run1" disabled />
+                        <input class="travel-way__input visually-hidden" id="run1" type="checkbox" name="run1" disabled="">
                         <label class="travel-way__label" for="run1">
                           <span class="travel-way__name">Пешком</span>
                           <svg class="travel-way__img travel-way__img--run" width="20" height="21">
@@ -1258,8 +1260,7 @@
                     </ul>
                     <div class="member__level level">
                       <svg class="member__level-line" width="45" height="45" viewBox="0 0 45 45">
-                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent"
-                          stroke-width="3" stroke-dasharray="121.2968903 1.225221114" stroke-dashoffset="30.63052785"></circle>
+                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent" stroke-width="3" stroke-dasharray="121.2968903 1.225221114" stroke-dashoffset="30.63052785"></circle>
                       </svg>
                       <p class="member__level-title">левел:</p>
                       <span class="member__level-value level-value">99</span>
@@ -1275,10 +1276,9 @@
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-          
                     <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-                    <img class="member__image" width="70" height="70" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин Фото" />
+                    <img class="member__image" width="70" height="70" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин Фото">
                   </picture>
                 </a>
                 <div class="member__wrapper">
@@ -1309,7 +1309,7 @@
                   </div>
                   <div class="member__liked">
                     <button class="member__like-btn" type="button" aria-label="Лайкнуть попутчика">
-                      <svg class="member__like-img"  width="13px" height="11px">
+                      <svg class="member__like-img" width="13px" height="11px">
                         <use xlink:href="#icon-heart"></use>
                       </svg>
                     </button>
@@ -1326,7 +1326,7 @@
                     <p class="member__travel-title">транспорт:</p>
                     <ul class="member__travel-modes travel-way travel-way--catalog">
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--plane">
-                        <input class="travel-way__input visually-hidden" id="plane2" type="checkbox" name="plane2" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="plane2" type="checkbox" name="plane2" checked="" disabled="">
                         <label class="travel-way__label" for="plane2">
                           <span class="travel-way__name">Авиаперелет</span>
                           <svg class="travel-way__img travel-way__img--plane" width="19" height="21">
@@ -1335,7 +1335,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bus">
-                        <input class="travel-way__input visually-hidden" id="bus2" type="checkbox" name="bus2" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="bus2" type="checkbox" name="bus2" checked="" disabled="">
                         <label class="travel-way__label" for="bus2">
                           <span class="travel-way__name">Автотранспорт</span>
                           <svg class="travel-way__img travel-way__img--bus" width="17" height="21">
@@ -1344,7 +1344,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bike">
-                        <input class="travel-way__input visually-hidden" id="bike2" type="checkbox" name="bike2" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="bike2" type="checkbox" name="bike2" checked="" disabled="">
                         <label class="travel-way__label" for="bike2">
                           <span class="travel-way__name">Велосипед</span>
                           <svg class="travel-way__img travel-way__img--bike" width="24" height="21">
@@ -1353,7 +1353,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--run">
-                        <input class="travel-way__input visually-hidden" id="run2" type="checkbox" name="run2" disabled />
+                        <input class="travel-way__input visually-hidden" id="run2" type="checkbox" name="run2" disabled="">
                         <label class="travel-way__label" for="run2">
                           <span class="travel-way__name">Пешком</span>
                           <svg class="travel-way__img travel-way__img--run" width="20" height="21">
@@ -1364,8 +1364,7 @@
                     </ul>
                     <div class="member__level level">
                       <svg class="member__level-line" width="45" height="45" viewBox="0 0 45 45">
-                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent"
-                          stroke-width="3" stroke-dasharray="98.01768912 24.50442228" stroke-dashoffset="30.63052785"></circle>
+                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent" stroke-width="3" stroke-dasharray="98.01768912 24.50442228" stroke-dashoffset="30.63052785"></circle>
                       </svg>
                       <p class="member__level-title">левел:</p>
                       <span class="member__level-value level__value">80</span>
@@ -1381,11 +1380,10 @@
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
-          
                     <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg 1x, img/smolov-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg 1x, img/smolov-tablet@2x.jpg 2x">
                     <source media="(min-width: 32068px)" srcset="img/smolov-mobile@1x.jpg 1x, img/smolov-mobile@2x.jpg 2x">
-                    <img class="member__image" width="70" height="70" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов Фото" />
+                    <img class="member__image" width="70" height="70" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов Фото">
                   </picture>
                 </a>
                 <div class="member__wrapper">
@@ -1416,7 +1414,7 @@
                   </div>
                   <div class="member__liked">
                     <button class="member__like-btn" type="button" aria-label="Лайкнуть попутчика">
-                      <svg class="member__like-img"  width="13px" height="11px">
+                      <svg class="member__like-img" width="13px" height="11px">
                         <use xlink:href="#icon-heart"></use>
                       </svg>
                     </button>
@@ -1438,7 +1436,7 @@
                     <p class="member__travel-title">транспорт:</p>
                     <ul class="member__travel-modes travel-way travel-way--catalog">
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--plane">
-                        <input class="travel-way__input visually-hidden" id="plane3" type="checkbox" name="plane3" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="plane3" type="checkbox" name="plane3" checked="" disabled="">
                         <label class="travel-way__label" for="plane3">
                           <span class="travel-way__name">Авиаперелет</span>
                           <svg class="travel-way__img travel-way__img--plane" width="19" height="21">
@@ -1447,7 +1445,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bus">
-                        <input class="travel-way__input visually-hidden" id="bus3" type="checkbox" name="bus3" disabled />
+                        <input class="travel-way__input visually-hidden" id="bus3" type="checkbox" name="bus3" disabled="">
                         <label class="travel-way__label" for="bus3">
                           <span class="travel-way__name">Автотранспорт</span>
                           <svg class="travel-way__img travel-way__img--bus" width="17" height="21">
@@ -1456,7 +1454,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bike">
-                        <input class="travel-way__input visually-hidden" id="bike3" type="checkbox" name="bike3" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="bike3" type="checkbox" name="bike3" checked="" disabled="">
                         <label class="travel-way__label" for="bike3">
                           <span class="travel-way__name">Велосипед</span>
                           <svg class="travel-way__img travel-way__img--bike" width="24" height="21">
@@ -1465,7 +1463,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--run">
-                        <input class="travel-way__input visually-hidden" id="run3" type="checkbox" name="run3" disabled />
+                        <input class="travel-way__input visually-hidden" id="run3" type="checkbox" name="run3" disabled="">
                         <label class="travel-way__label" for="run3">
                           <span class="travel-way__name">Пешком</span>
                           <svg class="travel-way__img travel-way__img--run" width="20" height="21">
@@ -1476,8 +1474,7 @@
                     </ul>
                     <div class="member__level level">
                       <svg class="member__level-line" width="45" height="45" viewBox="0 0 45 45">
-                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent"
-                          stroke-width="3" stroke-dasharray="30.63052785 91.89158355" stroke-dashoffset="30.63052785"></circle>
+                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent" stroke-width="3" stroke-dasharray="30.63052785 91.89158355" stroke-dashoffset="30.63052785"></circle>
                       </svg>
                       <p class="member__level-title">левел:</p>
                       <span class="member__level-value level__value">25</span>
@@ -1493,10 +1490,9 @@
                     <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
-          
                     <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg 1x, img/rogovaya-desktop@2x.jpg 2x">
                     <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg 1x, img/rogovaya-tablet@2x.jpg 2x">
-                    <img class="member__image" width="70" height="70" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая Фото" />
+                    <img class="member__image" width="70" height="70" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая Фото">
                   </picture>
                 </a>
                 <div class="member__wrapper">
@@ -1524,7 +1520,7 @@
                   </div>
                   <div class="member__liked">
                     <button class="member__like-btn" type="button" aria-label="Лайкнуть попутчика">
-                      <svg class="member__like-img"  width="13px" height="11px">
+                      <svg class="member__like-img" width="13px" height="11px">
                         <use xlink:href="#icon-heart"></use>
                       </svg>
                     </button>
@@ -1543,7 +1539,7 @@
                     <p class="member__travel-title">транспорт:</p>
                     <ul class="member__travel-modes travel-way travel-way--catalog">
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--plane">
-                        <input class="travel-way__input visually-hidden" id="plane4" type="checkbox" name="plane4" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="plane4" type="checkbox" name="plane4" checked="" disabled="">
                         <label class="travel-way__label" for="plane4">
                           <span class="travel-way__name">Авиаперелет</span>
                           <svg class="travel-way__img travel-way__img--plane" width="19" height="21">
@@ -1552,7 +1548,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bus">
-                        <input class="travel-way__input visually-hidden" id="bus4" type="checkbox" name="bus4" checked disabled />
+                        <input class="travel-way__input visually-hidden" id="bus4" type="checkbox" name="bus4" checked="" disabled="">
                         <label class="travel-way__label" for="bus4">
                           <span class="travel-way__name">Автотранспорт</span>
                           <svg class="travel-way__img travel-way__img--bus" width="17" height="21">
@@ -1561,7 +1557,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--bike">
-                        <input class="travel-way__input visually-hidden" id="bike4" type="checkbox" name="bike4" disabled />
+                        <input class="travel-way__input visually-hidden" id="bike4" type="checkbox" name="bike4" disabled="">
                         <label class="travel-way__label" for="bike4">
                           <span class="travel-way__name">Велосипед</span>
                           <svg class="travel-way__img travel-way__img--bike" width="24" height="21">
@@ -1570,7 +1566,7 @@
                         </label>
                       </li>
                       <li class="travel-way__item travel-way__item--catalog travel-way__item--run">
-                        <input class="travel-way__input visually-hidden" id="run4" type="checkbox" name="run4" disabled />
+                        <input class="travel-way__input visually-hidden" id="run4" type="checkbox" name="run4" disabled="">
                         <label class="travel-way__label" for="run4">
                           <span class="travel-way__name">Пешком</span>
                           <svg class="travel-way__img travel-way__img--run" width="20" height="21">
@@ -1581,8 +1577,7 @@
                     </ul>
                     <div class="member__level level">
                       <svg class="member__level-line" width="45" height="45" viewBox="0 0 45 45">
-                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent"
-                          stroke-width="3" stroke-dasharray="61.2610557 61.2610557" stroke-dashoffset="30.63052785"></circle>
+                        <circle class="member__level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent" stroke-width="3" stroke-dasharray="61.2610557 61.2610557" stroke-dashoffset="30.63052785"></circle>
                       </svg>
                       <p class="member__level-title">левел:</p>
                       <span class="member__level-value level__value">50</span>
@@ -1629,10 +1624,9 @@
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-          
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Погнали?" />
+            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Погнали?">
           </picture>
         </a>
         <ul class="page-footer__social social">
@@ -1664,12 +1658,12 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
           <b class="copyright__text">Разработано</b>
-          <img class="copyright__logo-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy" />
+          <img class="copyright__logo-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/picturefill.js" defer></script>
+    <script src="js/min.script.js"></script>
+    <script src="js/min.picturefill.js" defer=""></script>
   </body>
 </html>

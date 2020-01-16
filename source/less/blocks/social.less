@@ -23,7 +23,7 @@
   justify-content: center;
   align-items: center;
   .size(45);
-  color: @title;
+  fill: @title;
   background-color: @map;
   border-radius: 50%;
 
@@ -33,18 +33,18 @@
   }
 
   &:active {
-    color: rgba(29, 46, 91, 0.3);
+    fill: rgba(29, 46, 91, 0.3);
   }
 
   .social--nav & {
     &:hover,
     &:focus {
-      color: #ffffff;
+      fill: #ffffff;
       background-color: @bg-index;
     }
 
     &:active {
-      color: rgba(255, 255, 255, 0.3);
+      fill: rgba(255, 255, 255, 0.3);
     }
   }
 }

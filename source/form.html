@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link href="css/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="css/style.min.css" rel="stylesheet">
     <script>
       document.createElement( "picture" );
     </script>
@@ -37,9 +37,16 @@
 
   <body class="nojs">
 
-  <div style="display:none">
+
+<div style="display:none">
+  <include src="build/img/sprite.svg"></include>
+</div>
+
+
+
+  <!-- <div style="display:none">
     <svg>
-      <symbol  viewBox="0 0 19 21" id="icon-plane" fill="currentColor">
+      <symbol viewBox="0 0 19 21" id="icon-plane" fill="currentColor">
         <path d="M18.9,18.9c-0.1-0.3-3.7-10.1-3.7-10.1c0,0,0,0,0,0c-0.1-0.5,0.1-0.7,0.3-1.1c0,0,2.1-3.5,2.8-4.6c0.7-1.2,0.6-2.3-0.1-2.8
           c-0.7-0.5-1.7-0.1-2.5,1c-0.8,1.1-3,4.5-3,4.5c-0.3,0.4-0.4,0.7-0.9,0.8c0,0,0,0,0,0C11.7,6.5,1.5,7,1.2,7c-0.3,0-0.7,0.1-1,0.6
           C-0.2,8.3,0,8.5,0.4,8.6c0,0,8,2.6,8.3,2.7C9,11.3,9,11.5,8.9,11.9c-0.2,0.4-1.4,2.3-1.6,2.6c-0.1,0.2-0.2,0.2-0.4,0.3l-2.8,1
@@ -94,7 +101,7 @@
           c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z">
         </path>
       </symbol>
-      <symbol  viewBox="0 0 11 21" id="icon-facebook" fill="currentColor">
+      <symbol viewBox="0 0 11 21" id="icon-facebook" fill="currentColor">
         <g>
           <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
             V21z M3.4,19.9h3.1v-9.8h3.2V7.5H6.5l0-0.6c0-1.5,0-2.9,0.8-3.4l0.2-0.1h2.3V1.1H7.1C5.9,1.2,4.9,1.6,4.3,2.3
@@ -132,13 +139,13 @@
         </path>
         <circle cx="17.6" cy="5.4" r="1.3"></circle>
       </symbol>
-      <symbol  viewBox="0 0 23 17" id="icon-heart" fill="currentColor">
+      <symbol viewBox="0 0 23 17" id="icon-heart" fill="currentColor">
         <path d="M18.5,1.5c-2-2-5.3-2-7.3,0L10,2.7L8.8,1.5c-2-2-5.3-2-7.3,0c-2,2-2,5.2,0,7.2l1.2,1.2L10,17l7.3-7.2l1.2-1.2
           C20.5,6.7,20.5,3.5,18.5,1.5z M14.9,9.8L10,14.6L5.1,9.8L2.7,7.5C1.4,6.1,1.4,4,2.7,2.7c1.3-1.3,3.5-1.3,4.9,0L10,5.1l2.4-2.4
           c1.3-1.3,3.5-1.3,4.9,0c1.3,1.3,1.3,3.5,0,4.8L14.9,9.8z">
         </path>
       </symbol>
-      <symbol  viewBox="0 0 13 11" id="icon-heart-active" fill="currentColor">
+      <symbol viewBox="0 0 13 11" id="icon-heart-active" fill="currentColor">
         <path fill="#f02323" d="M12,1c-1.3-1.3-3.4-1.3-4.7,0L6.5,1.7L5.7,1C4.4-0.3,2.3-0.3,1,1c-1.3,1.3-1.3,3.4,0,4.6l0.8,0.8L6.5,11l4.7-4.6L12,5.6
           C13.3,4.3,13.3,2.2,12,1z">
         </path>
@@ -155,7 +162,7 @@
           L10.3,9z"></path>
       </symbol>
     </svg>
-  </div>
+  </div> -->
 
     <header class="page-header">
       <div class="container page-header__wrapper">
@@ -165,21 +172,17 @@
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
               <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-          
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-              <img class="page-header__img page-header__img--blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100"
-                height="19" alt="Погнали?" />
+              <img class="page-header__img page-header__img--blue" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Погнали?">
             </picture>
             <picture>
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x">
               <source type="image/webp" srcset="img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x">
-          
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-              <img class="page-header__img page-header__img--white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100"
-                height="19" alt="Погнали?" />
+              <img class="page-header__img page-header__img--white" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Погнали?">
             </picture>
           </a>
           <button class="page-header__toggle" type="button" aria-label="Закрыть/открыть форму">
@@ -194,7 +197,7 @@
         <nav class="page-header__nav main-nav">
           <ul class="page-header__site main-nav__list site-list">
             <li class="site-list__item">
-              <a data-hover="О сервисе" class="site-list__link"  href="index.html">О сервисе</a>
+              <a data-hover="О сервисе" class="site-list__link" href="index.html">О сервисе</a>
             </li>
             <li class="site-list__item">
               <a data-hover="Направления" class="site-list__link">Направления</a>
@@ -271,8 +274,7 @@
             <!-- уровень  -->
             <div class="form-me__level level level--form">
               <svg class="form-me__level-line level-line" width="45" height="45" viewBox="0 0 45 45">
-                <circle class="level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent" stroke-width="2"
-                  stroke-dasharray="98.01768912 24.50442228" stroke-dashoffset="30.63052785"></circle>
+                <circle class="level-segment" cx="22.5" cy="22.5" r="19.5" fill="transparent" stroke-width="2" stroke-dasharray="98.01768912 24.50442228" stroke-dashoffset="30.63052785"></circle>
               </svg>
               <span class="level__value">80</span>
               <span class="level__text">level</span>
@@ -282,23 +284,21 @@
               <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
-          
               <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
-              <img class="form-me__image" width="100" height="100" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Петя Демин Фото" />
+              <img class="form-me__image" width="100" height="100" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" alt="Петя Демин Фото">
             </picture>
           </div>
         </div>
         <div class="form-me__favor">
           <div class="container form-me__wrapper-favor">
-            <input class="form-me__input visually-hidden" id="user-photo" type="file" name="user-photo"/>
+            <input class="form-me__input visually-hidden" id="user-photo" type="file" name="user-photo">
             <label class="form-me__photo-btn button" for="user-photo" tabindex="1">
             <span>Сменить</span>фото
             </label>
             <!-- теги -->
             <div class="form-me__hashtags" title="Напишите свои теги">
-              <textarea class="form-me__hashtags-list" name="hashtag"
-              id="hashtag">#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea class="form-me__hashtags-list" name="hashtag" id="hashtag">#бургер #бар #футбол #концерт #крафт</textarea>
               <span class="form-me__legend-hashtag">Тэги</span>
             </div>
             <!-- Транспорт -->
@@ -306,7 +306,7 @@
               <span class="form-me__legend-transport">Транспорт</span>
               <ul class="form-me__travel-modes travel-way travel-way--form">
                 <li class="travel-way__item travel-way__item--plane">
-                    <input class="travel-way__input visually-hidden" id="plane" type="checkbox" name="plane" checked/>
+                    <input class="travel-way__input visually-hidden" id="plane" type="checkbox" name="plane" checked="">
                     <label class="travel-way__label" for="plane">
                       <span class="travel-way__name">Авиаперелет</span>
                       <svg class="travel-way__img travel-way__img--plane" width="19" height="21">
@@ -315,7 +315,7 @@
                     </label>
                 </li>
                 <li class="travel-way__item travel-way__item--bus">
-                    <input class="travel-way__input visually-hidden" id="bus" type="checkbox" name="bus" />
+                    <input class="travel-way__input visually-hidden" id="bus" type="checkbox" name="bus">
                     <label class="travel-way__label" for="bus">
                       <span class="travel-way__name">Автотранспорт</span>
                       <svg class="travel-way__img travel-way__img--bus" width="17" height="21">
@@ -324,7 +324,7 @@
                     </label>
                 </li>
                 <li class="travel-way__item travel-way__item--bike">
-                    <input class="travel-way__input visually-hidden" id="bike" type="checkbox" name="bike" checked />
+                    <input class="travel-way__input visually-hidden" id="bike" type="checkbox" name="bike" checked="">
                     <label class="travel-way__label" for="bike">
                       <span class="travel-way__name">Велосипед</span>
                       <svg class="travel-way__img travel-way__img--bike" width="24" height="21">
@@ -333,7 +333,7 @@
                     </label>
                 </li>
                 <li class="travel-way__item travel-way__item--run">
-                    <input class="travel-way__input visually-hidden" id="run" type="checkbox" name="run" checked />
+                    <input class="travel-way__input visually-hidden" id="run" type="checkbox" name="run" checked="">
                     <label class="travel-way__label" for="run">
                       <span class="travel-way__name">Пешком</span>
                       <svg class="travel-way__img travel-way__img--run" width="20" height="21">
@@ -406,7 +406,7 @@
                     <p class="counter__name">ищу попутчиков:</p>
                     <span class="counter__type">Чел.</span>
                     <div class="counter__wrapper">
-                      <input class="counter__input" id="counter-companions" type="text" name="counter-companions" value="2" />
+                      <input class="counter__input" id="counter-companions" type="text" name="counter-companions" value="2">
                       <button class="counter__less" type="button">
                         <span class="visually-hidden">Уменьшить</span>
                       </button>
@@ -420,7 +420,7 @@
                     <p class="counter__name">Длительность:</p>
                     <span class="counter__type">дн.</span>
                     <div class="counter__wrapper">
-                      <input class="counter__input" id="counter-days" type="text" name="counter-days" value="2" />
+                      <input class="counter__input" id="counter-days" type="text" name="counter-days" value="2">
                       <button class="counter__less" type="button">
                         <span class="visually-hidden">Уменьшить</span>
                       </button>
@@ -430,7 +430,7 @@
                       </button>
                     </div>
                   </div>
-                  <input class="visually-hidden steps__input" id="with-children" type="checkbox" name="with-children" checked />
+                  <input class="visually-hidden steps__input" id="with-children" type="checkbox" name="with-children" checked="">
                   <label class="steps__with-children" for="with-children">Можно с детьми</label>
                 </div>
                 <div class="period__month-year">
@@ -454,99 +454,99 @@
                 </ul>
                 <ul class="period__days">
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>23</button>
+                    <button class="period__day-btn" type="button" disabled="">23</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>24</button>
+                    <button class="period__day-btn" type="button" disabled="">24</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>25</button>
+                    <button class="period__day-btn" type="button" disabled="">25</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>26</button>
+                    <button class="period__day-btn" type="button" disabled="">26</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>27</button>
+                    <button class="period__day-btn" type="button" disabled="">27</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>28</button>
+                    <button class="period__day-btn" type="button" disabled="">28</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>
+                    <button class="period__day-btn" type="button" disabled="">
                       1<span class="period__day-month">мар</span>
                     </button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>2</button>
+                    <button class="period__day-btn" type="button" disabled="">2</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>3</button>
+                    <button class="period__day-btn" type="button" disabled="">3</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>4</button>
+                    <button class="period__day-btn" type="button" disabled="">4</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>5</button>
+                    <button class="period__day-btn" type="button" disabled="">5</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>6</button>
+                    <button class="period__day-btn" type="button" disabled="">6</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>7</button>
+                    <button class="period__day-btn" type="button" disabled="">7</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>8</button>
+                    <button class="period__day-btn" type="button" disabled="">8</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>9</button>
+                    <button class="period__day-btn" type="button" disabled="">9</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>10</button>
+                    <button class="period__day-btn" type="button" disabled="">10</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>11</button>
+                    <button class="period__day-btn" type="button" disabled="">11</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>12</button>
+                    <button class="period__day-btn" type="button" disabled="">12</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>13</button>
+                    <button class="period__day-btn" type="button" disabled="">13</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>14</button>
+                    <button class="period__day-btn" type="button" disabled="">14</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>15</button>
+                    <button class="period__day-btn" type="button" disabled="">15</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>16</button>
+                    <button class="period__day-btn" type="button" disabled="">16</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>17</button>
+                    <button class="period__day-btn" type="button" disabled="">17</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>18</button>
+                    <button class="period__day-btn" type="button" disabled="">18</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>19</button>
+                    <button class="period__day-btn" type="button" disabled="">19</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>20</button>
+                    <button class="period__day-btn" type="button" disabled="">20</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>21</button>
+                    <button class="period__day-btn" type="button" disabled="">21</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>22</button>
+                    <button class="period__day-btn" type="button" disabled="">22</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>23</button>
+                    <button class="period__day-btn" type="button" disabled="">23</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>24</button>
+                    <button class="period__day-btn" type="button" disabled="">24</button>
                   </li>
                   <li class="period__day">
-                    <button class="period__day-btn" type="button" disabled>25</button>
+                    <button class="period__day-btn" type="button" disabled="">25</button>
                   </li>
                   <li class="period__day">
                     <button class="period__day-btn  period__day-btn--start" type="button">
@@ -588,6 +588,8 @@
                     <button class="period__day-btn" type="button">5</button>
                   </li>
                 </ul>
+                <input class="period__date-start" type="text" name="date-start" id="date-start" value="26/03/2019">
+                <input class="period__date-end" type="text" name="date-end" id="date-end" value="28/03/2019">
                 <a class="steps__next button button--yellow button--arrow-right" href="#step2">Следующий шаг</a>
               </li>
               <!-- шаг 2 -->
@@ -638,8 +640,7 @@
                     <h3 class="visually-hidden">Выбор страны</h3>
                     <ul class="country-filter__letter-list country-filter__letter-list--form">
                       <li class="country-filter__letter-item">
-                        <button class="country-filter__letter-btn country-filter__letter-btn--active"
-                          type="button">А</button>
+                        <button class="country-filter__letter-btn country-filter__letter-btn--active" type="button">А</button>
                       </li>
                       <li class="country-filter__letter-item">
                         <button class="country-filter__letter-btn" type="button">Б</button>
@@ -792,7 +793,7 @@
                       <span class="steps__fun-flag steps__fun-flag--bosnia"></span>
                     </div>
                     <div class="steps__fun-wrapper">
-                      <textarea class="steps__fun-description" name="bosnia" id="bosnia" placeholder="План действий" required></textarea>
+                      <textarea class="steps__fun-description" name="country-0-desk" id="bosnia" placeholder="План действий" required=""></textarea>
                       <span class="steps__fun-error">Это поле должно быть заполнено</span>
                     </div>
                   </li>
@@ -802,7 +803,7 @@
                       <span class="steps__fun-flag steps__fun-flag--czech"></span>
                     </div>
                     <div class="steps__fun-wrapper">
-                      <textarea class="steps__fun-description" name="czech" id="czechia" placeholder="План действий" required>Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.
+                      <textarea class="steps__fun-description" name="country-1-desk" id="czechia" placeholder="План действий" required="">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.
                       </textarea>
                       <span class="steps__fun-error">Это поле должно быть заполнено</span>
                     </div>
@@ -828,10 +829,9 @@
             <source type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-          
             <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Погнали?" />
+            <img class="page-footer__logo-img" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="96" height="15" alt="Погнали?">
           </picture>
         </a>
         <ul class="page-footer__social social">
@@ -863,12 +863,12 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
           <b class="copyright__text">Разработано</b>
-          <img class="copyright__logo-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy" />
+          <img class="copyright__logo-img" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
           </a>
         </div>
       </div>
     </footer>
-    <script src="js/script.js"></script>
-    <script src="js/picturefill.js" defer></script>
+    <script src="js/min.script.js"></script>
+    <script src="js/min.picturefill.js" defer=""></script>
   </body>
 </html>
