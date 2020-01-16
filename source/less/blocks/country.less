@@ -384,22 +384,23 @@
 
   .country__button-del {
     position: absolute;
-    .size(18);
+    .size(18; 18);
     right: -3px;
-    top: -10px;
+    top: 27px;
     background-color: #ffffff;
 
-    &::before {
-      .size(25; 1);
-      top: 43px;
-      right: 0;
-    }
-
+    &::before,
     &::after {
       .size(25; 1);
-      top: 43px;
-      right: 0;
+      top: 9px;
+      right: -3px;
     }
+
+    // &::after {
+    //   .size(25; 1);
+    //   top: 5px;
+    //   right: 0;
+    // }
   }
 
   .country__add-country {

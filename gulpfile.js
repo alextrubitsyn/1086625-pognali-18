@@ -34,6 +34,11 @@ gulp.task("compressJs", function() {
   return gulp
     .src("source/js/*.js")
     .pipe(uglify())
+    .pipe(
+      rename({
+        prefix: "min."
+      })
+    )
     .pipe(gulp.dest("build/js"));
 });
 
