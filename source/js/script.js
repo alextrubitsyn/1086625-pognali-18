@@ -1,7 +1,8 @@
 var noJS = document.querySelector(".nojs");
 var headerEl = document.querySelector(".page-header");
 var toggleEl = document.querySelector(".page-header__toggle");
-var countryFormEl = document.querySelector(".country-filter--form");
+var countryFormEl = document.querySelector(".country--filter");
+// var countryFormEl = document.querySelector(".country-filter--form");
 var toggleFormEl = document.querySelector(".country__btn--empty");
 var countryCatalogEl = document.querySelector(".country-filter--catalog");
 var toggleCatalog1El = document.querySelector(".country-filter__toggle");
@@ -23,7 +24,7 @@ if (toggleEl) {
 
 if (toggleFormEl) {
   toggleFormEl.onclick = function() {
-    countryFormEl.classList.toggle("country-filter--open");
+    countryFormEl.classList.toggle("country--open");
   };
 }
 
