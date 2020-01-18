@@ -61,6 +61,7 @@
 
 .period__week-item {
   display: inline-block;
+  width: 10%;
 
   & span {
     font-size: 0;
@@ -71,7 +72,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 20px;
+    width: 14.6%;
   }
 }
 
@@ -174,7 +175,8 @@
     display: flex;
     justify-content: space-around;
     .clear();
-    margin: 0 12px 4px;
+    margin: 0 0 4px;
+    padding-left: 30px;
     font-size: 18px;
     line-height: 30px;
   }
@@ -184,9 +186,13 @@
       font-size: 18px;
     }
 
-    &:nth-child(n + 6) {
-      color: @holiday;
-    }
+    // &:nth-child(n + 6) {
+    //   color: @holiday;
+    // }
+
+    // &:not(:last-child) {
+    //   width: 14.6%;
+    // }
   }
 
   .period__days {
@@ -218,15 +224,7 @@
     justify-content: flex-start;
     .clear();
     margin-bottom: 16px;
-    // padding-left: 16px;
-  }
-
-  .period__week-item {
     padding-left: 16px;
-
-    &:not(:last-child) {
-      margin-right: 109px;
-    }
   }
 
   .period__days {
