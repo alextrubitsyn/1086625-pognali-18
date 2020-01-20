@@ -1,12 +1,15 @@
 var noJS = document.querySelector(".nojs");
+
 var headerEl = document.querySelector(".page-header");
 var toggleEl = document.querySelector(".page-header__toggle");
+
 var countryFormEl = document.querySelector(".country--filter");
-// var countryFormEl = document.querySelector(".country-filter--form");
 var toggleFormEl = document.querySelector(".country__btn--empty");
+
 var countryCatalogEl = document.querySelector(".country-filter--catalog");
 var toggleCatalog1El = document.querySelector(".country-filter__toggle");
 var toggleCatalog2El = document.querySelector(".country-filter__close");
+
 var businessRatesEl = document.querySelector(".business-rates");
 var modalOverlayEl = document.querySelector(".modal-overlay");
 var modalOpenEl = document.querySelector(".add-profile__business-link");
@@ -72,56 +75,56 @@ if (modalOpenEl && modalCloseEl && modalOverlayEl && businessRatesEl) {
   });
 }
 
-// if (headerEl) {
-//   var headerFixed = false;
+if (headerEl) {
+  var headerFixed = false;
 
-//   window.addEventListener("scroll", throttle(headerOnScroll, 300));
+  window.addEventListener("scroll", throttle(headerOnScroll, 300));
 
-//   function headerOnScroll() {
-//     if (document.documentElement.scrollTop > 0) {
-//       if (headerFixed) {
-//         return;
-//       }
+  function headerOnScroll() {
+    if (document.documentElement.scrollTop > 0) {
+      if (headerFixed) {
+        return;
+      }
 
-//       headerEl.classList.add("page-header--scroll");
-//       headerFixed = true;
-//     } else {
-//       if (!headerFixed) {
-//         return;
-//       }
+      headerEl.classList.add("page-header--scroll");
+      headerFixed = true;
+    } else {
+      if (!headerFixed) {
+        return;
+      }
 
-//       headerEl.classList.remove("page-header--scroll");
-//       headerFixed = false;
-//     }
-//   }
-// }
+      headerEl.classList.remove("page-header--scroll");
+      headerFixed = false;
+    }
+  }
+}
 
-// debugger;
-// function throttle(func, ms) {
-//   var isThrottled = false;
-//   var savedArgs;
-//   var savedThis;
+debugger;
+function throttle(func, ms) {
+  var isThrottled = false;
+  var savedArgs;
+  var savedThis;
 
-//   function wrapper() {
-//     if (isThrottled) {
-//       savedArgs = arguments;
-//       savedThis = this;
-//       return;
-//     }
+  function wrapper() {
+    if (isThrottled) {
+      savedArgs = arguments;
+      savedThis = this;
+      return;
+    }
 
-//     func.apply(this, arguments);
+    func.apply(this, arguments);
 
-//     isThrottled = true;
+    isThrottled = true;
 
-//     setTimeout(function() {
-//       isThrottled = false;
+    setTimeout(function() {
+      isThrottled = false;
 
-//       if (savedArgs) {
-//         wrapper.apply(savedThis, savedArgs);
-//         savedArgs = savedThis = null;
-//       }
-//     }, ms);
-//   }
+      if (savedArgs) {
+        wrapper.apply(savedThis, savedArgs);
+        savedArgs = savedThis = null;
+      }
+    }, ms);
+  }
 
-//   return wrapper;
-// }
+  return wrapper;
+}
