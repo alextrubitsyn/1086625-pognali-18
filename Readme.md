@@ -2,6 +2,7 @@
 
 * Студент: [Александр Трубицын](https://up.htmlacademy.ru/adaptive/18/user/1086625).
 * Наставник: Дмитрий Казанцев.
+* Сборка: https://alextrubitsyn.github.io/1086625-pognali-18/build/index.min.html
 
 ---
 
